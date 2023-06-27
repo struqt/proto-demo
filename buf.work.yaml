@@ -1,6 +1,6 @@
 version: v1
 
 directories: [
-  proto/buf/common,
-  proto/buf/demo,
+  proto/common,
+  proto/demo,
 ]

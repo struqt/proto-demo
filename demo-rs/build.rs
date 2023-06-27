@@ -15,7 +15,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         "common",
         "demo",
     ].into_iter()
-        .map(|dir| format!("../proto/buf/{}", dir))
+        .map(|dir| format!("../proto/{}", dir))
         .collect();
 
     let mut out_dir = std::env::current_dir()?;

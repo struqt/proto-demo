@@ -96,7 +96,7 @@ download_protobuf_grpc_gateway() {
   download openapiv2.proto
 }
 
-declare -rx BUF_DIR='../proto/buf'
+declare -rx BUF_DIR='../proto'
 
 download_protobuf_google_api master
 download_protobuf_grpc_gateway v2.16.0
