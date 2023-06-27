@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eo pipefail
 
+declare -rx BUF_DIR='../proto'
+
 protoc_gen() {
   local module=$1
   local depends=$2
@@ -12,15 +14,16 @@ protoc_gen() {
 
 protoc_gen_go() {
   local file=$1
+  local dir="../../demo-go/proto"
+  # echo "- $(pwd)"
   echo "- ${file:?}"
-  local DIR="../../../demo-go/proto"
-  mkdir -p "${DIR}"
+  mkdir -p "${dir}"
   # shellcheck disable=SC2086
   protoc \
-    --go_out "${DIR}" --go_opt paths=source_relative \
-    --go-grpc_out "${DIR}" --go-grpc_opt paths=source_relative \
-    --openapiv2_out "${DIR}" --openapiv2_opt logtostderr=true \
-    --grpc-gateway_out "${DIR}" \
+    --go_out "${dir}" --go_opt paths=source_relative \
+    --go-grpc_out "${dir}" --go-grpc_opt paths=source_relative \
+    --openapiv2_out "${dir}" --openapiv2_opt logtostderr=true \
+    --grpc-gateway_out "${dir}" \
     --grpc-gateway_opt logtostderr=true \
     --grpc-gateway_opt paths=source_relative \
     --grpc-gateway_opt generate_unbound_methods=true \
@@ -38,5 +41,5 @@ protoc-gen-grpc-gateway --version
 protoc-gen-openapiv2 --version
 
 ##
-protoc_gen 'common'
-protoc_gen 'demo' '--proto_path ../common'
+protoc_gen common
+protoc_gen demo '--proto_path ../common'
