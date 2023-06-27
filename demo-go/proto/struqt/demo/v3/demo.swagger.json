@@ -1,0 +1,332 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "gRPC Demo",
+    "version": "3"
+  },
+  "tags": [
+    {
+      "name": "DemoService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/demo/v3/echo": {
+      "post": {
+        "operationId": "DemoService_EchoValue",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v3EchoValueResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v3EchoValueRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DemoService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "protobufNullValue": {
+      "type": "string",
+      "enum": [
+        "NULL_VALUE"
+      ],
+      "default": "NULL_VALUE",
+      "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\nThe JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v3EchoValueRequest": {
+      "type": "object",
+      "properties": {
+        "value": {}
+      }
+    },
+    "v3EchoValueResponse": {
+      "type": "object",
+      "properties": {
+        "value": {},
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "pb3Message": {
+          "$ref": "#/definitions/v3Proto3Message"
+        }
+      }
+    },
+    "v3EnumValue": {
+      "type": "string",
+      "enum": [
+        "ENUM_VALUE_UNSPECIFIED",
+        "ENUM_VALUE_X",
+        "ENUM_VALUE_Y",
+        "ENUM_VALUE_Z"
+      ],
+      "default": "ENUM_VALUE_UNSPECIFIED"
+    },
+    "v3Proto3Message": {
+      "type": "object",
+      "properties": {
+        "nested": {
+          "$ref": "#/definitions/v3Proto3Message",
+          "title": "Next number: 49"
+        },
+        "floatValue": {
+          "type": "number",
+          "format": "float"
+        },
+        "doubleValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "int64Value": {
+          "type": "string",
+          "format": "int64"
+        },
+        "int32Value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "uint64Value": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "uint32Value": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "boolValue": {
+          "type": "boolean"
+        },
+        "stringValue": {
+          "type": "string"
+        },
+        "bytesValue": {
+          "type": "string",
+          "format": "byte"
+        },
+        "repeatedValue": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "repeatedMessage": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "enumValue": {
+          "$ref": "#/definitions/v3EnumValue"
+        },
+        "repeatedEnum": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/v3EnumValue"
+          }
+        },
+        "timestampValue": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "durationValue": {
+          "type": "string"
+        },
+        "fieldMaskValue": {
+          "type": "string"
+        },
+        "oneofBoolValue": {
+          "type": "boolean"
+        },
+        "oneofStringValue": {
+          "type": "string"
+        },
+        "nestedOneofValueOne": {
+          "$ref": "#/definitions/v3Proto3Message"
+        },
+        "wrapperDoubleValue": {
+          "type": "number",
+          "format": "double"
+        },
+        "wrapperFloatValue": {
+          "type": "number",
+          "format": "float"
+        },
+        "wrapperInt64Value": {
+          "type": "string",
+          "format": "int64"
+        },
+        "wrapperInt32Value": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "wrapperUInt64Value": {
+          "type": "string",
+          "format": "uint64"
+        },
+        "wrapperUInt32Value": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "wrapperBoolValue": {
+          "type": "boolean"
+        },
+        "wrapperStringValue": {
+          "type": "string"
+        },
+        "wrapperBytesValue": {
+          "type": "string",
+          "format": "byte"
+        },
+        "mapValue": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "mapValue2": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "mapValue3": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "mapValue4": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "int64"
+          }
+        },
+        "mapValue5": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "mapValue6": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "format": "int64"
+          }
+        },
+        "mapValue7": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "mapValue8": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "mapValue9": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "mapValue10": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "mapValue12": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "mapValue14": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "mapValue15": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "mapValue16": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uint64"
+          }
+        },
+        "structValueValue": {},
+        "structValue": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

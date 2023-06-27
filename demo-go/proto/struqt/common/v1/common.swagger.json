@@ -1,0 +1,102 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "struqt/common/v1/common.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "CommonService"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/common/v1/server-info": {
+      "get": {
+        "operationId": "CommonService_GetServerInfo",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetServerInfoResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "tags": [
+          "CommonService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    },
+    "v1GetServerInfoResponse": {
+      "type": "object",
+      "properties": {
+        "serverId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "startedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "$ref": "#/definitions/v1ServerStatus"
+        }
+      },
+      "required": [
+        "serverId"
+      ]
+    },
+    "v1ServerStatus": {
+      "type": "string",
+      "enum": [
+        "SERVER_STATUS_UNSPECIFIED",
+        "SERVER_STATUS_INITIAL",
+        "SERVER_STATUS_STARTING",
+        "SERVER_STATUS_RUNNING",
+        "SERVER_STATUS_SHUTDOWN"
+      ],
+      "default": "SERVER_STATUS_UNSPECIFIED"
+    }
+  }
+}
