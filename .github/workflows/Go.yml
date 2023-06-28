@@ -23,8 +23,8 @@ jobs:
         with:
           go-version: 1.19
 
-      - name: Setup Protobuf
-        run: cd demo-go && ./build.sh
+      #- name: Setup Protobuf
+      #  run: cd demo-go && ./build.sh
 
       - name: Build
         run: |
