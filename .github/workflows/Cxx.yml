@@ -1,0 +1,121 @@
+name: Cxx
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  PROJECT_NAME: demo-cxx
+
+jobs:
+  prepare:
+    strategy:
+      matrix:
+        grpc_version: [
+          1.55,
+          1.56,
+        ]
+        build_type: [
+          Release,
+          #Debug,
+          #RelWithDebInfo,
+        ]
+        os: [
+          ubuntu-latest,
+          #ubuntu-20.04,
+          #macos-13,
+          #windows-2022,
+        ]
+      fail-fast: true
+    # The CMake configure and build commands are platform-agnostic and should work equally well on Windows or Mac.
+    # You can convert this to a matrix build if you need cross-platform coverage. See:
+    # https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: gRPC Cache
+        id: cache-grpc
+        uses: actions/cache@v3
+        # https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows
+        env:
+          cache-name: demo-cxx
+        with:
+          path: ./demo-cxx/third-party
+          #key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('./demo-cxx/third-party/install.sh') }}
+          key: ${{ matrix.os }} ${{ env.cache-name }} gRPC ${{ matrix.grpc_version }} ${{ matrix.build_type }}
+
+      - if: steps.cache-grpc.outputs.cache-hit != 'true'
+        name: gRPC Clone Repository
+        working-directory: ${{ github.workspace }}/demo-cxx/third-party
+        run: |
+          git -c advice.detachedHead=false clone -j 6 -b v${{ matrix.grpc_version }}.x \
+            --recurse-submodules --shallow-submodules --depth 10 https://github.com/grpc/grpc
+
+      - if: steps.cache-grpc.outputs.cache-hit != 'true'
+        name: gRPC Install
+        working-directory: ${{ github.workspace }}/demo-cxx/third-party
+        run: ./install.sh ${{ matrix.build_type }}
+    #steps
+  #prepare
+
+  build:
+    needs: prepare
+    strategy:
+      matrix:
+        grpc_version: [
+          1.55,
+          1.56,
+        ]
+        build_type: [
+          Release,
+        ]
+        os: [
+          ubuntu-latest,
+        ]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: gRPC Cache
+        id: cache-grpc
+        uses: actions/cache@v3
+        env:
+          cache-name: demo-cxx
+        with:
+          path: ./demo-cxx/third-party
+          key: ${{ matrix.os }} ${{ env.cache-name }} gRPC ${{ matrix.grpc_version }} ${{ matrix.build_type }}
+
+      - name: CMake
+        if: steps.cache-grpc.outputs.cache-hit == 'true'
+        working-directory: ${{ github.workspace }}/demo-cxx
+        run: cmake -B ${{ github.workspace }}/demo-cxx-build -D CMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+      - name: CMake Build
+        if: steps.cache-grpc.outputs.cache-hit == 'true'
+        working-directory: ${{ github.workspace }}/demo-cxx
+        run: cmake --build ${{ github.workspace }}/demo-cxx-build -j 6 --config ${{ matrix.build_type }}
+
+      - name: Test
+        if: steps.cache-grpc.outputs.cache-hit == 'true'
+        working-directory: ${{ github.workspace }}/demo-cxx-build
+        # Execute tests defined by the CMake configuration.
+        # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
+        run: |
+          ctest -C ${{ matrix.build_type }}
+          ls -lAh
+          if command -v ldd &>/dev/null; then
+            echo '## ldd demo_cxx_hello'
+            ldd demo_cxx_hello
+            echo '## ldd demo_cxx_server'
+            ldd demo_cxx_server
+          fi
+          ./demo_cxx_hello
+    #steps
+  #build
+#jobs

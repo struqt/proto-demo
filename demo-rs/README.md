@@ -3,7 +3,7 @@
 ## Start gRPC Server
 
 ```shell
-cargo run --bin demo-server
+cargo run --release --bin demo-rs-server
 ```
 
 ## Test with [gRPCurl](https://github.com/fullstorydev/grpcurl)

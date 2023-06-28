@@ -1,19 +1,37 @@
-# gRPC Go Demo
+# gRPC Golang Demo
 
-## Start gRPC Gateway Server
+## Generate Source Code
 
 ```shell
-go run ./server/cmd/demo-gate
+./protoc-gen.sh
 ```
 
-## Start gRPC Server
+## Run gRPC Server
+
+Start gRPC Server
 
 ```shell
 go run ./server/cmd/demo-grpc
 ```
 
-### Generate Code with Bash
+Test gRPC server with [gRPCurl](https://github.com/fullstorydev/grpcurl)
 
 ```shell
-./build.sh
+grpcurl -plaintext -import-path ../proto/googleapis -import-path ../proto/common -proto struqt/common/v1/common.proto 127.0.0.1:9090 struqt.common.v1.CommonService/GetServerInfo | jq
+```
+
+## Run gRPC Gateway Server
+
+Start:
+
+```shell
+go run ./server/cmd/demo-gate
+```
+
+Test gateway server with [cURL](https://curl.se)
+
+**Firstly, confirm that the corresponding gRPC gateway server has been started**
+
+```shell
+curl 127.0.0.1:8080/common/v1/server-info -s | jq
 ```

@@ -7,7 +7,7 @@ pub mod v1 {
 
     #[tonic::async_trait]
     impl CommonService for Handler {
-        async fn get_server_info(&self, request: Request<GetServerInfoRequest>) ->
+        async fn get_server_info(&self, _request: Request<GetServerInfoRequest>) ->
         Result<Response<GetServerInfoResponse>, Status> {
             let host = format!("demo#{}", self.context.server_id);
             let mut map = HeaderMap::new();
@@ -21,7 +21,7 @@ pub mod v1 {
             let metadata = MetadataMap::from_headers(map);
             let extensions = Extensions::default();
             let response = Response::from_parts(metadata, message, extensions);
-            println!("=== {:?}\n== {:?}", request, response);
+            // println!("=== {:?}\n== {:?}", request, response);
             Ok(response)
         }
     }

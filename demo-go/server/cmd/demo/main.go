@@ -1,16 +1,15 @@
 package main
 
 import (
-	"fmt"
-	"github.com/struqt/proto-demo/demo-go/server/cmd"
+	"github.com/struqt/proto-demo/demo-go/server"
+	"github.com/struqt/proto-demo/demo-go/server/gateway"
+	"github.com/struqt/proto-demo/demo-go/server/grpc"
 )
 
 func main() {
-	if *cmd.IsGateway {
-		fmt.Println("Starting gRPC gateway server")
-		cmd.RunGateway("127.0.0.1:8080")
+	if server.IsGateway() {
+		gateway.Start("localhost:8080")
 	} else {
-		fmt.Println("Starting gRPC server")
-		cmd.RunGrpcServer()
+		grpc.Start()
 	}
 }

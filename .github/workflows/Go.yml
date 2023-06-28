@@ -12,7 +12,18 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [
+          ubuntu-latest,
+          # ubuntu-20.04,
+          # macos-13,
+          # windows-2022,
+        ]
+      fail-fast: true
+
     steps:
       - uses: actions/checkout@v3
         with:
@@ -22,9 +33,6 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: 1.19
-
-      #- name: Setup Protobuf
-      #  run: cd demo-go && ./build.sh
 
       - name: Build
         run: |
