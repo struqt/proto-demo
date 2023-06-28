@@ -8,7 +8,7 @@ import (
 func main() {
 	if *cmd.IsGateway {
 		fmt.Println("Starting gRPC gateway server")
-		cmd.RunGateway()
+		cmd.RunGateway("127.0.0.1:8080")
 	} else {
 		fmt.Println("Starting gRPC server")
 		cmd.RunGrpcServer()

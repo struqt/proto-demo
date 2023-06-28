@@ -1,6 +1,6 @@
 module github.com/struqt/proto
 
-go 1.20
+go 1.19
 
 require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.16.0

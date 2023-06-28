@@ -1,7 +1,11 @@
 package main
 
-import "github.com/struqt/proto-demo/demo-go/server/cmd"
+import (
+	"fmt"
+	"github.com/struqt/proto-demo/demo-go/server/cmd"
+)
 
 func main() {
-	cmd.RunGateway()
+	fmt.Println("Starting gRPC gateway server")
+	cmd.RunGateway("127.0.0.1:8080")
 }

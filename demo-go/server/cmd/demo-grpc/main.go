@@ -1,7 +1,11 @@
 package main
 
-import "github.com/struqt/proto-demo/demo-go/server/cmd"
+import (
+	"fmt"
+	"github.com/struqt/proto-demo/demo-go/server/cmd"
+)
 
 func main() {
+	fmt.Println("Starting gRPC server")
 	cmd.RunGrpcServer()
 }

@@ -28,10 +28,12 @@ jobs:
 
       - name: Build
         run: |
-          cd demo-go
-          go build -v github.com/struqt/proto-demo/demo-go/server/cmd/demo-grpc
-          go build -v github.com/struqt/proto-demo/demo-go/server/cmd/demo-gate
-          go build -v github.com/struqt/proto-demo/demo-go/server/cmd/demo
+          mkdir -p demo-go/out
+          pushd demo-go/out
+          go build -v ../server/cmd/demo-grpc
+          go build -v ../server/cmd/demo-gate
+          go build -v ../server/cmd/demo
+          popd
 
       - name: Test
         run: |

@@ -1,6 +1,6 @@
 module github.com/struqt/proto-demo/demo-go/server
 
-go 1.20
+go 1.19
 
 require github.com/struqt/proto v0.3.1
 
