@@ -2,12 +2,8 @@ pub mod v1 {
     use tonic::{Request, Response, Status};
     use crate::struqt::demo::v1::*;
 
-    pub struct Handler {
-        pub context: Context,
-    }
-
     #[tonic::async_trait]
-    impl DemoService for Handler {
+    impl DemoService for DemoHandler {
         async fn echo(&self, request: Request<EchoRequest>) -> Result<Response<EchoResponse>, Status> {
             Ok(Response::new(EchoResponse {
                 version: 1,
@@ -17,7 +13,7 @@ pub mod v1 {
     }
 
     #[tonic::async_trait]
-    impl BasicService for Handler {
+    impl BasicService for BasicHandler {
         async fn json_rpc(&self, _request: Request<JsonRpcRequest>) -> Result<Response<JsonRpcResponse>, Status> {
             todo!()
         }

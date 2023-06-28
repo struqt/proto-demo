@@ -5,7 +5,11 @@ pub mod common {
         include!("../../gen/struqt.common.v1.rs");
         use common_service_server::CommonServiceServer as Serv;
         pub use common_service_server::CommonService;
-        pub use crate::handler::{Context, common::v1::Handler};
+        pub use crate::handler::Context;
+
+        pub struct Handler {
+            pub context: Context,
+        }
 
         pub fn service(context: Context) -> Serv<Handler> {
             Serv::new(Handler { context })
@@ -14,42 +18,58 @@ pub mod common {
 }
 
 pub mod demo {
-    pub mod v1 {
-        include!("../../gen/struqt.demo.v1.rs");
-        use basic_service_server::BasicServiceServer as ServB;
-        use demo_service_server::DemoServiceServer as ServD;
-        pub use basic_service_server::BasicService;
+    pub mod v3 {
+        include!("../../gen/struqt.demo.v3.rs");
+        pub use crate::handler::Context;
         pub use demo_service_server::DemoService;
-        pub use crate::handler::{Context, demo::v1::Handler};
+        use demo_service_server::DemoServiceServer as Service;
 
-        pub fn service_basic(context: Context) -> ServB<Handler> {
-            ServB::new(Handler { context })
+        pub struct Handler {
+            pub context: Context,
         }
 
-        pub fn service(context: Context) -> ServD<Handler> {
-            ServD::new(Handler { context })
+        pub fn service(context: Context) -> Service<Handler> {
+            Service::new(Handler { context })
         }
     }
 
     pub mod v2 {
         include!("../../gen/struqt.demo.v2.rs");
-        use basic_service_server::BasicServiceServer as Service;
+        pub use crate::handler::Context;
         pub use basic_service_server::BasicService;
-        pub use crate::handler::{Context, demo::v2::Handler};
+        use basic_service_server::BasicServiceServer as Service;
+
+        pub struct Handler {
+            pub context: Context,
+        }
 
         pub fn service(context: Context) -> Service<Handler> {
             Service::new(Handler { context })
         }
     }
 
-    pub mod v3 {
-        include!("../../gen/struqt.demo.v3.rs");
-        use demo_service_server::DemoServiceServer as Service;
-        pub use demo_service_server::DemoService;
-        pub use crate::handler::{Context, demo::v3::Handler};
+    pub mod v1 {
+        include!("../../gen/struqt.demo.v1.rs");
+        pub use crate::handler::Context;
 
-        pub fn service(context: Context) -> Service<Handler> {
-            Service::new(Handler { context })
+        pub struct DemoHandler {
+            pub context: Context,
         }
+
+        pub fn service(context: Context) -> demo_service_server::DemoServiceServer<DemoHandler> {
+            demo_service_server::DemoServiceServer::new(DemoHandler { context })
+        }
+
+        pub use demo_service_server::DemoService;
+
+        pub struct BasicHandler {
+            pub context: Context,
+        }
+
+        pub fn service_basic(context: Context) -> basic_service_server::BasicServiceServer<BasicHandler> {
+            basic_service_server::BasicServiceServer::new(BasicHandler { context })
+        }
+
+        pub use basic_service_server::BasicService;
     }
 }
