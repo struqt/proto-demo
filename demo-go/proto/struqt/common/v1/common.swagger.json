@@ -81,10 +81,15 @@
         },
         "status": {
           "$ref": "#/definitions/v1ServerStatus"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
         }
       },
       "required": [
-        "serverId"
+        "serverId",
+        "timestamp"
       ]
     },
     "v1ServerStatus": {

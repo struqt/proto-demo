@@ -1,4 +1,5 @@
 pub mod v1 {
+    use std::time::SystemTime;
     use tonic::{Request, Response, Status};
     use crate::struqt::common::v1::*;
 
@@ -14,6 +15,7 @@ pub mod v1 {
                 server_id: self.context.server_id,
                 started_at: Some(prost_types::Timestamp::from(self.context.started_at)),
                 status: ServerStatus::Running.into(),
+                timestamp: Some(prost_types::Timestamp::from(SystemTime::now())),
             }))
         }
     }

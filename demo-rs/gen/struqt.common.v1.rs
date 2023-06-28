@@ -10,6 +10,8 @@ pub struct GetServerInfoResponse {
     pub started_at: ::core::option::Option<::prost_types::Timestamp>,
     #[prost(enumeration = "ServerStatus", tag = "24")]
     pub status: i32,
+    #[prost(message, optional, tag = "25")]
+    pub timestamp: ::core::option::Option<::prost_types::Timestamp>,
 }
 #[allow(clippy::derive_partial_eq_without_eq)]
 #[derive(Clone, PartialEq, ::prost::Message)]
