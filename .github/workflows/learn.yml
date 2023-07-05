@@ -1,0 +1,48 @@
+name: Learn
+
+# run-name: ${{ github.actor }} is learning GitHub Actions
+run-name: ${{ github.workflow }} on commit ${{ github.sha }}
+
+on:
+  # manual
+  workflow_dispatch:
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
+  #check-bats-version
+  test-ssh-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./.github/actions/setup-ssh-agent
+        with:
+          ssh-known-hosts: ${{ secrets.SSH_KNOWN_HOSTS }}
+      - run: |
+          setup_known_hosts() {
+            mkdir -p ~/.ssh
+            touch ~/.ssh/known_hosts
+            chmod --quiet 644 ~/'.ssh/known_hosts'
+            chmod --quiet 700 ~/'.ssh'
+            echo "${{ secrets.SSH_KNOWN_HOSTS }}" >>~/'.ssh/known_hosts'
+          }
+          setup_known_hosts
+          who am i
+      - run: |
+          setup_ssh_agent() {
+            eval "$(ssh-agent -s)"
+            echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add - &>/dev/null         
+          }
+          setup_ssh_agent
+          who am i
+          ssh guest@${{ secrets.SSH_JUMPER_IP }} 'id'
+        shell: bash
+  #test-ssh-agent
+#jobs

@@ -1,0 +1,27 @@
+name: Main Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  cxx:
+    name: C++
+    uses: ./.github/workflows/demo-cxx.yml
+    with:
+      safe-checkout: ${{ github.sha }}
+    secrets: inherit
+  go:
+    name: Go
+    uses: ./.github/workflows/demo-go.yml
+    with:
+      safe-checkout: ${{ github.sha }}
+    secrets: inherit
+  rs:
+    name: Rust
+    uses: ./.github/workflows/demo-rs.yml
+    with:
+      safe-checkout: ${{ github.sha }}
+    secrets: inherit

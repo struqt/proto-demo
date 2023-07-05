@@ -1,10 +1,14 @@
-name: Rust
+name: -rust
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
+    inputs:
+      safe-checkout:
+        required: true
+        description: "The SHA key for the commit we want to run over"
+        type: string
+  #workflow_call
+#on
 
 env:
   CARGO_TERM_COLOR: always
@@ -21,27 +25,16 @@ jobs:
       - name: Run tests
         run: |
           pwd
-          docker ps
           which apt
           which ssh-agent
           which ssh
           which scp
+          uname -a
       - name: Add SSH key
         run: |
-          mkdir -p ~/.ssh
-          touch ~/.ssh/known_hosts
-          chmod --quiet 644 ~/'.ssh/known_hosts'
-          chmod --quiet 700 ~/'.ssh'
-          echo "${{ secrets.SSH_JUMPER_KNOWN_HOST }}" >>~/'.ssh/known_hosts'
-          eval "$(ssh-agent -s)"
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add - &>/dev/null
-          uname -a
-          ssh guest@${{ secrets.SSH_JUMPER_IP }} 'id'
-          docker compose version
           docker version
-          ls -lhA /usr/sbin
-          ls -lhA /usr/bin
-          ls -lhA /usr/lib
+          docker compose version
+          docker ps -a
         shell: bash
     #steps
   #prepare
@@ -61,6 +54,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          ref: ${{ inputs.safe-checkout }}
           submodules: 'true'
 
       - name: Install protoc
