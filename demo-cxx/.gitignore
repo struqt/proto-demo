@@ -2,7 +2,3 @@
 .build
 build
 cmake-build*
-third-party/.build
-third-party/build
-third-party/tmp
-third-party/grpc
