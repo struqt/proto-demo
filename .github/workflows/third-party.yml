@@ -10,7 +10,7 @@ on:
 #on
 
 jobs:
-  prepare:
+  install:
     strategy:
       matrix:
         grpc_version: [
@@ -36,24 +36,29 @@ jobs:
         with:
           ref: ${{ inputs.safe-checkout }}
           submodules: 'true'
+
       - name: gRPC Cache
         id: cache-grpc
         uses: actions/cache@v3
         env:
           cache-name: gRPC${{ matrix.grpc_version }}
         with:
-          path: ${{ github.workspace }}/third-party
+          path: |
+            ${{ github.workspace }}/third-party/grpc
+            ${{ github.workspace }}/third-party/build
           key: ${{ env.cache-name }} ${{ runner.os }} ${{ runner.arch }} ${{ matrix.build_type }}
-      - if: steps.cache-grpc.outputs.cache-hit != 'true'
-        name: gRPC Clone Repository
+
+      - name: gRPC Clone Repository
+        if: steps.cache-grpc.outputs.cache-hit != 'true'
         working-directory: ${{ github.workspace }}/third-party
         run: |
           git -c advice.detachedHead=false clone -j 6 -b v${{ matrix.grpc_version }}.x \
             --recurse-submodules --shallow-submodules --depth 10 https://github.com/grpc/grpc
-      - if: steps.cache-grpc.outputs.cache-hit != 'true'
-        name: gRPC Install
+
+      - name: gRPC Install
+        #if: steps.cache-grpc.outputs.cache-hit != 'true'
         working-directory: ${{ github.workspace }}/third-party
-        run: ./install.sh ${{ matrix.build_type }}
+        run: ./install.sh ${{ matrix.build_type }} ${{ matrix.grpc_version }}
     #steps
-  #prepare
+  #install
 #jobs

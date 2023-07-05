@@ -42,7 +42,9 @@ jobs:
         env:
           cache-name: gRPC${{ matrix.grpc_version }}
         with:
-          path: ${{ github.workspace }}/third-party
+          path: |
+            ${{ github.workspace }}/third-party/grpc
+            ${{ github.workspace }}/third-party/build
           key: ${{ env.cache-name }} ${{ runner.os }} ${{ runner.arch }} ${{ matrix.build_type }}
 
       - name: CMake

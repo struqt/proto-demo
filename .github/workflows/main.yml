@@ -7,27 +7,27 @@ on:
     branches: [ "main" ]
 
 jobs:
-  grpc:
-    name: gRPC
-    uses: ./.github/workflows/grpc.yml
+  base:
+    name: Base
+    uses: ./.github/workflows/third-party.yml
     with:
       safe-checkout: ${{ github.sha }}
   cxx:
-    needs: grpc
+    needs: base
     name: C++
     uses: ./.github/workflows/demo-cxx.yml
     with:
       safe-checkout: ${{ github.sha }}
     secrets: inherit
   go:
-    needs: grpc
+    needs: base
     name: Go
     uses: ./.github/workflows/demo-go.yml
     with:
       safe-checkout: ${{ github.sha }}
     secrets: inherit
   rs:
-    needs: grpc
+    needs: base
     name: Rust
     uses: ./.github/workflows/demo-rs.yml
     with:
@@ -35,7 +35,7 @@ jobs:
     secrets: inherit
   built:
     needs: [ cxx, go, rs ]
-    name: Finish Building
+    name: Finish
     uses: ./.github/workflows/empty.yml
   #built
 #jobs

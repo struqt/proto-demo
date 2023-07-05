@@ -1,25 +1,22 @@
 #!/bin/bash
 set -eo pipefail
 
-declare -rx CMAKE_BUILD_TYPE="$1"
+declare -rx BUILD_TYPE="${1:-RelWithDebInfo}"
+declare -rx GRPC_VERSION="${2:-1.56}"
+echo "$0 -- ${BUILD_TYPE:?} ${GRPC_VERSION:?}"
 
 function cmake_build() {
   local NAME="${1}"
   local PROJECT="${2}"
   local SHARED_PREFIX="$PWD/build/target/${NAME:?}"
   local CMAKE_OUT="$PWD/build/cmake/${NAME:?}"
-  local BUILD_TYPE='RelWithDebInfo'
-  if [ 'Release' == "${CMAKE_BUILD_TYPE}" ]; then
-    BUILD_TYPE='Release'
-  fi
-  echo "$0 -- BUILD_TYPE: ${BUILD_TYPE}"
   if [ -d "${SHARED_PREFIX}/lib" ]; then
     echo "Installed to ${SHARED_PREFIX}"
     return
   fi
   cmake -S "${PROJECT:?}" -B "${CMAKE_OUT}" \
     -D BUILD_SHARED_LIBS=OFF \
-    -D CMAKE_BUILD_TYPE="${BUILD_TYPE:-RelWithDebInfo}" \
+    -D CMAKE_BUILD_TYPE="${BUILD_TYPE:?}" \
     -D CMAKE_INSTALL_PREFIX="${SHARED_PREFIX}" \
     "${@:3}"
   pushd "${CMAKE_OUT}"
@@ -28,7 +25,7 @@ function cmake_build() {
   popd
 }
 
-function cmake_build_all() {
+function cmake_build_grpc() {
   local t="$PWD/build/target"
   cmake_build 'abseil-cpp' 'grpc/third_party/abseil-cpp' \
     -D CMAKE_POSITION_INDEPENDENT_CODE=TRUE \
@@ -55,7 +52,7 @@ function cmake_build_all() {
 if [ ! -d ./grpc ]; then
   git -c advice.detachedHead=false clone -j 6 \
     --recurse-submodules --shallow-submodules --depth 10 \
-    -b v1.56.x https://github.com/grpc/grpc
+    -b "v${GRPC_VERSION}.x" https://github.com/grpc/grpc
 fi
 
-cmake_build_all
+cmake_build_grpc
