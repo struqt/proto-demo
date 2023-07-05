@@ -33,3 +33,12 @@ jobs:
     with:
       safe-checkout: ${{ github.sha }}
     secrets: inherit
+  built:
+    needs: [ cxx, go, rs ]
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Building Jobs are finished!'
+        shell: bash
+    #steps
+  #built
+#jobs
