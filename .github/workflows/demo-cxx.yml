@@ -40,10 +40,10 @@ jobs:
         id: cache-grpc
         uses: actions/cache@v3
         env:
-          cache-name: demo-cxx
+          cache-name: gRPC${{ matrix.grpc_version }}
         with:
-          path: ./demo-cxx/third-party
-          key: ${{ matrix.os }} ${{ env.cache-name }} gRPC ${{ matrix.grpc_version }} ${{ matrix.build_type }}
+          path: ${{ github.workspace }}/third-party
+          key: ${{ env.cache-name }} ${{ runner.os }} ${{ runner.arch }} ${{ matrix.build_type }}
 
       - name: CMake
         if: steps.cache-grpc.outputs.cache-hit == 'true'
@@ -62,14 +62,6 @@ jobs:
         # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
         run: |
           ctest -C ${{ matrix.build_type }}
-          ls -lAh
-          if command -v ldd &>/dev/null; then
-            echo '## ldd demo_cxx_hello'
-            ldd demo_cxx_hello
-            echo '## ldd demo_cxx_server'
-            ldd demo_cxx_server
-          fi
-          ./demo_cxx_hello
 
       - name: Upload demo_cxx_hello
         uses: actions/upload-artifact@v3

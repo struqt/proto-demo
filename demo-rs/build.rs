@@ -25,7 +25,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
 
     let protoc_path = std::env::current_dir()?
-        .join("../demo-cxx/third-party/build/target/protobuf/bin");
+        .join("../third-party/build/target/protobuf/bin");
     if protoc_path.exists() {
         let path_var = std::env::var("PATH").unwrap_or_else(|_| String::from(""));
         if let Some(protoc_str) = protoc_path.to_str() {

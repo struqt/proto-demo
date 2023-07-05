@@ -57,7 +57,7 @@ go_install_bin() {
   else echo "Installed: $package"; fi
 }
 
-declare -rx PROTOC_PATH="$PWD/../demo-cxx/third-party/build/target/protobuf"
+declare -rx PROTOC_PATH="$PWD/../third-party/build/target/protobuf"
 if [ ! -d "${PROTOC_PATH}" ]; then
   install_protobuf
 fi
