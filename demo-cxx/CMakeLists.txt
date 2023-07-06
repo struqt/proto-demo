@@ -4,6 +4,13 @@ project(demo_cxx)
 set(CMAKE_CXX_STANDARD 17)
 include(${CMAKE_CURRENT_SOURCE_DIR}/../third-party/install.cmake)
 
+message(STATUS "Run protoc-gen-cxx.sh +")
+execute_process(
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+  COMMAND bash ${CMAKE_CURRENT_SOURCE_DIR}/protoc-gen-cxx.sh
+)
+message(STATUS "Run protoc-gen-cxx.sh -")
+
 function(fn_target_sources_protoc_gen t)
   message(STATUS "- ${t} fn_target_sources_protoc_gen")
   file(GLOB_RECURSE SOURCES_PROTO_GEN "./gen-cxx/*.cc" "./gen-cxx-grpc/*.cc")

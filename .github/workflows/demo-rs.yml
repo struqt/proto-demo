@@ -57,16 +57,13 @@ jobs:
           ref: ${{ inputs.safe-checkout }}
           submodules: 'true'
 
-      - name: Install protoc
-        uses: taiki-e/install-action@v2
-        with:
-          tool: protoc@3.23.3
-
       - name: Build
-        run: cd demo-rs && cargo build --verbose
+        working-directory: ${{ github.workspace }}/demo-rs
+        run: cargo build --verbose
 
       - name: Run tests
-        run: cd demo-rs && cargo test --verbose
+        working-directory: ${{ github.workspace }}/demo-rs
+        run: cargo test --verbose
     #steps
   #build
 #jobs

@@ -2,9 +2,10 @@ message(STATUS "CMAKE_CURRENT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}")
 message(STATUS "CMAKE_BUILD_TYPE ${CMAKE_BUILD_TYPE}")
 
 set(ABSL_PROPAGATE_CXX_STD on)
-set(DIR_THIRD_PARTY ${CMAKE_CURRENT_SOURCE_DIR}/../third-party)
-set(DIR_THIRD_PARTY_OUT ${DIR_THIRD_PARTY}/build/target)
+message(STATUS "The current directory is ${CMAKE_CURRENT_LIST_DIR}")
 
+set(DIR_THIRD_PARTY ${CMAKE_CURRENT_LIST_DIR})
+set(DIR_THIRD_PARTY_OUT ${DIR_THIRD_PARTY}/build/target)
 if (CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   execute_process(
     WORKING_DIRECTORY ${DIR_THIRD_PARTY}
@@ -26,5 +27,5 @@ message(STATUS "CMAKE_PREFIX_PATH  ${CMAKE_PREFIX_PATH}")
 
 find_package(protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
-message(STATUS "Using protobuf    ${Protobuf_VERSION}")
-message(STATUS "Using gRPC        ${gRPC_VERSION}")
+message(STATUS "Using protobuf  ${Protobuf_VERSION}")
+message(STATUS "Using gRPC      ${gRPC_VERSION}")

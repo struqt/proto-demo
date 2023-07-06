@@ -1,15 +1,19 @@
 #!/bin/bash
-set -eo pipefail
+set -euo pipefail
 
 declare -rx BUILD_TYPE="${1:-RelWithDebInfo}"
 declare -rx GRPC_VERSION="${2:-1.56}"
+
+declare -r SELF=$(readlink -f "$0")
+declare -r SELF_DIR=${SELF%/*}
+
 echo "$0 -- ${BUILD_TYPE:?} ${GRPC_VERSION:?}"
 
 function cmake_build() {
   local NAME="${1}"
   local PROJECT="${2}"
-  local SHARED_PREFIX="$PWD/build/target/${NAME:?}"
-  local CMAKE_OUT="$PWD/build/cmake/${NAME:?}"
+  local SHARED_PREFIX="$SELF_DIR/build/target/${NAME:?}"
+  local CMAKE_OUT="$SELF_DIR/build/cmake/${NAME:?}"
   if [ -d "${SHARED_PREFIX}/lib" ]; then
     echo "Installed to ${SHARED_PREFIX}"
     return
@@ -26,7 +30,7 @@ function cmake_build() {
 }
 
 function cmake_build_grpc() {
-  local t="$PWD/build/target"
+  local t="$SELF_DIR/build/target"
   cmake_build 'abseil-cpp' 'grpc/third_party/abseil-cpp' \
     -D CMAKE_POSITION_INDEPENDENT_CODE=TRUE \
     -D ABSL_PROPAGATE_CXX_STD=ON
