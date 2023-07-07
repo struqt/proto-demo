@@ -1,0 +1,20 @@
+name: Lint
+
+on:
+  workflow_dispatch:
+
+jobs:
+  buf-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bufbuild/buf-setup-action@v1
+      - run: buf lint
+      - uses: bufbuild/buf-lint-action@v1
+        with:
+          input: proto/common
+      - uses: bufbuild/buf-lint-action@v1
+        with:
+          input: proto/demo
+  #buf-lint
+#jobs
