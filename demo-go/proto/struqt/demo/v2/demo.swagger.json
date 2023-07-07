@@ -134,6 +134,9 @@
         "version": {
           "type": "integer",
           "format": "int32"
+        },
+        "versionTag": {
+          "type": "string"
         }
       }
     },

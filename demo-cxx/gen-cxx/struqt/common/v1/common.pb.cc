@@ -58,7 +58,11 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
 template <typename>
 PROTOBUF_CONSTEXPR Dummy::Dummy(
     ::_pbi::ConstantInitialized): _impl_{
-    /*decltype(_impl_.version_)*/ 0
+    /*decltype(_impl_.version_tag_)*/ {
+    &::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized {}
+  }
+
+  , /*decltype(_impl_.version_)*/ 0
 
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct DummyDefaultTypeInternal {
@@ -113,6 +117,7 @@ const ::uint32_t TableStruct_struqt_2fcommon_2fv1_2fcommon_2eproto::offsets[] PR
     ~0u,  // no _split_
     ~0u,  // no sizeof(Split)
     PROTOBUF_FIELD_OFFSET(::struqt::common::v1::Dummy, _impl_.version_),
+    PROTOBUF_FIELD_OFFSET(::struqt::common::v1::Dummy, _impl_.version_tag_),
 };
 
 static const ::_pbi::MigrationSchema
@@ -137,18 +142,19 @@ const char descriptor_table_protodef_struqt_2fcommon_2fv1_2fcommon_2eproto[] PRO
     "t\030\027 \001(\0132\032.google.protobuf.TimestampB\004\342A\001"
     "\005\0224\n\006status\030\030 \001(\0162\036.struqt.common.v1.Ser"
     "verStatusB\004\342A\001\005\0223\n\ttimestamp\030\031 \001(\0132\032.goo"
-    "gle.protobuf.TimestampB\004\342A\001\002J\004\010\001\020\025\"\030\n\005Du"
-    "mmy\022\017\n\007version\030\001 \001(\005*\233\001\n\014ServerStatus\022\035\n"
-    "\031SERVER_STATUS_UNSPECIFIED\020\000\022\031\n\025SERVER_S"
-    "TATUS_INITIAL\020\001\022\032\n\026SERVER_STATUS_STARTIN"
-    "G\020\002\022\031\n\025SERVER_STATUS_RUNNING\020\003\022\032\n\026SERVER"
-    "_STATUS_SHUTDOWN\020\0042\222\001\n\rCommonService\022\200\001\n"
-    "\rGetServerInfo\022&.struqt.common.v1.GetSer"
-    "verInfoRequest\032\'.struqt.common.v1.GetSer"
-    "verInfoResponse\"\036\202\323\344\223\002\030\022\026/common/v1/serv"
-    "er-infoB`\n\032com.struqt.proto.common.v1Z/g"
-    "ithub.com/struqt/proto/struqt/common/v1;"
-    "common\252\002\020Struqt.Common.V1b\006proto3"
+    "gle.protobuf.TimestampB\004\342A\001\002J\004\010\001\020\025\"-\n\005Du"
+    "mmy\022\017\n\007version\030\001 \001(\005\022\023\n\013version_tag\030\002 \001("
+    "\t*\233\001\n\014ServerStatus\022\035\n\031SERVER_STATUS_UNSP"
+    "ECIFIED\020\000\022\031\n\025SERVER_STATUS_INITIAL\020\001\022\032\n\026"
+    "SERVER_STATUS_STARTING\020\002\022\031\n\025SERVER_STATU"
+    "S_RUNNING\020\003\022\032\n\026SERVER_STATUS_SHUTDOWN\020\0042"
+    "\222\001\n\rCommonService\022\200\001\n\rGetServerInfo\022&.st"
+    "ruqt.common.v1.GetServerInfoRequest\032\'.st"
+    "ruqt.common.v1.GetServerInfoResponse\"\036\202\323"
+    "\344\223\002\030\022\026/common/v1/server-infoB`\n\032com.stru"
+    "qt.proto.common.v1Z/github.com/struqt/pr"
+    "oto/struqt/common/v1;common\252\002\020Struqt.Com"
+    "mon.V1b\006proto3"
 };
 static const ::_pbi::DescriptorTable* const descriptor_table_struqt_2fcommon_2fv1_2fcommon_2eproto_deps[3] =
     {
@@ -160,7 +166,7 @@ static ::absl::once_flag descriptor_table_struqt_2fcommon_2fv1_2fcommon_2eproto_
 const ::_pbi::DescriptorTable descriptor_table_struqt_2fcommon_2fv1_2fcommon_2eproto = {
     false,
     false,
-    833,
+    854,
     descriptor_table_protodef_struqt_2fcommon_2fv1_2fcommon_2eproto,
     "struqt/common/v1/common.proto",
     &descriptor_table_struqt_2fcommon_2fv1_2fcommon_2eproto_once,
@@ -596,19 +602,40 @@ Dummy::Dummy(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   // @@protoc_insertion_point(arena_constructor:struqt.common.v1.Dummy)
 }
 Dummy::Dummy(const Dummy& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(), _impl_(from._impl_) {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(
-      from._internal_metadata_);
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  Dummy* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.version_tag_) {}
+
+    , decltype(_impl_.version_) {}
+
+    , /*decltype(_impl_._cached_size_)*/{}};
+
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  _impl_.version_tag_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.version_tag_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (!from._internal_version_tag().empty()) {
+    _this->_impl_.version_tag_.Set(from._internal_version_tag(), _this->GetArenaForAllocation());
+  }
+  _this->_impl_.version_ = from._impl_.version_;
   // @@protoc_insertion_point(copy_constructor:struqt.common.v1.Dummy)
 }
 
 inline void Dummy::SharedCtor(::_pb::Arena* arena) {
   (void)arena;
   new (&_impl_) Impl_{
-      decltype(_impl_.version_) { 0 }
+      decltype(_impl_.version_tag_) {}
+
+    , decltype(_impl_.version_) { 0 }
 
     , /*decltype(_impl_._cached_size_)*/{}
   };
+  _impl_.version_tag_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        _impl_.version_tag_.Set("", GetArenaForAllocation());
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 Dummy::~Dummy() {
@@ -622,6 +649,7 @@ Dummy::~Dummy() {
 
 inline void Dummy::SharedDtor() {
   ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.version_tag_.Destroy();
 }
 
 void Dummy::SetCachedSize(int size) const {
@@ -634,6 +662,7 @@ void Dummy::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  _impl_.version_tag_.ClearToEmpty();
   _impl_.version_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -649,6 +678,17 @@ const char* Dummy::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
         if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 8)) {
           _impl_.version_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
+        } else {
+          goto handle_unusual;
+        }
+        continue;
+      // string version_tag = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::uint8_t>(tag) == 18)) {
+          auto str = _internal_mutable_version_tag();
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(ptr);
+          CHK_(::_pbi::VerifyUTF8(str, "struqt.common.v1.Dummy.version_tag"));
         } else {
           goto handle_unusual;
         }
@@ -689,6 +729,14 @@ failure:
         1, this->_internal_version(), target);
   }
 
+  // string version_tag = 2;
+  if (!this->_internal_version_tag().empty()) {
+    const std::string& _s = this->_internal_version_tag();
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+        _s.data(), static_cast<int>(_s.length()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE, "struqt.common.v1.Dummy.version_tag");
+    target = stream->WriteStringMaybeAliased(2, _s, target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -704,6 +752,12 @@ failure:
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // string version_tag = 2;
+  if (!this->_internal_version_tag().empty()) {
+    total_size += 1 + ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+                                    this->_internal_version_tag());
+  }
 
   // int32 version = 1;
   if (this->_internal_version() != 0) {
@@ -729,6 +783,9 @@ void Dummy::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (!from._internal_version_tag().empty()) {
+    _this->_internal_set_version_tag(from._internal_version_tag());
+  }
   if (from._internal_version() != 0) {
     _this->_internal_set_version(from._internal_version());
   }
@@ -748,7 +805,11 @@ bool Dummy::IsInitialized() const {
 
 void Dummy::InternalSwap(Dummy* other) {
   using std::swap;
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.version_tag_, lhs_arena,
+                                       &other->_impl_.version_tag_, rhs_arena);
 
   swap(_impl_.version_, other->_impl_.version_);
 }
