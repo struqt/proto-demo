@@ -1,41 +1,35 @@
 name: Main Workflow
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  push: { branches: [ "main" ] }
+  pull_request: { branches: [ "main" ] }
 
 jobs:
   base:
     name: Base
-    uses: ./.github/workflows/third-party.yml
-    with:
-      safe-checkout: ${{ github.sha }}
+    uses: ./.github/workflows/_build_base.yml
+    with: { safe-checkout: '${{ github.sha }}' }
   cxx:
     needs: base
     name: C++
-    uses: ./.github/workflows/demo-cxx.yml
-    with:
-      safe-checkout: ${{ github.sha }}
+    uses: ./.github/workflows/_build_cxx.yml
+    with: { safe-checkout: '${{ github.sha }}' }
     secrets: inherit
   go:
     needs: base
     name: Go
-    uses: ./.github/workflows/demo-go.yml
-    with:
-      safe-checkout: ${{ github.sha }}
+    uses: ./.github/workflows/_build_go.yml
+    with: { safe-checkout: '${{ github.sha }}' }
     secrets: inherit
-  rs:
+  rust:
     needs: base
     name: Rust
-    uses: ./.github/workflows/.build-rust.yml
-    with:
-      safe-checkout: ${{ github.sha }}
+    uses: ./.github/workflows/_build_rust.yml
+    with: { safe-checkout: '${{ github.sha }}' }
     secrets: inherit
   built:
-    needs: [ cxx, go, rs ]
+    needs: [ cxx, go, rust ]
     name: Finish
-    uses: ./.github/workflows/empty.yml
+    uses: ./.github/workflows/_empty.yml
   #built
 #jobs

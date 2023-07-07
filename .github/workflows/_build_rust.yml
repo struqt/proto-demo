@@ -1,5 +1,3 @@
-#name: .build-rust
-
 on:
   workflow_call:
     inputs:
@@ -8,7 +6,6 @@ on:
         required: true
         description: 'The SHA key for the commit we want to run over'
   #workflow_call
-  workflow_dispatch:
 #on
 
 env:

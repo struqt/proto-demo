@@ -1,5 +1,3 @@
-name: -c++
-
 on:
   workflow_call:
     inputs:

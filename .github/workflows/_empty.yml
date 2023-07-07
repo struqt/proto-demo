@@ -1,5 +1,3 @@
-name: -empty
-
 on:
   workflow_call:
 #on
