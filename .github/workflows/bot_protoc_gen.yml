@@ -1,22 +1,16 @@
-name: Bot
+name: Protoc Gen
 
 on:
-  workflow_dispatch:
   push: { branches: [ "proto" ] }
+  pull_request: { branches: [ "proto" ] }
 
 jobs:
   generate:
     strategy:
       matrix:
-        grpc_version: [
-          1.56,
-        ]
-        build_type: [
-          Release,
-        ]
-        os: [
-          ubuntu-latest,
-        ]
+        grpc_version: [ 1.56 ]
+        build_type: [ Release ]
+        os: [ ubuntu-latest ]
       fail-fast: true
     runs-on: ${{ matrix.os }}
     steps:
@@ -46,10 +40,27 @@ jobs:
         run: bash ${{ github.workspace }}/protoc-gen.sh
         shell: bash
 
+      - name: Validate Go Build
+        working-directory: ${{ github.workspace }}/demo-go
+        run: |
+          pushd .go/bin
+          go build -v ../../server/cmd/demo-grpc
+          go build -v ../../server/cmd/demo-gate
+          go build -v ../../server/cmd/demo
+          ls -lhA
+          popd
+
+      - name: Validate CMake Build
+        if: steps.cache-grpc.outputs.cache-hit == 'true'
+        working-directory: ${{ github.workspace }}/demo-cxx
+        run: |
+          cmake -B ./build -D CMAKE_BUILD_TYPE=${{ matrix.build_type }}
+          cmake --build ./build  -j 6 --config ${{ matrix.build_type }}
+
       - name: Git Commit
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_author: 'wkang[bot] <wkang2015@163.com>'
-          commit_message: '[bot-commit] Update proto submodule'
+          commit_message: '[bot-commit] Code Generation'
   #generate
 #jobs
