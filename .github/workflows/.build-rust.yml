@@ -1,0 +1,41 @@
+#name: .build-rust
+
+on:
+  workflow_call:
+    inputs:
+      safe-checkout:
+        type: string
+        required: true
+        description: 'The SHA key for the commit we want to run over'
+  #workflow_call
+  workflow_dispatch:
+#on
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [
+          ubuntu-latest,
+          #ubuntu-20.04,
+          #macos-13,
+          #windows-2022,
+        ]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with: { ref: '${{ inputs.safe-checkout }}' }
+      - name: Build
+        working-directory: ${{ github.workspace }}/demo-rs
+        run: cargo build --verbose
+      - name: Test
+        working-directory: ${{ github.workspace }}/demo-rs
+        run: cargo test --verbose
+    #steps
+  #build
+#jobs

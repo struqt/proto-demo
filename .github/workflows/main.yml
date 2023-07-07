@@ -29,7 +29,7 @@ jobs:
   rs:
     needs: base
     name: Rust
-    uses: ./.github/workflows/demo-rs.yml
+    uses: ./.github/workflows/.build-rust.yml
     with:
       safe-checkout: ${{ github.sha }}
     secrets: inherit
