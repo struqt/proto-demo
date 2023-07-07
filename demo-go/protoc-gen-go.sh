@@ -1,7 +1,13 @@
 #!/bin/bash
-set -eo pipefail
+set -euo pipefail
 
-declare -rx BUF_DIR='../proto'
+declare -r SELF=$(readlink -f "$0")
+declare -r SELF_DIR=${SELF%/*}
+declare -r UPPER_DIR=${SELF_DIR%/*}
+echo "Run $SELF"
+
+declare -rx BUF_DIR="${UPPER_DIR}/proto"
+declare -rx OUT_DIR="${SELF_DIR}/proto"
 
 protoc_gen() {
   local module=$1
@@ -14,7 +20,7 @@ protoc_gen() {
 
 protoc_gen_go() {
   local file=$1
-  local dir="../../demo-go/proto"
+  local dir="${OUT_DIR}"
   # echo "- $(pwd)"
   echo "- ${file:?}"
   mkdir -p "${dir}"
@@ -32,7 +38,7 @@ protoc_gen_go() {
     --proto_path '.' ${2} "${file}"
 }
 
-source protoc-setup.sh
+source "${SELF_DIR}/protoc-setup.sh"
 export PATH="$PATH:$GOPATH/bin:$PROTOC_PATH/bin"
 
 protoc --version
@@ -42,5 +48,5 @@ protoc-gen-grpc-gateway --version
 protoc-gen-openapiv2 --version
 
 ##
-protoc_gen common
+protoc_gen common ''
 protoc_gen demo '--proto_path ../common'

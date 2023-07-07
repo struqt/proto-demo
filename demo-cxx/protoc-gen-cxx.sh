@@ -4,7 +4,7 @@ set -euo pipefail
 declare -r SELF=$(readlink -f "$0")
 declare -r SELF_DIR=${SELF%/*}
 declare -r PROJECT_DIR=${SELF_DIR%/*}
-echo "$SELF"
+echo "Run $SELF"
 
 declare -r GRPC_PATH="${PROJECT_DIR}/third-party/build/target/grpc/bin"
 declare -r PROTOC_PATH="${PROJECT_DIR}/third-party/build/target/protobuf/bin"

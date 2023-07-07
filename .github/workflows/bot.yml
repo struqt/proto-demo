@@ -1,0 +1,19 @@
+name: Bot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with: { submodules: true }
+      - name: Setup Go
+        uses: actions/setup-go@v3
+        with: { go-version: 1.19 }
+      - run: |
+          bash ${{ github.workspace }}/protoc-gen.sh
+        shell: bash
+  #bot
+#jobs

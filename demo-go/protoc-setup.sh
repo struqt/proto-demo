@@ -1,5 +1,12 @@
 #!/bin/bash
-set -eo pipefail
+set -euo pipefail
+
+if [ -z "${SELF}" ]; then
+  declare -r SELF=$(readlink -f "$0")
+  declare -r SELF_DIR=${SELF%/*}
+  declare -r UPPER_DIR=${SELF_DIR%/*}
+  echo "Run $SELF"
+fi
 
 install_protobuf_macos() {
   if command -v 'brew' >/dev/null 2>&1; then
@@ -57,12 +64,12 @@ go_install_bin() {
   else echo "Installed: $package"; fi
 }
 
-declare -rx PROTOC_PATH="$PWD/../third-party/build/target/protobuf"
+declare -rx PROTOC_PATH="${UPPER_DIR:?}/third-party/build/target/protobuf"
 if [ ! -d "${PROTOC_PATH}" ]; then
   install_protobuf
 fi
 
-declare -rx GOPATH="$PWD/.go"
+declare -rx GOPATH="${SELF_DIR:?}/.go"
 declare -rx GO111MODULE='on'
 
 go_install_bin sqlc v1.18.0 github.com/kyleconroy/sqlc/cmd/sqlc
