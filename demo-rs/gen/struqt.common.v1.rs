@@ -18,6 +18,8 @@ pub struct GetServerInfoResponse {
 pub struct Dummy {
     #[prost(int32, tag = "1")]
     pub version: i32,
+    #[prost(string, tag = "2")]
+    pub version_tag: ::prost::alloc::string::String,
 }
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, ::prost::Enumeration)]
 #[repr(i32)]

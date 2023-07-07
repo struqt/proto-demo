@@ -6,9 +6,9 @@ declare -r SELF_DIR=${SELF%/*}
 echo "Run $SELF"
 
 protoc_gen_all() {
-  ./demo-cxx/protoc-gen-cxx.sh
-  ./demo-go/protoc-gen-go.sh
-  ./demo-rs/protoc-gen-rust.sh
+  "$SELF_DIR"/demo-cxx/protoc-gen-cxx.sh
+  "$SELF_DIR"/demo-go/protoc-gen-go.sh
+  "$SELF_DIR"/demo-rs/protoc-gen-rust.sh
 }
 
 protoc_gen() {
@@ -20,7 +20,9 @@ protoc_gen() {
   fi
   local commit_sha_new
   commit_sha_new="$(git submodule status "${module_name}" | awk '{ print $1 }')"
+  commit_sha_new=${commit_sha_new#+}
   echo "${commit_sha_old} ===> ${commit_sha_new}"
+  git submodule status "${module_name}"
   if [ "${commit_sha_old}" == "${commit_sha_new}" ]; then
     echo "Ignored. No changes."
     return

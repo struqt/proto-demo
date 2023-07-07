@@ -575,8 +575,29 @@ class Dummy final :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kVersionTagFieldNumber = 2,
     kVersionFieldNumber = 1,
   };
+  // string version_tag = 2;
+  void clear_version_tag() ;
+  const std::string& version_tag() const;
+
+
+
+
+  template <typename Arg_ = const std::string&, typename... Args_>
+  void set_version_tag(Arg_&& arg, Args_... args);
+  std::string* mutable_version_tag();
+  PROTOBUF_NODISCARD std::string* release_version_tag();
+  void set_allocated_version_tag(std::string* ptr);
+
+  private:
+  const std::string& _internal_version_tag() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_version_tag(
+      const std::string& value);
+  std::string* _internal_mutable_version_tag();
+
+  public:
   // int32 version = 1;
   void clear_version() ;
   ::int32_t version() const;
@@ -595,6 +616,7 @@ class Dummy final :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   struct Impl_ {
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr version_tag_;
     ::int32_t version_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
@@ -852,6 +874,53 @@ inline ::int32_t Dummy::_internal_version() const {
 inline void Dummy::_internal_set_version(::int32_t value) {
   ;
   _impl_.version_ = value;
+}
+
+// string version_tag = 2;
+inline void Dummy::clear_version_tag() {
+  _impl_.version_tag_.ClearToEmpty();
+}
+inline const std::string& Dummy::version_tag() const {
+  // @@protoc_insertion_point(field_get:struqt.common.v1.Dummy.version_tag)
+  return _internal_version_tag();
+}
+template <typename Arg_, typename... Args_>
+inline PROTOBUF_ALWAYS_INLINE void Dummy::set_version_tag(Arg_&& arg,
+                                                     Args_... args) {
+  ;
+  _impl_.version_tag_.Set(static_cast<Arg_&&>(arg), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:struqt.common.v1.Dummy.version_tag)
+}
+inline std::string* Dummy::mutable_version_tag() {
+  std::string* _s = _internal_mutable_version_tag();
+  // @@protoc_insertion_point(field_mutable:struqt.common.v1.Dummy.version_tag)
+  return _s;
+}
+inline const std::string& Dummy::_internal_version_tag() const {
+  return _impl_.version_tag_.Get();
+}
+inline void Dummy::_internal_set_version_tag(const std::string& value) {
+  ;
+
+
+  _impl_.version_tag_.Set(value, GetArenaForAllocation());
+}
+inline std::string* Dummy::_internal_mutable_version_tag() {
+  ;
+  return _impl_.version_tag_.Mutable( GetArenaForAllocation());
+}
+inline std::string* Dummy::release_version_tag() {
+  // @@protoc_insertion_point(field_release:struqt.common.v1.Dummy.version_tag)
+  return _impl_.version_tag_.Release();
+}
+inline void Dummy::set_allocated_version_tag(std::string* value) {
+  _impl_.version_tag_.SetAllocated(value, GetArenaForAllocation());
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+        if (_impl_.version_tag_.IsDefault()) {
+          _impl_.version_tag_.Set("", GetArenaForAllocation());
+        }
+  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:struqt.common.v1.Dummy.version_tag)
 }
 
 #ifdef __GNUC__

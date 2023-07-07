@@ -9,5 +9,5 @@ echo "Run $SELF"
 #export PROTOC_INCLUDE=$PROTOBUF_LOCATION/include
 
 pushd "${SELF_DIR}"
-cargo build --release --bin demo-rs-server
+cargo build --release --verbose
 popd
