@@ -6,30 +6,33 @@ on:
 
 jobs:
   base:
-    name: Base
+    name: Build Base
     uses: ./.github/workflows/_build_base.yml
     with: { safe-checkout: '${{ github.sha }}' }
   cxx:
+    name: Build C++
     needs: base
-    name: C++
     uses: ./.github/workflows/_build_cxx.yml
     with: { safe-checkout: '${{ github.sha }}' }
     secrets: inherit
   go:
+    name: Build Go
     needs: base
-    name: Go
     uses: ./.github/workflows/_build_go.yml
     with: { safe-checkout: '${{ github.sha }}' }
     secrets: inherit
   rust:
+    name: Build Rust
     needs: base
-    name: Rust
     uses: ./.github/workflows/_build_rust.yml
     with: { safe-checkout: '${{ github.sha }}' }
     secrets: inherit
   built:
+    name: Built
     needs: [ cxx, go, rust ]
-    name: Finish
     uses: ./.github/workflows/_empty.yml
-  #built
-#jobs
+  test:
+    name: Run Tests
+    needs: built
+    secrets: inherit
+    uses: ./.github/workflows/_test.yml

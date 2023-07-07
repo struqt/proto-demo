@@ -1,0 +1,43 @@
+on:
+  workflow_call:
+#on
+
+jobs:
+  empty:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'Do nothing!'
+        shell: bash
+  test:
+    strategy:
+      matrix:
+        os: [
+          ubuntu-latest,
+        ]
+        grpc_version: [
+          1.55,
+          1.56,
+        ]
+        build_type: [
+          Release,
+        ]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Download demo_cxx_hello
+        uses: actions/download-artifact@v3
+        with:
+          name: demo_cxx_hello-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}
+      - name: Test demo_cxx_hello
+        run: |
+          ls -lAh
+          if command -v ldd &>/dev/null; then
+            echo '## ldd demo_cxx_hello'
+            ldd demo_cxx_hello
+          fi
+          chmod u+x demo_cxx_hello
+          ./demo_cxx_hello
+        shell: bash
+    #steps
+  #test
+#jobs

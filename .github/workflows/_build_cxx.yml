@@ -78,37 +78,4 @@ jobs:
           path: ${{ github.workspace }}/demo-cxx-build/demo_cxx_server
     #steps
   #build
-  test:
-    needs: build
-    strategy:
-      matrix:
-        grpc_version: [
-          1.55,
-          1.56,
-        ]
-        build_type: [
-          Release,
-        ]
-        os: [
-          ubuntu-latest,
-        ]
-      fail-fast: true
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Download demo_cxx_hello
-        uses: actions/download-artifact@v3
-        with:
-          name: demo_cxx_hello-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}
-      - name: Test demo_cxx_hello
-        run: |
-          ls -lAh
-          if command -v ldd &>/dev/null; then
-            echo '## ldd demo_cxx_hello'
-            ldd demo_cxx_hello
-          fi
-          chmod u+x demo_cxx_hello
-          ./demo_cxx_hello
-        shell: bash
-    #steps
-  #test
 #jobs
