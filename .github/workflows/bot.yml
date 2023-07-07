@@ -2,9 +2,10 @@ name: Bot
 
 on:
   workflow_dispatch:
+  push: { branches: [ "proto" ] }
 
 jobs:
-  bot:
+  generate:
     strategy:
       matrix:
         grpc_version: [
@@ -21,6 +22,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with: { submodules: true }
+
+      - run: git submodule update --recursive --remote
+        shell: bash
 
       - name: Setup gRPC
         id: cache-grpc
@@ -39,10 +43,7 @@ jobs:
 
       - name: Generate
         if: steps.cache-grpc.outputs.cache-hit == 'true'
-        run: |
-          git submodule update --recursive --remote
-          bash ${{ github.workspace }}/protoc-gen.sh
-          git status
+        run: bash ${{ github.workspace }}/protoc-gen.sh
         shell: bash
 
       - name: Git Commit
@@ -50,5 +51,5 @@ jobs:
         with:
           commit_author: 'wkang[bot] <wkang2015@163.com>'
           commit_message: '[bot-commit] Update proto submodule'
-  #bot
+  #generate
 #jobs
