@@ -43,6 +43,7 @@ jobs:
       - name: Validate Go Build
         working-directory: ${{ github.workspace }}/demo-go
         run: |
+          mkdir -p .go/bin 
           pushd .go/bin
           go build -v ../../server/cmd/demo-grpc
           go build -v ../../server/cmd/demo-gate

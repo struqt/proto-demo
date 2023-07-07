@@ -20,8 +20,9 @@ protoc_gen() {
   fi
   local commit_sha_new
   commit_sha_new="$(git submodule status "${module_name}" | awk '{ print $1 }')"
-  git submodule status "${module_name}"
+  commit_sha_new=${commit_sha_new#+}
   echo "${commit_sha_old} ===> ${commit_sha_new}"
+  git submodule status "${module_name}"
   if [ "${commit_sha_old}" == "${commit_sha_new}" ]; then
     echo "Ignored. No changes."
     return
