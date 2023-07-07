@@ -5,15 +5,44 @@ on:
 
 jobs:
   bot:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        grpc_version: [
+          1.55,
+          1.56,
+        ]
+        build_type: [
+          Release,
+        ]
+        os: [
+          ubuntu-latest,
+        ]
+      fail-fast: true
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
         with: { submodules: true }
+
+      - name: Setup gRPC
+        id: cache-grpc
+        uses: actions/cache@v3
+        env:
+          cache-name: gRPC${{ matrix.grpc_version }}
+        with:
+          path: |
+            ${{ github.workspace }}/third-party/grpc
+            ${{ github.workspace }}/third-party/build
+          key: ${{ env.cache-name }} ${{ runner.os }} ${{ runner.arch }} ${{ matrix.build_type }}
+
       - name: Setup Go
         uses: actions/setup-go@v3
         with: { go-version: 1.19 }
-      - run: |
+
+      - name: Generate
+        if: steps.cache-grpc.outputs.cache-hit == 'true'
+        run: |
           bash ${{ github.workspace }}/protoc-gen.sh
+          git status
         shell: bash
   #bot
 #jobs
