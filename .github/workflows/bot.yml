@@ -8,7 +8,6 @@ jobs:
     strategy:
       matrix:
         grpc_version: [
-          #1.55,
           1.56,
         ]
         build_type: [
@@ -45,5 +44,11 @@ jobs:
           bash ${{ github.workspace }}/protoc-gen.sh
           git status
         shell: bash
+
+      - name: Git Commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_author: 'wkang[bot] <wkang2015@163.com>'
+          commit_message: '[bot-commit] Update proto submodule'
   #bot
 #jobs
