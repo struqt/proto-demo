@@ -9,6 +9,7 @@ on:
 #on
 
 env:
+  SKIP_TONIC_BUILD: true
   CARGO_TERM_COLOR: always
 
 jobs:

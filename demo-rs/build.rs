@@ -7,9 +7,9 @@ use walkdir::WalkDir;
 type Yes<T> = Result<T, Box<dyn std::error::Error>>;
 
 fn main() -> Yes<()> {
-    // if env::var("GITHUB_ACTIONS").is_ok() {
-    //     return Ok(());
-    // }
+    if env::var("SKIP_TONIC_BUILD").is_ok() {
+        return Ok(());
+    }
     let dir = &env::current_dir()?;
     let src = &dir.parent().unwrap().join("proto");
     let out = &dir.join("gen");
