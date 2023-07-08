@@ -7,7 +7,7 @@ declare -rx GRPC_VERSION="${2:-1.56}"
 declare -r SELF=$(readlink -f "$0")
 declare -r SELF_DIR=${SELF%/*}
 
-echo "$0 -- ${BUILD_TYPE:?} ${GRPC_VERSION:?}"
+echo "Run ${SELF} --- ${BUILD_TYPE:?} ${GRPC_VERSION:?}"
 
 function cmake_build() {
   local NAME="${1}"
@@ -18,7 +18,7 @@ function cmake_build() {
     echo "Installed to ${SHARED_PREFIX}"
     return
   fi
-  cmake -S "${PROJECT:?}" -B "${CMAKE_OUT}" \
+  cmake -S "$SELF_DIR/${PROJECT:?}" -B "${CMAKE_OUT}" \
     -D BUILD_SHARED_LIBS=OFF \
     -D CMAKE_BUILD_TYPE="${BUILD_TYPE:?}" \
     -D CMAKE_INSTALL_PREFIX="${SHARED_PREFIX}" \
@@ -53,10 +53,10 @@ function cmake_build_grpc() {
     -D gRPC_PROTOBUF_PROVIDER=package
 }
 
-if [ ! -d ./grpc ]; then
+if [ ! -d "${SELF_DIR}/grpc" ]; then
   git -c advice.detachedHead=false clone -j 6 \
-    --recurse-submodules --shallow-submodules --depth 10 \
-    -b "v${GRPC_VERSION}.x" https://github.com/grpc/grpc
+    --recurse-submodules --shallow-submodules --depth 10 -b "v${GRPC_VERSION}.x" \
+    https://github.com/grpc/grpc "${SELF_DIR}/grpc"
 fi
 
 cmake_build_grpc
