@@ -2,12 +2,17 @@
 // Created by Kang on 7/3/23.
 //
 
-#include <grpcpp/grpcpp.h>
 #include <iostream>
 #include <memory>
 #include <utility>
 
+#include <absl/flags/flag.h>
+#include <absl/flags/parse.h>
+#include <grpcpp/grpcpp.h>
+
 #include <struqt/common/v1/common.grpc.pb.h>
+
+ABSL_FLAG(int32_t, count, 5, "Count number of testing iteration");
 
 namespace v1common {
 using namespace struqt::common::v1;
@@ -46,10 +51,11 @@ void Test(std::shared_ptr<grpc::Channel> ch) {
 }
 } // namespace v1common
 
-int main() {
+int main(int argc, char **argv) {
+  ::absl::ParseCommandLine(argc, argv);
+  auto count = ::absl::GetFlag(FLAGS_count);
   // Create a gRPC channel and a client
   std::string server_address = "localhost:9090";
-
   grpc::ChannelArguments channel_args;
   channel_args.SetMaxReceiveMessageSize(1024 * 1024 * 16);
   channel_args.SetInt("grpc.keepalive_time_ms", 10000);
@@ -64,9 +70,10 @@ int main() {
 
   auto timeout = std::chrono::system_clock::now() + std::chrono::seconds(10);
   while (true) {
+    std::cout << "grpc::Channel State - " << ch->GetState(true) << std::endl;
     if (ch->WaitForConnected(timeout)) {
-      std::cout << ch->GetState(true) << std::endl;
-      for (int i = 0; i < 5; ++i) {
+      std::cout << "grpc::Channel State - " << ch->GetState(true) << std::endl;
+      for (int i = 0; i < count; ++i) {
         v1common::Test(ch);
       }
       break;
