@@ -9,6 +9,10 @@ edition = "2021"
 name = "demo-rs-server"
 path = "src/server/main.rs"
 
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = true
 
 [dependencies]
 prost = "0.11.9"
@@ -17,11 +21,7 @@ tonic = "0.9.2"
 
 [dependencies.tokio]
 version = "1.28.2"
-features = [
-    "macros",
-    "rt-multi-thread",
-]
-
+features = ["parking_lot", "rt-multi-thread", "macros", "io-util"]
 
 [build-dependencies]
 walkdir = "2.3.3"
