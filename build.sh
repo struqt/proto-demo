@@ -35,6 +35,7 @@ cmake_build() {
 
 "${SELF_DIR}"/third-party/install.sh 'Release'
 
+declare -rx SKIP_TONIC_BUILD=true
 cargo_build "${SELF_DIR}/demo-rs"
 
 go_build "${SELF_DIR}/demo-go"
