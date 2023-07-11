@@ -8,9 +8,6 @@
 
 ## Performance References
 
-[grpc.io - Benchmarking](https://grpc.io/docs/guides/benchmarking/)
-
-[grpc.io - Performance Best Practices](https://grpc.io/docs/guides/performance)
-
-[github.com - grpc_bench](https://github.com/LesnyRumcajs/grpc_bench)
-
+- [grpc.io - Benchmarking](https://grpc.io/docs/guides/benchmarking/)
+- [grpc.io - Performance Best Practices](https://grpc.io/docs/guides/performance)
+- [github.com - grpc_bench](https://github.com/LesnyRumcajs/grpc_bench)

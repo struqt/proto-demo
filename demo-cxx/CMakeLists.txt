@@ -66,6 +66,12 @@ fn_target_depends_demo_cxx_gen(demo_cxx_hello)
 
 
 #--------------------------------------------------------------
+add_executable(demo_cxx_server_mt)
+target_sources(demo_cxx_server_mt PRIVATE cmd/server_mt.cpp)
+fn_target_depends_demo_cxx_gen(demo_cxx_server_mt)
+
+
+#--------------------------------------------------------------
 add_executable(demo_cxx_server cmd/server.cpp)
 fn_target_depends_demo_cxx_gen(demo_cxx_server)
 file(GLOB_RECURSE SRC_SERVER ${CMAKE_CURRENT_SOURCE_DIR}/src/server/*.cpp)
