@@ -5,6 +5,34 @@
 
 ---
 
+## Setup and Build
+
+### Debian
+
+```
+apt install -y build-essential autoconf libtool pkg-config
+apt install -y cmake ca-certificates libssl-dev
+apt install -y golang
+```
+
+### macOS
+
+```
+brew install git
+brew install cmake openssl
+brew install rustup
+brew install goenv
+goenv install 1.19
+```
+
+### Build
+
+```
+git clone --recurse-submodules https://github.com/struqt/proto-demo.git
+./proto-demo/build.sh
+```
+
+---
 
 ## Performance References
 
