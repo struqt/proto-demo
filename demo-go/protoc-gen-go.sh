@@ -39,7 +39,7 @@ protoc_gen_go() {
 }
 
 source "${SELF_DIR}/protoc-setup.sh"
-export PATH="$PATH:$GOPATH/bin:$PROTOC_PATH/bin"
+export PATH="$PATH:${GOPATH:?}/bin:${PROTOC_PATH:?}/bin"
 
 protoc --version
 protoc-gen-go --version

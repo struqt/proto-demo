@@ -4,11 +4,15 @@
 #include <string>
 #include <thread>
 
+#include <absl/flags/flag.h>
+#include <absl/flags/parse.h>
 #include <google/protobuf/util/time_util.h>
 #include <grpc/support/log.h>
 #include <grpcpp/grpcpp.h>
 
 #include <struqt/common/v1/common.grpc.pb.h>
+
+ABSL_FLAG(std::string, address, "localhost:9090", "Listen address");
 
 using grpc::Server;
 using grpc::ServerAsyncResponseWriter;
@@ -27,8 +31,7 @@ public:
   }
 
   // There is no shutdown handling in this code.
-  void Run() {
-    std::string server_address("127.0.0.1:9090");
+  void Run(const std::string &server_address) {
     ServerBuilder builder;
     builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
     builder.RegisterService(&service_);
@@ -155,8 +158,10 @@ private:
   }; // class CallData
 };
 
-int main() {
+int main(int argc, char **argv) {
+  ::absl::ParseCommandLine(argc, argv);
+  auto address = ::absl::GetFlag(FLAGS_address);
   ServerImpl server;
-  server.Run();
+  server.Run(address);
   return 0;
 }
