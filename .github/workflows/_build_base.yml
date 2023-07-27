@@ -51,7 +51,7 @@ jobs:
         if: steps.cache-grpc.outputs.cache-hit != 'true'
         working-directory: ${{ github.workspace }}/third-party
         run: |
-          git -c advice.detachedHead=false clone -j 6 -b v${{ matrix.grpc_version }}.x \
+          git -c advice.detachedHead=false clone -j 16 -b v${{ matrix.grpc_version }}.x \
             --recurse-submodules --shallow-submodules --depth 10 https://github.com/grpc/grpc
 
       - name: gRPC Install

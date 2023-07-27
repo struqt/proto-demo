@@ -12,7 +12,8 @@ path = "src/server/main.rs"
 [profile.release]
 opt-level = 3
 codegen-units = 1
-lto = true
+#lto = true
+lto = "thin"
 
 [dependencies]
 prost = "0.11.9"

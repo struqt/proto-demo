@@ -53,7 +53,7 @@ jobs:
       - name: CMake Build
         if: steps.cache-grpc.outputs.cache-hit == 'true'
         working-directory: ${{ github.workspace }}/demo-cxx
-        run: cmake --build ${{ github.workspace }}/demo-cxx-build -j 6 --config ${{ matrix.build_type }}
+        run: cmake --build ${{ github.workspace }}/demo-cxx-build -j 16 --config ${{ matrix.build_type }}
 
       - name: Test
         if: steps.cache-grpc.outputs.cache-hit == 'true'
