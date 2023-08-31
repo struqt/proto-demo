@@ -9,7 +9,7 @@ set(DIR_THIRD_PARTY_OUT ${DIR_THIRD_PARTY}/build/target)
 if (CMAKE_HOST_SYSTEM_NAME STREQUAL "Darwin")
   execute_process(
     WORKING_DIRECTORY ${DIR_THIRD_PARTY}
-    COMMAND bash ${DIR_THIRD_PARTY}/install.sh ${CMAKE_BUILD_TYPE}
+    COMMAND bash ${DIR_THIRD_PARTY}/install.sh ${CMAKE_BUILD_TYPE} "1.57"
   )
 else ()
   execute_process(

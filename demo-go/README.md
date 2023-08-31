@@ -3,7 +3,7 @@
 ## Generate Source Code
 
 ```shell
-./protoc-gen.sh
+./protoc-gen-go.sh
 ```
 
 ## Run gRPC Server

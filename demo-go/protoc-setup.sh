@@ -10,7 +10,7 @@ fi
 
 install_protobuf_macos() {
   if command -v 'brew' >/dev/null 2>&1; then
-    brew install protobuf
+    brew install protobuf_xxx
   else
     echo "Homebrew not found. Please install protobuf manually."
     return 1

@@ -16,8 +16,8 @@ jobs:
     strategy:
       matrix:
         grpc_version: [
-          1.55,
           1.56,
+          1.57,
         ]
         build_type: [
           Release,
