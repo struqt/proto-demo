@@ -14,10 +14,10 @@ fn main() -> Yes<()> {
     let src = &dir.parent().unwrap().join("proto");
     let out = &dir.join("gen");
     let names = vec![
-        // "googleapis",
-        // "grpc-gateway",
-        // "common",
-        // "demo",
+        "googleapis",
+        "grpc-gateway",
+        "common",
+        "demo",
     ];
     protoc_gen_by_tonic(&names, src, out)
 }
