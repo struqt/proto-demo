@@ -74,8 +74,8 @@ declare -rx GO111MODULE='on'
 
 #go_install_bin sqlc v1.18.0 github.com/kyleconroy/sqlc/cmd/sqlc
 #go_install_bin buf v1.21.0 github.com/bufbuild/buf/cmd/buf
-go_install_bin protoc-gen-go v1.30.0 google.golang.org/protobuf/cmd/protoc-gen-go
+go_install_bin protoc-gen-go v1.31.0 google.golang.org/protobuf/cmd/protoc-gen-go
 go_install_bin protoc-gen-go-grpc v1.3.0 google.golang.org/grpc/cmd/protoc-gen-go-grpc
-go_install_bin protoc-gen-grpc-gateway v2.16.0 github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway
-go_install_bin protoc-gen-openapiv2 v2.16.0 github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2
+go_install_bin protoc-gen-grpc-gateway v2.17.1 github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-grpc-gateway
+go_install_bin protoc-gen-openapiv2 v2.17.1 github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2
 echo 'Installation finished'
