@@ -23,42 +23,6 @@ namespace _fl = ::google::protobuf::internal::field_layout;
 namespace struqt {
 namespace demo {
 namespace v3 {
-        template <typename>
-PROTOBUF_CONSTEXPR EchoValueRequest::EchoValueRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.value_)*/ nullptr,
-    } {}
-struct EchoValueRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR EchoValueRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~EchoValueRequestDefaultTypeInternal() {}
-  union {
-    EchoValueRequest _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoValueRequestDefaultTypeInternal _EchoValueRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR EchoValueResponse::EchoValueResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.value_)*/ nullptr,
-      /*decltype(_impl_.timestamp_)*/ nullptr,
-      /*decltype(_impl_.pb3_message_)*/ nullptr,
-    } {}
-struct EchoValueResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR EchoValueResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~EchoValueResponseDefaultTypeInternal() {}
-  union {
-    EchoValueResponse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoValueResponseDefaultTypeInternal _EchoValueResponse_default_instance_;
       template <typename>
 PROTOBUF_CONSTEXPR Proto3Message_MapValueEntry_DoNotUse::Proto3Message_MapValueEntry_DoNotUse(::_pbi::ConstantInitialized) {}
 struct Proto3Message_MapValueEntry_DoNotUseDefaultTypeInternal {
@@ -72,77 +36,17 @@ struct Proto3Message_MapValueEntry_DoNotUseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValueEntry_DoNotUseDefaultTypeInternal _Proto3Message_MapValueEntry_DoNotUse_default_instance_;
       template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue2Entry_DoNotUse::Proto3Message_MapValue2Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR Proto3Message_MapValue9Entry_DoNotUse::Proto3Message_MapValue9Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal() {}
   union {
-    Proto3Message_MapValue2Entry_DoNotUse _instance;
+    Proto3Message_MapValue9Entry_DoNotUse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue2Entry_DoNotUse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue3Entry_DoNotUse::Proto3Message_MapValue3Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal() {}
-  union {
-    Proto3Message_MapValue3Entry_DoNotUse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue3Entry_DoNotUse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue4Entry_DoNotUse::Proto3Message_MapValue4Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal() {}
-  union {
-    Proto3Message_MapValue4Entry_DoNotUse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue4Entry_DoNotUse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue5Entry_DoNotUse::Proto3Message_MapValue5Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal() {}
-  union {
-    Proto3Message_MapValue5Entry_DoNotUse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue5Entry_DoNotUse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue6Entry_DoNotUse::Proto3Message_MapValue6Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal() {}
-  union {
-    Proto3Message_MapValue6Entry_DoNotUse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue6Entry_DoNotUse_default_instance_;
-      template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue7Entry_DoNotUse::Proto3Message_MapValue7Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal() {}
-  union {
-    Proto3Message_MapValue7Entry_DoNotUse _instance;
-  };
-};
-
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue7Entry_DoNotUse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue9Entry_DoNotUse_default_instance_;
       template <typename>
 PROTOBUF_CONSTEXPR Proto3Message_MapValue8Entry_DoNotUse::Proto3Message_MapValue8Entry_DoNotUse(::_pbi::ConstantInitialized) {}
 struct Proto3Message_MapValue8Entry_DoNotUseDefaultTypeInternal {
@@ -156,53 +60,77 @@ struct Proto3Message_MapValue8Entry_DoNotUseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue8Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue8Entry_DoNotUse_default_instance_;
       template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue9Entry_DoNotUse::Proto3Message_MapValue9Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR Proto3Message_MapValue7Entry_DoNotUse::Proto3Message_MapValue7Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal() {}
   union {
-    Proto3Message_MapValue9Entry_DoNotUse _instance;
+    Proto3Message_MapValue7Entry_DoNotUse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue9Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue9Entry_DoNotUse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue7Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue7Entry_DoNotUse_default_instance_;
       template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue10Entry_DoNotUse::Proto3Message_MapValue10Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR Proto3Message_MapValue6Entry_DoNotUse::Proto3Message_MapValue6Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal() {}
   union {
-    Proto3Message_MapValue10Entry_DoNotUse _instance;
+    Proto3Message_MapValue6Entry_DoNotUse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue10Entry_DoNotUse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue6Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue6Entry_DoNotUse_default_instance_;
       template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue12Entry_DoNotUse::Proto3Message_MapValue12Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR Proto3Message_MapValue5Entry_DoNotUse::Proto3Message_MapValue5Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal() {}
   union {
-    Proto3Message_MapValue12Entry_DoNotUse _instance;
+    Proto3Message_MapValue5Entry_DoNotUse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue12Entry_DoNotUse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue5Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue5Entry_DoNotUse_default_instance_;
       template <typename>
-PROTOBUF_CONSTEXPR Proto3Message_MapValue14Entry_DoNotUse::Proto3Message_MapValue14Entry_DoNotUse(::_pbi::ConstantInitialized) {}
-struct Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal() {}
+PROTOBUF_CONSTEXPR Proto3Message_MapValue4Entry_DoNotUse::Proto3Message_MapValue4Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal() {}
   union {
-    Proto3Message_MapValue14Entry_DoNotUse _instance;
+    Proto3Message_MapValue4Entry_DoNotUse _instance;
   };
 };
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue14Entry_DoNotUse_default_instance_;
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue4Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue4Entry_DoNotUse_default_instance_;
+      template <typename>
+PROTOBUF_CONSTEXPR Proto3Message_MapValue3Entry_DoNotUse::Proto3Message_MapValue3Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Proto3Message_MapValue3Entry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue3Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue3Entry_DoNotUse_default_instance_;
+      template <typename>
+PROTOBUF_CONSTEXPR Proto3Message_MapValue2Entry_DoNotUse::Proto3Message_MapValue2Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Proto3Message_MapValue2Entry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue2Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue2Entry_DoNotUse_default_instance_;
       template <typename>
 PROTOBUF_CONSTEXPR Proto3Message_MapValue15Entry_DoNotUse::Proto3Message_MapValue15Entry_DoNotUse(::_pbi::ConstantInitialized) {}
 struct Proto3Message_MapValue15Entry_DoNotUseDefaultTypeInternal {
@@ -216,6 +144,42 @@ struct Proto3Message_MapValue15Entry_DoNotUseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue15Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue15Entry_DoNotUse_default_instance_;
       template <typename>
+PROTOBUF_CONSTEXPR Proto3Message_MapValue14Entry_DoNotUse::Proto3Message_MapValue14Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Proto3Message_MapValue14Entry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue14Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue14Entry_DoNotUse_default_instance_;
+      template <typename>
+PROTOBUF_CONSTEXPR Proto3Message_MapValue12Entry_DoNotUse::Proto3Message_MapValue12Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Proto3Message_MapValue12Entry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue12Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue12Entry_DoNotUse_default_instance_;
+      template <typename>
+PROTOBUF_CONSTEXPR Proto3Message_MapValue10Entry_DoNotUse::Proto3Message_MapValue10Entry_DoNotUse(::_pbi::ConstantInitialized) {}
+struct Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Proto3Message_MapValue10Entry_DoNotUse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue10Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue10Entry_DoNotUse_default_instance_;
+      template <typename>
 PROTOBUF_CONSTEXPR Proto3Message_MapValue16Entry_DoNotUse::Proto3Message_MapValue16Entry_DoNotUse(::_pbi::ConstantInitialized) {}
 struct Proto3Message_MapValue16Entry_DoNotUseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Proto3Message_MapValue16Entry_DoNotUseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
@@ -227,64 +191,83 @@ struct Proto3Message_MapValue16Entry_DoNotUseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3Message_MapValue16Entry_DoNotUseDefaultTypeInternal _Proto3Message_MapValue16Entry_DoNotUse_default_instance_;
-        template <typename>
+
+inline constexpr EchoValueRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        value_{nullptr} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR EchoValueRequest::EchoValueRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct EchoValueRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EchoValueRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EchoValueRequestDefaultTypeInternal() {}
+  union {
+    EchoValueRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoValueRequestDefaultTypeInternal _EchoValueRequest_default_instance_;
+
+inline constexpr Proto3Message::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        repeated_value_{},
+        repeated_enum_{},
+        _repeated_enum_cached_byte_size_{0},
+        map_value_{},
+        map_value2_{},
+        map_value3_{},
+        map_value4_{},
+        map_value5_{},
+        map_value6_{},
+        map_value7_{},
+        map_value8_{},
+        map_value9_{},
+        map_value10_{},
+        map_value12_{},
+        map_value14_{},
+        map_value15_{},
+        repeated_message_{},
+        map_value16_{},
+        string_value_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        bytes_value_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        timestamp_value_{nullptr},
+        duration_value_{nullptr},
+        field_mask_value_{nullptr},
+        wrapper_double_value_{nullptr},
+        wrapper_float_value_{nullptr},
+        wrapper_int64_value_{nullptr},
+        wrapper_int32_value_{nullptr},
+        wrapper_u_int64_value_{nullptr},
+        wrapper_u_int32_value_{nullptr},
+        wrapper_bool_value_{nullptr},
+        wrapper_string_value_{nullptr},
+        wrapper_bytes_value_{nullptr},
+        nested_{nullptr},
+        struct_value_value_{nullptr},
+        struct_value_{nullptr},
+        int64_value_{::int64_t{0}},
+        uint64_value_{::uint64_t{0u}},
+        int32_value_{0},
+        uint32_value_{0u},
+        bool_value_{false},
+        enum_value_{static_cast< ::struqt::demo::v3::EnumValue >(0)},
+        double_value_{0},
+        float_value_{0},
+        oneof_value_{},
+        nested_oneof_value_{},
+        _oneof_case_{} {}
+
+template <typename>
 PROTOBUF_CONSTEXPR Proto3Message::Proto3Message(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.repeated_value_)*/ {},
-      /*decltype(_impl_.repeated_enum_)*/ {},
-      /*decltype(_impl_._repeated_enum_cached_byte_size_)*/ {0},
-      /* decltype(_impl_.map_value_) */ {},
-      /* decltype(_impl_.map_value2_) */ {},
-      /* decltype(_impl_.map_value3_) */ {},
-      /* decltype(_impl_.map_value4_) */ {},
-      /* decltype(_impl_.map_value5_) */ {},
-      /* decltype(_impl_.map_value6_) */ {},
-      /* decltype(_impl_.map_value7_) */ {},
-      /* decltype(_impl_.map_value8_) */ {},
-      /* decltype(_impl_.map_value9_) */ {},
-      /* decltype(_impl_.map_value10_) */ {},
-      /* decltype(_impl_.map_value12_) */ {},
-      /* decltype(_impl_.map_value14_) */ {},
-      /* decltype(_impl_.map_value15_) */ {},
-      /*decltype(_impl_.repeated_message_)*/ {},
-      /* decltype(_impl_.map_value16_) */ {},
-      /*decltype(_impl_.string_value_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.bytes_value_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.timestamp_value_)*/ nullptr,
-      /*decltype(_impl_.duration_value_)*/ nullptr,
-      /*decltype(_impl_.field_mask_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_double_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_float_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_int64_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_int32_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_u_int64_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_u_int32_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_bool_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_string_value_)*/ nullptr,
-      /*decltype(_impl_.wrapper_bytes_value_)*/ nullptr,
-      /*decltype(_impl_.nested_)*/ nullptr,
-      /*decltype(_impl_.struct_value_value_)*/ nullptr,
-      /*decltype(_impl_.struct_value_)*/ nullptr,
-      /*decltype(_impl_.int64_value_)*/ ::int64_t{0},
-      /*decltype(_impl_.uint64_value_)*/ ::uint64_t{0u},
-      /*decltype(_impl_.int32_value_)*/ 0,
-      /*decltype(_impl_.uint32_value_)*/ 0u,
-      /*decltype(_impl_.bool_value_)*/ false,
-      /*decltype(_impl_.enum_value_)*/ 0,
-      /*decltype(_impl_.double_value_)*/ 0,
-      /*decltype(_impl_.float_value_)*/ 0,
-      /*decltype(_impl_.oneof_value_)*/ {},
-      /*decltype(_impl_.nested_oneof_value_)*/ {},
-      /*decltype(_impl_._oneof_case_)*/ {},
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct Proto3MessageDefaultTypeInternal {
   PROTOBUF_CONSTEXPR Proto3MessageDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~Proto3MessageDefaultTypeInternal() {}
@@ -295,6 +278,27 @@ struct Proto3MessageDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 Proto3MessageDefaultTypeInternal _Proto3Message_default_instance_;
+
+inline constexpr EchoValueResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        value_{nullptr},
+        timestamp_{nullptr},
+        pb3_message_{nullptr} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR EchoValueResponse::EchoValueResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct EchoValueResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EchoValueResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EchoValueResponseDefaultTypeInternal() {}
+  union {
+    EchoValueResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoValueResponseDefaultTypeInternal _EchoValueResponse_default_instance_;
 }  // namespace v3
 }  // namespace demo
 }  // namespace struqt
@@ -783,16 +787,10 @@ const ::google::protobuf::EnumDescriptor* EnumValue_descriptor() {
   ::google::protobuf::internal::AssignDescriptors(&descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto);
   return file_level_enum_descriptors_struqt_2fdemo_2fv3_2fmessages_2eproto[0];
 }
+PROTOBUF_CONSTINIT const uint32_t EnumValue_internal_data_[] = {
+    262144u, 0u, };
 bool EnumValue_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-      return true;
-    default:
-      return false;
-  }
+  return 0 <= value && value <= 3;
 }
 // ===================================================================
 
@@ -811,6 +809,7 @@ const ::google::protobuf::Value& EchoValueRequest::_Internal::value(const EchoVa
   return *msg->_impl_.value_;
 }
 void EchoValueRequest::clear_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.value_ != nullptr) _impl_.value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
@@ -819,29 +818,36 @@ EchoValueRequest::EchoValueRequest(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v3.EchoValueRequest)
 }
-EchoValueRequest::EchoValueRequest(const EchoValueRequest& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE EchoValueRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0} {}
+
+EchoValueRequest::EchoValueRequest(
+    ::google::protobuf::Arena* arena,
+    const EchoValueRequest& from)
+    : ::google::protobuf::Message(arena) {
   EchoValueRequest* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.value_){nullptr},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.value_ = new ::google::protobuf::Value(*from._impl_.value_);
-  }
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.value_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.value_)
+                : nullptr;
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v3.EchoValueRequest)
 }
+inline PROTOBUF_NDEBUG_INLINE EchoValueRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
 inline void EchoValueRequest::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.value_){nullptr},
-  };
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.value_ = {};
 }
 EchoValueRequest::~EchoValueRequest() {
   // @@protoc_insertion_point(destructor:struqt.demo.v3.EchoValueRequest)
@@ -849,15 +855,14 @@ EchoValueRequest::~EchoValueRequest() {
   SharedDtor();
 }
 inline void EchoValueRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.value_;
-}
-void EchoValueRequest::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  ABSL_DCHECK(GetArena() == nullptr);
+  delete _impl_.value_;
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void EchoValueRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v3.EchoValueRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -918,8 +923,8 @@ const ::_pbi::TcParseTable<0, 1, 1, 0, 2> EchoValueRequest::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Value value = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        1, _Internal::value(this),
         _Internal::value(this).GetCachedSize(), target, stream);
   }
 
@@ -943,20 +948,20 @@ const ::_pbi::TcParseTable<0, 1, 1, 0, 2> EchoValueRequest::_table_ = {
   // .google.protobuf.Value value = 1;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *_impl_.value_);
+    total_size +=
+        1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.value_);
   }
 
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
 const ::google::protobuf::Message::ClassData EchoValueRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    EchoValueRequest::MergeImpl
+    EchoValueRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*EchoValueRequest::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* EchoValueRequest::GetClassData() const {
+  return &_class_data_;
+}
 
 void EchoValueRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<EchoValueRequest*>(&to_msg);
@@ -984,7 +989,10 @@ PROTOBUF_NOINLINE bool EchoValueRequest::IsInitialized() const {
   return true;
 }
 
-void EchoValueRequest::InternalSwap(EchoValueRequest* other) {
+::_pbi::CachedSize* EchoValueRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void EchoValueRequest::InternalSwap(EchoValueRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
@@ -1027,10 +1035,12 @@ const ::struqt::demo::v3::Proto3Message& EchoValueResponse::_Internal::pb3_messa
   return *msg->_impl_.pb3_message_;
 }
 void EchoValueResponse::clear_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.value_ != nullptr) _impl_.value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 void EchoValueResponse::clear_timestamp() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.timestamp_ != nullptr) _impl_.timestamp_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
@@ -1039,39 +1049,47 @@ EchoValueResponse::EchoValueResponse(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v3.EchoValueResponse)
 }
-EchoValueResponse::EchoValueResponse(const EchoValueResponse& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE EchoValueResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0} {}
+
+EchoValueResponse::EchoValueResponse(
+    ::google::protobuf::Arena* arena,
+    const EchoValueResponse& from)
+    : ::google::protobuf::Message(arena) {
   EchoValueResponse* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.value_){nullptr},
-      decltype(_impl_.timestamp_){nullptr},
-      decltype(_impl_.pb3_message_){nullptr},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.value_ = new ::google::protobuf::Value(*from._impl_.value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
-    _this->_impl_.timestamp_ = new ::google::protobuf::Timestamp(*from._impl_.timestamp_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
-    _this->_impl_.pb3_message_ = new ::struqt::demo::v3::Proto3Message(*from._impl_.pb3_message_);
-  }
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.value_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.value_)
+                : nullptr;
+  _impl_.timestamp_ = (cached_has_bits & 0x00000002u)
+                ? CreateMaybeMessage<::google::protobuf::Timestamp>(arena, *from._impl_.timestamp_)
+                : nullptr;
+  _impl_.pb3_message_ = (cached_has_bits & 0x00000004u)
+                ? CreateMaybeMessage<::struqt::demo::v3::Proto3Message>(arena, *from._impl_.pb3_message_)
+                : nullptr;
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v3.EchoValueResponse)
 }
+inline PROTOBUF_NDEBUG_INLINE EchoValueResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
 inline void EchoValueResponse::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.value_){nullptr},
-      decltype(_impl_.timestamp_){nullptr},
-      decltype(_impl_.pb3_message_){nullptr},
-  };
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, value_),
+           0,
+           offsetof(Impl_, pb3_message_) -
+               offsetof(Impl_, value_) +
+               sizeof(Impl_::pb3_message_));
 }
 EchoValueResponse::~EchoValueResponse() {
   // @@protoc_insertion_point(destructor:struqt.demo.v3.EchoValueResponse)
@@ -1079,17 +1097,16 @@ EchoValueResponse::~EchoValueResponse() {
   SharedDtor();
 }
 inline void EchoValueResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.value_;
-  if (this != internal_default_instance()) delete _impl_.timestamp_;
-  if (this != internal_default_instance()) delete _impl_.pb3_message_;
-}
-void EchoValueResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  ABSL_DCHECK(GetArena() == nullptr);
+  delete _impl_.value_;
+  delete _impl_.timestamp_;
+  delete _impl_.pb3_message_;
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void EchoValueResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v3.EchoValueResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1175,22 +1192,22 @@ const ::_pbi::TcParseTable<2, 3, 3, 0, 2> EchoValueResponse::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Value value = 1;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(1, _Internal::value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        1, _Internal::value(this),
         _Internal::value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Timestamp timestamp = 2;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(2, _Internal::timestamp(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        2, _Internal::timestamp(this),
         _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
   // .struqt.demo.v3.Proto3Message pb3_message = 3;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::pb3_message(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        3, _Internal::pb3_message(this),
         _Internal::pb3_message(this).GetCachedSize(), target, stream);
   }
 
@@ -1215,23 +1232,20 @@ const ::_pbi::TcParseTable<2, 3, 3, 0, 2> EchoValueResponse::_table_ = {
   if (cached_has_bits & 0x00000007u) {
     // .google.protobuf.Value value = 1;
     if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.value_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.value_);
     }
 
     // .google.protobuf.Timestamp timestamp = 2;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.timestamp_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.timestamp_);
     }
 
     // .struqt.demo.v3.Proto3Message pb3_message = 3;
     if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.pb3_message_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.pb3_message_);
     }
 
   }
@@ -1239,11 +1253,12 @@ const ::_pbi::TcParseTable<2, 3, 3, 0, 2> EchoValueResponse::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData EchoValueResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    EchoValueResponse::MergeImpl
+    EchoValueResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*EchoValueResponse::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* EchoValueResponse::GetClassData() const {
+  return &_class_data_;
+}
 
 void EchoValueResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<EchoValueResponse*>(&to_msg);
@@ -1282,7 +1297,10 @@ PROTOBUF_NOINLINE bool EchoValueResponse::IsInitialized() const {
   return true;
 }
 
-void EchoValueResponse::InternalSwap(EchoValueResponse* other) {
+::_pbi::CachedSize* EchoValueResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void EchoValueResponse::InternalSwap(EchoValueResponse* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
@@ -1304,9 +1322,6 @@ void EchoValueResponse::InternalSwap(EchoValueResponse* other) {
 Proto3Message_MapValueEntry_DoNotUse::Proto3Message_MapValueEntry_DoNotUse() {}
 Proto3Message_MapValueEntry_DoNotUse::Proto3Message_MapValueEntry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValueEntry_DoNotUse::MergeFrom(const Proto3Message_MapValueEntry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValueEntry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1317,9 +1332,6 @@ void Proto3Message_MapValueEntry_DoNotUse::MergeFrom(const Proto3Message_MapValu
 Proto3Message_MapValue2Entry_DoNotUse::Proto3Message_MapValue2Entry_DoNotUse() {}
 Proto3Message_MapValue2Entry_DoNotUse::Proto3Message_MapValue2Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue2Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue2Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue2Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1330,9 +1342,6 @@ void Proto3Message_MapValue2Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue3Entry_DoNotUse::Proto3Message_MapValue3Entry_DoNotUse() {}
 Proto3Message_MapValue3Entry_DoNotUse::Proto3Message_MapValue3Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue3Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue3Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue3Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1343,9 +1352,6 @@ void Proto3Message_MapValue3Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue4Entry_DoNotUse::Proto3Message_MapValue4Entry_DoNotUse() {}
 Proto3Message_MapValue4Entry_DoNotUse::Proto3Message_MapValue4Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue4Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue4Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue4Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1356,9 +1362,6 @@ void Proto3Message_MapValue4Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue5Entry_DoNotUse::Proto3Message_MapValue5Entry_DoNotUse() {}
 Proto3Message_MapValue5Entry_DoNotUse::Proto3Message_MapValue5Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue5Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue5Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue5Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1369,9 +1372,6 @@ void Proto3Message_MapValue5Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue6Entry_DoNotUse::Proto3Message_MapValue6Entry_DoNotUse() {}
 Proto3Message_MapValue6Entry_DoNotUse::Proto3Message_MapValue6Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue6Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue6Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue6Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1382,9 +1382,6 @@ void Proto3Message_MapValue6Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue7Entry_DoNotUse::Proto3Message_MapValue7Entry_DoNotUse() {}
 Proto3Message_MapValue7Entry_DoNotUse::Proto3Message_MapValue7Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue7Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue7Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue7Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1395,9 +1392,6 @@ void Proto3Message_MapValue7Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue8Entry_DoNotUse::Proto3Message_MapValue8Entry_DoNotUse() {}
 Proto3Message_MapValue8Entry_DoNotUse::Proto3Message_MapValue8Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue8Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue8Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue8Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1408,9 +1402,6 @@ void Proto3Message_MapValue8Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue9Entry_DoNotUse::Proto3Message_MapValue9Entry_DoNotUse() {}
 Proto3Message_MapValue9Entry_DoNotUse::Proto3Message_MapValue9Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue9Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue9Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue9Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1421,9 +1412,6 @@ void Proto3Message_MapValue9Entry_DoNotUse::MergeFrom(const Proto3Message_MapVal
 Proto3Message_MapValue10Entry_DoNotUse::Proto3Message_MapValue10Entry_DoNotUse() {}
 Proto3Message_MapValue10Entry_DoNotUse::Proto3Message_MapValue10Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue10Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue10Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue10Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1434,9 +1422,6 @@ void Proto3Message_MapValue10Entry_DoNotUse::MergeFrom(const Proto3Message_MapVa
 Proto3Message_MapValue12Entry_DoNotUse::Proto3Message_MapValue12Entry_DoNotUse() {}
 Proto3Message_MapValue12Entry_DoNotUse::Proto3Message_MapValue12Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue12Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue12Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue12Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1447,9 +1432,6 @@ void Proto3Message_MapValue12Entry_DoNotUse::MergeFrom(const Proto3Message_MapVa
 Proto3Message_MapValue14Entry_DoNotUse::Proto3Message_MapValue14Entry_DoNotUse() {}
 Proto3Message_MapValue14Entry_DoNotUse::Proto3Message_MapValue14Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue14Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue14Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue14Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1460,9 +1442,6 @@ void Proto3Message_MapValue14Entry_DoNotUse::MergeFrom(const Proto3Message_MapVa
 Proto3Message_MapValue15Entry_DoNotUse::Proto3Message_MapValue15Entry_DoNotUse() {}
 Proto3Message_MapValue15Entry_DoNotUse::Proto3Message_MapValue15Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue15Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue15Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue15Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1473,9 +1452,6 @@ void Proto3Message_MapValue15Entry_DoNotUse::MergeFrom(const Proto3Message_MapVa
 Proto3Message_MapValue16Entry_DoNotUse::Proto3Message_MapValue16Entry_DoNotUse() {}
 Proto3Message_MapValue16Entry_DoNotUse::Proto3Message_MapValue16Entry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void Proto3Message_MapValue16Entry_DoNotUse::MergeFrom(const Proto3Message_MapValue16Entry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
 ::google::protobuf::Metadata Proto3Message_MapValue16Entry_DoNotUse::GetMetadata() const {
   return ::_pbi::AssignDescriptors(
       &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_getter, &descriptor_table_struqt_2fdemo_2fv3_2fmessages_2eproto_once,
@@ -1602,29 +1578,31 @@ const ::google::protobuf::Struct& Proto3Message::_Internal::struct_value(const P
   return *msg->_impl_.struct_value_;
 }
 void Proto3Message::clear_repeated_message() {
-  _internal_mutable_repeated_message()->Clear();
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
+  _impl_.repeated_message_.Clear();
 }
 void Proto3Message::clear_timestamp_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.timestamp_value_ != nullptr) _impl_.timestamp_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 void Proto3Message::clear_duration_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.duration_value_ != nullptr) _impl_.duration_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
 void Proto3Message::clear_field_mask_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.field_mask_value_ != nullptr) _impl_.field_mask_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
 void Proto3Message::set_allocated_nested_oneof_value_one(::struqt::demo::v3::Proto3Message* nested_oneof_value_one) {
-  ::google::protobuf::Arena* message_arena = GetArenaForAllocation();
+  ::google::protobuf::Arena* message_arena = GetArena();
   clear_nested_oneof_value();
   if (nested_oneof_value_one) {
-    ::google::protobuf::Arena* submessage_arena =
-      ::google::protobuf::Arena::InternalGetOwningArena(nested_oneof_value_one);
+    ::google::protobuf::Arena* submessage_arena = nested_oneof_value_one->GetArena();
     if (message_arena != submessage_arena) {
-      nested_oneof_value_one = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, nested_oneof_value_one, submessage_arena);
+      nested_oneof_value_one = ::google::protobuf::internal::GetOwnedMessage(message_arena, nested_oneof_value_one, submessage_arena);
     }
     set_has_nested_oneof_value_one();
     _impl_.nested_oneof_value_.nested_oneof_value_one_ = nested_oneof_value_one;
@@ -1632,49 +1610,61 @@ void Proto3Message::set_allocated_nested_oneof_value_one(::struqt::demo::v3::Pro
   // @@protoc_insertion_point(field_set_allocated:struqt.demo.v3.Proto3Message.nested_oneof_value_one)
 }
 void Proto3Message::clear_wrapper_double_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_double_value_ != nullptr) _impl_.wrapper_double_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
 void Proto3Message::clear_wrapper_float_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_float_value_ != nullptr) _impl_.wrapper_float_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000010u;
 }
 void Proto3Message::clear_wrapper_int64_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_int64_value_ != nullptr) _impl_.wrapper_int64_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000020u;
 }
 void Proto3Message::clear_wrapper_int32_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_int32_value_ != nullptr) _impl_.wrapper_int32_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000040u;
 }
 void Proto3Message::clear_wrapper_u_int64_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_u_int64_value_ != nullptr) _impl_.wrapper_u_int64_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000080u;
 }
 void Proto3Message::clear_wrapper_u_int32_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_u_int32_value_ != nullptr) _impl_.wrapper_u_int32_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000100u;
 }
 void Proto3Message::clear_wrapper_bool_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_bool_value_ != nullptr) _impl_.wrapper_bool_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000200u;
 }
 void Proto3Message::clear_wrapper_string_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_string_value_ != nullptr) _impl_.wrapper_string_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000400u;
 }
 void Proto3Message::clear_wrapper_bytes_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.wrapper_bytes_value_ != nullptr) _impl_.wrapper_bytes_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00000800u;
 }
 void Proto3Message::clear_map_value16() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   _impl_.map_value16_.Clear();
 }
 void Proto3Message::clear_struct_value_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.struct_value_value_ != nullptr) _impl_.struct_value_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00002000u;
 }
 void Proto3Message::clear_struct_value() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.struct_value_ != nullptr) _impl_.struct_value_->Clear();
   _impl_._has_bits_[0] &= ~0x00004000u;
 }
@@ -1683,227 +1673,153 @@ Proto3Message::Proto3Message(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v3.Proto3Message)
 }
-Proto3Message::Proto3Message(const Proto3Message& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE Proto3Message::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        repeated_value_{visibility, arena, from.repeated_value_},
+        repeated_enum_{visibility, arena, from.repeated_enum_},
+        _repeated_enum_cached_byte_size_{0},
+        map_value_{visibility, arena, from.map_value_},
+        map_value2_{visibility, arena, from.map_value2_},
+        map_value3_{visibility, arena, from.map_value3_},
+        map_value4_{visibility, arena, from.map_value4_},
+        map_value5_{visibility, arena, from.map_value5_},
+        map_value6_{visibility, arena, from.map_value6_},
+        map_value7_{visibility, arena, from.map_value7_},
+        map_value8_{visibility, arena, from.map_value8_},
+        map_value9_{visibility, arena, from.map_value9_},
+        map_value10_{visibility, arena, from.map_value10_},
+        map_value12_{visibility, arena, from.map_value12_},
+        map_value14_{visibility, arena, from.map_value14_},
+        map_value15_{visibility, arena, from.map_value15_},
+        repeated_message_{visibility, arena, from.repeated_message_},
+        map_value16_{visibility, arena, from.map_value16_},
+        string_value_(arena, from.string_value_),
+        bytes_value_(arena, from.bytes_value_),
+        oneof_value_{},
+        nested_oneof_value_{},
+        _oneof_case_{from._oneof_case_[0], from._oneof_case_[1]} {}
+
+Proto3Message::Proto3Message(
+    ::google::protobuf::Arena* arena,
+    const Proto3Message& from)
+    : ::google::protobuf::Message(arena) {
   Proto3Message* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.repeated_value_){from._impl_.repeated_value_},
-      decltype(_impl_.repeated_enum_){from._internal_repeated_enum()},
-      /*decltype(_impl_._repeated_enum_cached_byte_size_)*/ {0},
-      /* decltype(_impl_.map_value_) */ {},
-      /* decltype(_impl_.map_value2_) */ {},
-      /* decltype(_impl_.map_value3_) */ {},
-      /* decltype(_impl_.map_value4_) */ {},
-      /* decltype(_impl_.map_value5_) */ {},
-      /* decltype(_impl_.map_value6_) */ {},
-      /* decltype(_impl_.map_value7_) */ {},
-      /* decltype(_impl_.map_value8_) */ {},
-      /* decltype(_impl_.map_value9_) */ {},
-      /* decltype(_impl_.map_value10_) */ {},
-      /* decltype(_impl_.map_value12_) */ {},
-      /* decltype(_impl_.map_value14_) */ {},
-      /* decltype(_impl_.map_value15_) */ {},
-      decltype(_impl_.repeated_message_){from._impl_.repeated_message_},
-      /* decltype(_impl_.map_value16_) */ {},
-      decltype(_impl_.string_value_){},
-      decltype(_impl_.bytes_value_){},
-      decltype(_impl_.timestamp_value_){nullptr},
-      decltype(_impl_.duration_value_){nullptr},
-      decltype(_impl_.field_mask_value_){nullptr},
-      decltype(_impl_.wrapper_double_value_){nullptr},
-      decltype(_impl_.wrapper_float_value_){nullptr},
-      decltype(_impl_.wrapper_int64_value_){nullptr},
-      decltype(_impl_.wrapper_int32_value_){nullptr},
-      decltype(_impl_.wrapper_u_int64_value_){nullptr},
-      decltype(_impl_.wrapper_u_int32_value_){nullptr},
-      decltype(_impl_.wrapper_bool_value_){nullptr},
-      decltype(_impl_.wrapper_string_value_){nullptr},
-      decltype(_impl_.wrapper_bytes_value_){nullptr},
-      decltype(_impl_.nested_){nullptr},
-      decltype(_impl_.struct_value_value_){nullptr},
-      decltype(_impl_.struct_value_){nullptr},
-      decltype(_impl_.int64_value_){},
-      decltype(_impl_.uint64_value_){},
-      decltype(_impl_.int32_value_){},
-      decltype(_impl_.uint32_value_){},
-      decltype(_impl_.bool_value_){},
-      decltype(_impl_.enum_value_){},
-      decltype(_impl_.double_value_){},
-      decltype(_impl_.float_value_){},
-      decltype(_impl_.oneof_value_){},
-      decltype(_impl_.nested_oneof_value_){},
-      /*decltype(_impl_._oneof_case_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _this->_impl_.map_value_.MergeFrom(from._impl_.map_value_);
-  _this->_impl_.map_value2_.MergeFrom(from._impl_.map_value2_);
-  _this->_impl_.map_value3_.MergeFrom(from._impl_.map_value3_);
-  _this->_impl_.map_value4_.MergeFrom(from._impl_.map_value4_);
-  _this->_impl_.map_value5_.MergeFrom(from._impl_.map_value5_);
-  _this->_impl_.map_value6_.MergeFrom(from._impl_.map_value6_);
-  _this->_impl_.map_value7_.MergeFrom(from._impl_.map_value7_);
-  _this->_impl_.map_value8_.MergeFrom(from._impl_.map_value8_);
-  _this->_impl_.map_value9_.MergeFrom(from._impl_.map_value9_);
-  _this->_impl_.map_value10_.MergeFrom(from._impl_.map_value10_);
-  _this->_impl_.map_value12_.MergeFrom(from._impl_.map_value12_);
-  _this->_impl_.map_value14_.MergeFrom(from._impl_.map_value14_);
-  _this->_impl_.map_value15_.MergeFrom(from._impl_.map_value15_);
-  _this->_impl_.map_value16_.MergeFrom(from._impl_.map_value16_);
-  _impl_.string_value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.string_value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_string_value().empty()) {
-    _this->_impl_.string_value_.Set(from._internal_string_value(), _this->GetArenaForAllocation());
-  }
-  _impl_.bytes_value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.bytes_value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_bytes_value().empty()) {
-    _this->_impl_.bytes_value_.Set(from._internal_bytes_value(), _this->GetArenaForAllocation());
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.timestamp_value_ = new ::google::protobuf::Timestamp(*from._impl_.timestamp_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
-    _this->_impl_.duration_value_ = new ::google::protobuf::Duration(*from._impl_.duration_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000004u) != 0) {
-    _this->_impl_.field_mask_value_ = new ::google::protobuf::FieldMask(*from._impl_.field_mask_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000008u) != 0) {
-    _this->_impl_.wrapper_double_value_ = new ::google::protobuf::DoubleValue(*from._impl_.wrapper_double_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000010u) != 0) {
-    _this->_impl_.wrapper_float_value_ = new ::google::protobuf::FloatValue(*from._impl_.wrapper_float_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000020u) != 0) {
-    _this->_impl_.wrapper_int64_value_ = new ::google::protobuf::Int64Value(*from._impl_.wrapper_int64_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000040u) != 0) {
-    _this->_impl_.wrapper_int32_value_ = new ::google::protobuf::Int32Value(*from._impl_.wrapper_int32_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000080u) != 0) {
-    _this->_impl_.wrapper_u_int64_value_ = new ::google::protobuf::UInt64Value(*from._impl_.wrapper_u_int64_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000100u) != 0) {
-    _this->_impl_.wrapper_u_int32_value_ = new ::google::protobuf::UInt32Value(*from._impl_.wrapper_u_int32_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000200u) != 0) {
-    _this->_impl_.wrapper_bool_value_ = new ::google::protobuf::BoolValue(*from._impl_.wrapper_bool_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000400u) != 0) {
-    _this->_impl_.wrapper_string_value_ = new ::google::protobuf::StringValue(*from._impl_.wrapper_string_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000800u) != 0) {
-    _this->_impl_.wrapper_bytes_value_ = new ::google::protobuf::BytesValue(*from._impl_.wrapper_bytes_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00001000u) != 0) {
-    _this->_impl_.nested_ = new ::struqt::demo::v3::Proto3Message(*from._impl_.nested_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00002000u) != 0) {
-    _this->_impl_.struct_value_value_ = new ::google::protobuf::Value(*from._impl_.struct_value_value_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00004000u) != 0) {
-    _this->_impl_.struct_value_ = new ::google::protobuf::Struct(*from._impl_.struct_value_);
-  }
-  ::memcpy(&_impl_.int64_value_, &from._impl_.int64_value_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.float_value_) -
-    reinterpret_cast<char*>(&_impl_.int64_value_)) + sizeof(_impl_.float_value_));
-  clear_has_oneof_value();
-  switch (from.oneof_value_case()) {
-    case kOneofBoolValue: {
-      _this->_internal_set_oneof_bool_value(from._internal_oneof_bool_value());
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.timestamp_value_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Timestamp>(arena, *from._impl_.timestamp_value_)
+                : nullptr;
+  _impl_.duration_value_ = (cached_has_bits & 0x00000002u)
+                ? CreateMaybeMessage<::google::protobuf::Duration>(arena, *from._impl_.duration_value_)
+                : nullptr;
+  _impl_.field_mask_value_ = (cached_has_bits & 0x00000004u)
+                ? CreateMaybeMessage<::google::protobuf::FieldMask>(arena, *from._impl_.field_mask_value_)
+                : nullptr;
+  _impl_.wrapper_double_value_ = (cached_has_bits & 0x00000008u)
+                ? CreateMaybeMessage<::google::protobuf::DoubleValue>(arena, *from._impl_.wrapper_double_value_)
+                : nullptr;
+  _impl_.wrapper_float_value_ = (cached_has_bits & 0x00000010u)
+                ? CreateMaybeMessage<::google::protobuf::FloatValue>(arena, *from._impl_.wrapper_float_value_)
+                : nullptr;
+  _impl_.wrapper_int64_value_ = (cached_has_bits & 0x00000020u)
+                ? CreateMaybeMessage<::google::protobuf::Int64Value>(arena, *from._impl_.wrapper_int64_value_)
+                : nullptr;
+  _impl_.wrapper_int32_value_ = (cached_has_bits & 0x00000040u)
+                ? CreateMaybeMessage<::google::protobuf::Int32Value>(arena, *from._impl_.wrapper_int32_value_)
+                : nullptr;
+  _impl_.wrapper_u_int64_value_ = (cached_has_bits & 0x00000080u)
+                ? CreateMaybeMessage<::google::protobuf::UInt64Value>(arena, *from._impl_.wrapper_u_int64_value_)
+                : nullptr;
+  _impl_.wrapper_u_int32_value_ = (cached_has_bits & 0x00000100u)
+                ? CreateMaybeMessage<::google::protobuf::UInt32Value>(arena, *from._impl_.wrapper_u_int32_value_)
+                : nullptr;
+  _impl_.wrapper_bool_value_ = (cached_has_bits & 0x00000200u)
+                ? CreateMaybeMessage<::google::protobuf::BoolValue>(arena, *from._impl_.wrapper_bool_value_)
+                : nullptr;
+  _impl_.wrapper_string_value_ = (cached_has_bits & 0x00000400u)
+                ? CreateMaybeMessage<::google::protobuf::StringValue>(arena, *from._impl_.wrapper_string_value_)
+                : nullptr;
+  _impl_.wrapper_bytes_value_ = (cached_has_bits & 0x00000800u)
+                ? CreateMaybeMessage<::google::protobuf::BytesValue>(arena, *from._impl_.wrapper_bytes_value_)
+                : nullptr;
+  _impl_.nested_ = (cached_has_bits & 0x00001000u)
+                ? CreateMaybeMessage<::struqt::demo::v3::Proto3Message>(arena, *from._impl_.nested_)
+                : nullptr;
+  _impl_.struct_value_value_ = (cached_has_bits & 0x00002000u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.struct_value_value_)
+                : nullptr;
+  _impl_.struct_value_ = (cached_has_bits & 0x00004000u)
+                ? CreateMaybeMessage<::google::protobuf::Struct>(arena, *from._impl_.struct_value_)
+                : nullptr;
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, int64_value_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, int64_value_),
+           offsetof(Impl_, float_value_) -
+               offsetof(Impl_, int64_value_) +
+               sizeof(Impl_::float_value_));
+  switch (oneof_value_case()) {
+    case ONEOF_VALUE_NOT_SET:
       break;
-    }
-    case kOneofStringValue: {
-      _this->_internal_set_oneof_string_value(from._internal_oneof_string_value());
-      break;
-    }
-    case ONEOF_VALUE_NOT_SET: {
-      break;
-    }
+      case kOneofBoolValue:
+        _impl_.oneof_value_.oneof_bool_value_ = from._impl_.oneof_value_.oneof_bool_value_;
+        break;
+      case kOneofStringValue:
+        new (&_impl_.oneof_value_.oneof_string_value_) decltype(_impl_.oneof_value_.oneof_string_value_){arena, from._impl_.oneof_value_.oneof_string_value_};
+        break;
   }
-  clear_has_nested_oneof_value();
-  switch (from.nested_oneof_value_case()) {
-    case kNestedOneofValueOne: {
-      _this->_internal_mutable_nested_oneof_value_one()->::struqt::demo::v3::Proto3Message::MergeFrom(
-          from._internal_nested_oneof_value_one());
+  switch (nested_oneof_value_case()) {
+    case NESTED_ONEOF_VALUE_NOT_SET:
       break;
-    }
-    case NESTED_ONEOF_VALUE_NOT_SET: {
-      break;
-    }
+      case kNestedOneofValueOne:
+        _impl_.nested_oneof_value_.nested_oneof_value_one_ = CreateMaybeMessage<::struqt::demo::v3::Proto3Message>(arena, *from._impl_.nested_oneof_value_.nested_oneof_value_one_);
+        break;
   }
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v3.Proto3Message)
 }
+inline PROTOBUF_NDEBUG_INLINE Proto3Message::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        repeated_value_{visibility, arena},
+        repeated_enum_{visibility, arena},
+        _repeated_enum_cached_byte_size_{0},
+        map_value_{visibility, arena},
+        map_value2_{visibility, arena},
+        map_value3_{visibility, arena},
+        map_value4_{visibility, arena},
+        map_value5_{visibility, arena},
+        map_value6_{visibility, arena},
+        map_value7_{visibility, arena},
+        map_value8_{visibility, arena},
+        map_value9_{visibility, arena},
+        map_value10_{visibility, arena},
+        map_value12_{visibility, arena},
+        map_value14_{visibility, arena},
+        map_value15_{visibility, arena},
+        repeated_message_{visibility, arena},
+        map_value16_{visibility, arena},
+        string_value_(arena),
+        bytes_value_(arena),
+        oneof_value_{},
+        nested_oneof_value_{},
+        _oneof_case_{} {}
+
 inline void Proto3Message::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.repeated_value_){arena},
-      decltype(_impl_.repeated_enum_){arena},
-      /*decltype(_impl_._repeated_enum_cached_byte_size_)*/ {0},
-      /* decltype(_impl_.map_value_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value2_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value3_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value4_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value5_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value6_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value7_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value8_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value9_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value10_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value12_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value14_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      /* decltype(_impl_.map_value15_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      decltype(_impl_.repeated_message_){arena},
-      /* decltype(_impl_.map_value16_) */ {::google::protobuf::internal::ArenaInitialized(), arena},
-      decltype(_impl_.string_value_){},
-      decltype(_impl_.bytes_value_){},
-      decltype(_impl_.timestamp_value_){nullptr},
-      decltype(_impl_.duration_value_){nullptr},
-      decltype(_impl_.field_mask_value_){nullptr},
-      decltype(_impl_.wrapper_double_value_){nullptr},
-      decltype(_impl_.wrapper_float_value_){nullptr},
-      decltype(_impl_.wrapper_int64_value_){nullptr},
-      decltype(_impl_.wrapper_int32_value_){nullptr},
-      decltype(_impl_.wrapper_u_int64_value_){nullptr},
-      decltype(_impl_.wrapper_u_int32_value_){nullptr},
-      decltype(_impl_.wrapper_bool_value_){nullptr},
-      decltype(_impl_.wrapper_string_value_){nullptr},
-      decltype(_impl_.wrapper_bytes_value_){nullptr},
-      decltype(_impl_.nested_){nullptr},
-      decltype(_impl_.struct_value_value_){nullptr},
-      decltype(_impl_.struct_value_){nullptr},
-      decltype(_impl_.int64_value_){::int64_t{0}},
-      decltype(_impl_.uint64_value_){::uint64_t{0u}},
-      decltype(_impl_.int32_value_){0},
-      decltype(_impl_.uint32_value_){0u},
-      decltype(_impl_.bool_value_){false},
-      decltype(_impl_.enum_value_){0},
-      decltype(_impl_.double_value_){0},
-      decltype(_impl_.float_value_){0},
-      decltype(_impl_.oneof_value_){},
-      decltype(_impl_.nested_oneof_value_){},
-      /*decltype(_impl_._oneof_case_)*/ {},
-  };
-  _impl_.string_value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.string_value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.bytes_value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.bytes_value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  clear_has_oneof_value();
-  clear_has_nested_oneof_value();
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, timestamp_value_),
+           0,
+           offsetof(Impl_, float_value_) -
+               offsetof(Impl_, timestamp_value_) +
+               sizeof(Impl_::float_value_));
 }
 Proto3Message::~Proto3Message() {
   // @@protoc_insertion_point(destructor:struqt.demo.v3.Proto3Message)
@@ -1911,54 +1827,36 @@ Proto3Message::~Proto3Message() {
   SharedDtor();
 }
 inline void Proto3Message::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _internal_mutable_repeated_value()->~RepeatedPtrField();
-  _internal_mutable_repeated_enum()->~RepeatedField();
-  _impl_.map_value_.~MapField();
-  _impl_.map_value2_.~MapField();
-  _impl_.map_value3_.~MapField();
-  _impl_.map_value4_.~MapField();
-  _impl_.map_value5_.~MapField();
-  _impl_.map_value6_.~MapField();
-  _impl_.map_value7_.~MapField();
-  _impl_.map_value8_.~MapField();
-  _impl_.map_value9_.~MapField();
-  _impl_.map_value10_.~MapField();
-  _impl_.map_value12_.~MapField();
-  _impl_.map_value14_.~MapField();
-  _impl_.map_value15_.~MapField();
-  _impl_.repeated_message_.~RepeatedPtrField();
-  _impl_.map_value16_.~MapField();
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.string_value_.Destroy();
   _impl_.bytes_value_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.timestamp_value_;
-  if (this != internal_default_instance()) delete _impl_.duration_value_;
-  if (this != internal_default_instance()) delete _impl_.field_mask_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_double_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_float_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_int64_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_int32_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_u_int64_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_u_int32_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_bool_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_string_value_;
-  if (this != internal_default_instance()) delete _impl_.wrapper_bytes_value_;
-  if (this != internal_default_instance()) delete _impl_.nested_;
-  if (this != internal_default_instance()) delete _impl_.struct_value_value_;
-  if (this != internal_default_instance()) delete _impl_.struct_value_;
+  delete _impl_.timestamp_value_;
+  delete _impl_.duration_value_;
+  delete _impl_.field_mask_value_;
+  delete _impl_.wrapper_double_value_;
+  delete _impl_.wrapper_float_value_;
+  delete _impl_.wrapper_int64_value_;
+  delete _impl_.wrapper_int32_value_;
+  delete _impl_.wrapper_u_int64_value_;
+  delete _impl_.wrapper_u_int32_value_;
+  delete _impl_.wrapper_bool_value_;
+  delete _impl_.wrapper_string_value_;
+  delete _impl_.wrapper_bytes_value_;
+  delete _impl_.nested_;
+  delete _impl_.struct_value_value_;
+  delete _impl_.struct_value_;
   if (has_oneof_value()) {
     clear_oneof_value();
   }
   if (has_nested_oneof_value()) {
     clear_nested_oneof_value();
   }
-}
-void Proto3Message::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 void Proto3Message::clear_oneof_value() {
 // @@protoc_insertion_point(one_of_clear_start:struqt.demo.v3.Proto3Message)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   switch (oneof_value_case()) {
     case kOneofBoolValue: {
       // No need to clear
@@ -1977,9 +1875,10 @@ void Proto3Message::clear_oneof_value() {
 
 void Proto3Message::clear_nested_oneof_value() {
 // @@protoc_insertion_point(one_of_clear_start:struqt.demo.v3.Proto3Message)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   switch (nested_oneof_value_case()) {
     case kNestedOneofValueOne: {
-      if (GetArenaForAllocation() == nullptr) {
+      if (GetArena() == nullptr) {
         delete _impl_.nested_oneof_value_.nested_oneof_value_one_;
       }
       break;
@@ -1994,12 +1893,13 @@ void Proto3Message::clear_nested_oneof_value() {
 
 PROTOBUF_NOINLINE void Proto3Message::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v3.Proto3Message)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_repeated_value()->Clear();
-  _internal_mutable_repeated_enum()->Clear();
+  _impl_.repeated_value_.Clear();
+  _impl_.repeated_enum_.Clear();
   _impl_.map_value_.Clear();
   _impl_.map_value2_.Clear();
   _impl_.map_value3_.Clear();
@@ -2013,7 +1913,7 @@ PROTOBUF_NOINLINE void Proto3Message::Clear() {
   _impl_.map_value12_.Clear();
   _impl_.map_value14_.Clear();
   _impl_.map_value15_.Clear();
-  _internal_mutable_repeated_message()->Clear();
+  _impl_.repeated_message_.Clear();
   _impl_.map_value16_.Clear();
   _impl_.string_value_.ClearToEmpty();
   _impl_.bytes_value_.ClearToEmpty();
@@ -2352,22 +2252,64 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
     {::_pbi::TcParser::GetTable<::google::protobuf::BoolValue>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::StringValue>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::BytesValue>()},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value2_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value3_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value4_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value5_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value6_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value7_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value8_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value9_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value10_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value12_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value14_)>(1, 0, 0)},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value15_)>(1, 0, 0)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value_)>(
+        1, 0, 0, 9,
+        9)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value2_)>(
+        1, 0, 0, 9,
+        5)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value3_)>(
+        1, 0, 0, 5,
+        9)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value4_)>(
+        1, 0, 0, 9,
+        3)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value5_)>(
+        1, 0, 0, 3,
+        9)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value6_)>(
+        1, 0, 0, 9,
+        13)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value7_)>(
+        1, 0, 0, 13,
+        9)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value8_)>(
+        1, 0, 0, 9,
+        4)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value9_)>(
+        1, 0, 0, 4,
+        9)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value10_)>(
+        1, 0, 0, 9,
+        2)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value12_)>(
+        1, 0, 0, 9,
+        1)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value14_)>(
+        1, 0, 0, 9,
+        8)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value15_)>(
+        1, 0, 0, 8,
+        9)},
     {::_pbi::TcParser::GetTable<::struqt::demo::v3::Proto3Message>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::UInt64Value>()},
-    {::_pbi::TcParser::GetMapAuxInfo<decltype(Proto3Message()._impl_.map_value16_)>(1, 0, 0)},
+    {::_pbi::TcParser::GetMapAuxInfo<
+        decltype(Proto3Message()._impl_.map_value16_)>(
+        1, 0, 0, 9,
+        11)},
     {::_pbi::TcParser::CreateInArenaStorageCb<::google::protobuf::UInt64Value>},
     {::_pbi::TcParser::GetTable<::struqt::demo::v3::Proto3Message>()},
     {::_pbi::TcParser::GetTable<::google::protobuf::Value>()},
@@ -2485,7 +2427,7 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
 
   // repeated .struqt.demo.v3.EnumValue repeated_enum = 12;
   {
-    int byte_size = _impl_._repeated_enum_cached_byte_size_.Get();
+    std::size_t byte_size = _impl_._repeated_enum_cached_byte_size_.Get();
     if (byte_size > 0) {
       target = stream->WriteEnumPacked(12, _internal_repeated_enum(),
                                        byte_size, target);
@@ -2495,92 +2437,94 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Timestamp timestamp_value = 13;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(13, _Internal::timestamp_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        13, _Internal::timestamp_value(this),
         _Internal::timestamp_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Duration duration_value = 14;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(14, _Internal::duration_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        14, _Internal::duration_value(this),
         _Internal::duration_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FieldMask field_mask_value = 15;
   if (cached_has_bits & 0x00000004u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(15, _Internal::field_mask_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        15, _Internal::field_mask_value(this),
         _Internal::field_mask_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.DoubleValue wrapper_double_value = 17;
   if (cached_has_bits & 0x00000008u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(17, _Internal::wrapper_double_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        17, _Internal::wrapper_double_value(this),
         _Internal::wrapper_double_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.FloatValue wrapper_float_value = 18;
   if (cached_has_bits & 0x00000010u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(18, _Internal::wrapper_float_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        18, _Internal::wrapper_float_value(this),
         _Internal::wrapper_float_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Int64Value wrapper_int64_value = 19;
   if (cached_has_bits & 0x00000020u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(19, _Internal::wrapper_int64_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        19, _Internal::wrapper_int64_value(this),
         _Internal::wrapper_int64_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Int32Value wrapper_int32_value = 20;
   if (cached_has_bits & 0x00000040u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(20, _Internal::wrapper_int32_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        20, _Internal::wrapper_int32_value(this),
         _Internal::wrapper_int32_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.UInt64Value wrapper_u_int64_value = 21;
   if (cached_has_bits & 0x00000080u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(21, _Internal::wrapper_u_int64_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        21, _Internal::wrapper_u_int64_value(this),
         _Internal::wrapper_u_int64_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.UInt32Value wrapper_u_int32_value = 22;
   if (cached_has_bits & 0x00000100u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(22, _Internal::wrapper_u_int32_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        22, _Internal::wrapper_u_int32_value(this),
         _Internal::wrapper_u_int32_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BoolValue wrapper_bool_value = 23;
   if (cached_has_bits & 0x00000200u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(23, _Internal::wrapper_bool_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        23, _Internal::wrapper_bool_value(this),
         _Internal::wrapper_bool_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.StringValue wrapper_string_value = 24;
   if (cached_has_bits & 0x00000400u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(24, _Internal::wrapper_string_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        24, _Internal::wrapper_string_value(this),
         _Internal::wrapper_string_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.BytesValue wrapper_bytes_value = 25;
   if (cached_has_bits & 0x00000800u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(25, _Internal::wrapper_bytes_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        25, _Internal::wrapper_bytes_value(this),
         _Internal::wrapper_bytes_value(this).GetCachedSize(), target, stream);
   }
 
   // map<string, string> map_value = 26;
   if (!_internal_map_value().empty()) {
     using MapType = ::google::protobuf::Map<std::string, std::string>;
-    using WireHelper = Proto3Message_MapValueEntry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, std::string,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_STRING>;
     const auto& field = _internal_map_value();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2611,7 +2555,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, int32> map_value2 = 27;
   if (!_internal_map_value2().empty()) {
     using MapType = ::google::protobuf::Map<std::string, ::int32_t>;
-    using WireHelper = Proto3Message_MapValue2Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, ::int32_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_INT32>;
     const auto& field = _internal_map_value2();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2636,7 +2582,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<int32, string> map_value3 = 28;
   if (!_internal_map_value3().empty()) {
     using MapType = ::google::protobuf::Map<::int32_t, std::string>;
-    using WireHelper = Proto3Message_MapValue3Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<::int32_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_INT32,
+                                   _pbi::WireFormatLite::TYPE_STRING>;
     const auto& field = _internal_map_value3();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2661,7 +2609,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, int64> map_value4 = 29;
   if (!_internal_map_value4().empty()) {
     using MapType = ::google::protobuf::Map<std::string, ::int64_t>;
-    using WireHelper = Proto3Message_MapValue4Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, ::int64_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_INT64>;
     const auto& field = _internal_map_value4();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2686,7 +2636,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<int64, string> map_value5 = 30;
   if (!_internal_map_value5().empty()) {
     using MapType = ::google::protobuf::Map<::int64_t, std::string>;
-    using WireHelper = Proto3Message_MapValue5Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<::int64_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_INT64,
+                                   _pbi::WireFormatLite::TYPE_STRING>;
     const auto& field = _internal_map_value5();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2711,7 +2663,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, uint32> map_value6 = 31;
   if (!_internal_map_value6().empty()) {
     using MapType = ::google::protobuf::Map<std::string, ::uint32_t>;
-    using WireHelper = Proto3Message_MapValue6Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, ::uint32_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_UINT32>;
     const auto& field = _internal_map_value6();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2736,7 +2690,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<uint32, string> map_value7 = 32;
   if (!_internal_map_value7().empty()) {
     using MapType = ::google::protobuf::Map<::uint32_t, std::string>;
-    using WireHelper = Proto3Message_MapValue7Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<::uint32_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_UINT32,
+                                   _pbi::WireFormatLite::TYPE_STRING>;
     const auto& field = _internal_map_value7();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2761,7 +2717,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, uint64> map_value8 = 33;
   if (!_internal_map_value8().empty()) {
     using MapType = ::google::protobuf::Map<std::string, ::uint64_t>;
-    using WireHelper = Proto3Message_MapValue8Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, ::uint64_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_UINT64>;
     const auto& field = _internal_map_value8();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2786,7 +2744,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<uint64, string> map_value9 = 34;
   if (!_internal_map_value9().empty()) {
     using MapType = ::google::protobuf::Map<::uint64_t, std::string>;
-    using WireHelper = Proto3Message_MapValue9Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<::uint64_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_UINT64,
+                                   _pbi::WireFormatLite::TYPE_STRING>;
     const auto& field = _internal_map_value9();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2811,7 +2771,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, float> map_value10 = 35;
   if (!_internal_map_value10().empty()) {
     using MapType = ::google::protobuf::Map<std::string, float>;
-    using WireHelper = Proto3Message_MapValue10Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, float,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_FLOAT>;
     const auto& field = _internal_map_value10();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2836,7 +2798,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, double> map_value12 = 37;
   if (!_internal_map_value12().empty()) {
     using MapType = ::google::protobuf::Map<std::string, double>;
-    using WireHelper = Proto3Message_MapValue12Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, double,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_DOUBLE>;
     const auto& field = _internal_map_value12();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2861,7 +2825,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, bool> map_value14 = 39;
   if (!_internal_map_value14().empty()) {
     using MapType = ::google::protobuf::Map<std::string, bool>;
-    using WireHelper = Proto3Message_MapValue14Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, bool,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_BOOL>;
     const auto& field = _internal_map_value14();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2886,7 +2852,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<bool, string> map_value15 = 40;
   if (!_internal_map_value15().empty()) {
     using MapType = ::google::protobuf::Map<bool, std::string>;
-    using WireHelper = Proto3Message_MapValue15Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<bool, std::string,
+                                   _pbi::WireFormatLite::TYPE_BOOL,
+                                   _pbi::WireFormatLite::TYPE_STRING>;
     const auto& field = _internal_map_value15();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2910,8 +2878,8 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
 
   // .struqt.demo.v3.Proto3Message nested = 41;
   if (cached_has_bits & 0x00001000u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(41, _Internal::nested(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        41, _Internal::nested(this),
         _Internal::nested(this).GetCachedSize(), target, stream);
   }
 
@@ -2950,7 +2918,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, .google.protobuf.UInt64Value> map_value16 = 45;
   if (!_internal_map_value16().empty()) {
     using MapType = ::google::protobuf::Map<std::string, ::google::protobuf::UInt64Value>;
-    using WireHelper = Proto3Message_MapValue16Entry_DoNotUse::Funcs;
+    using WireHelper = _pbi::MapEntryFuncs<std::string, ::google::protobuf::UInt64Value,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_MESSAGE>;
     const auto& field = _internal_map_value16();
 
     if (stream->IsSerializationDeterministic() && field.size() > 1) {
@@ -2974,22 +2944,22 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
 
   // .struqt.demo.v3.Proto3Message nested_oneof_value_one = 46;
   if (nested_oneof_value_case() == kNestedOneofValueOne) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(46, _Internal::nested_oneof_value_one(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        46, _Internal::nested_oneof_value_one(this),
         _Internal::nested_oneof_value_one(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Value struct_value_value = 47;
   if (cached_has_bits & 0x00002000u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(47, _Internal::struct_value_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        47, _Internal::struct_value_value(this),
         _Internal::struct_value_value(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Struct struct_value = 48;
   if (cached_has_bits & 0x00004000u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(48, _Internal::struct_value(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        48, _Internal::struct_value(this),
         _Internal::struct_value(this).GetCachedSize(), target, stream);
   }
 
@@ -3036,67 +3006,93 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, string> map_value = 26;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value_size());
   for (const auto& entry : _internal_map_value()) {
-    total_size += Proto3Message_MapValueEntry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, std::string,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, int32> map_value2 = 27;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value2_size());
   for (const auto& entry : _internal_map_value2()) {
-    total_size += Proto3Message_MapValue2Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, ::int32_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_INT32>::ByteSizeLong(entry.first, entry.second);
   }
   // map<int32, string> map_value3 = 28;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value3_size());
   for (const auto& entry : _internal_map_value3()) {
-    total_size += Proto3Message_MapValue3Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<::int32_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_INT32,
+                                   _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, int64> map_value4 = 29;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value4_size());
   for (const auto& entry : _internal_map_value4()) {
-    total_size += Proto3Message_MapValue4Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, ::int64_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_INT64>::ByteSizeLong(entry.first, entry.second);
   }
   // map<int64, string> map_value5 = 30;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value5_size());
   for (const auto& entry : _internal_map_value5()) {
-    total_size += Proto3Message_MapValue5Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<::int64_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_INT64,
+                                   _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, uint32> map_value6 = 31;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value6_size());
   for (const auto& entry : _internal_map_value6()) {
-    total_size += Proto3Message_MapValue6Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, ::uint32_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_UINT32>::ByteSizeLong(entry.first, entry.second);
   }
   // map<uint32, string> map_value7 = 32;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value7_size());
   for (const auto& entry : _internal_map_value7()) {
-    total_size += Proto3Message_MapValue7Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<::uint32_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_UINT32,
+                                   _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, uint64> map_value8 = 33;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value8_size());
   for (const auto& entry : _internal_map_value8()) {
-    total_size += Proto3Message_MapValue8Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, ::uint64_t,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_UINT64>::ByteSizeLong(entry.first, entry.second);
   }
   // map<uint64, string> map_value9 = 34;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value9_size());
   for (const auto& entry : _internal_map_value9()) {
-    total_size += Proto3Message_MapValue9Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<::uint64_t, std::string,
+                                   _pbi::WireFormatLite::TYPE_UINT64,
+                                   _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, float> map_value10 = 35;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value10_size());
   for (const auto& entry : _internal_map_value10()) {
-    total_size += Proto3Message_MapValue10Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, float,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_FLOAT>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, double> map_value12 = 37;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value12_size());
   for (const auto& entry : _internal_map_value12()) {
-    total_size += Proto3Message_MapValue12Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, double,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_DOUBLE>::ByteSizeLong(entry.first, entry.second);
   }
   // map<string, bool> map_value14 = 39;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value14_size());
   for (const auto& entry : _internal_map_value14()) {
-    total_size += Proto3Message_MapValue14Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, bool,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_BOOL>::ByteSizeLong(entry.first, entry.second);
   }
   // map<bool, string> map_value15 = 40;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value15_size());
   for (const auto& entry : _internal_map_value15()) {
-    total_size += Proto3Message_MapValue15Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<bool, std::string,
+                                   _pbi::WireFormatLite::TYPE_BOOL,
+                                   _pbi::WireFormatLite::TYPE_STRING>::ByteSizeLong(entry.first, entry.second);
   }
   // repeated .google.protobuf.UInt64Value repeated_message = 44;
   total_size += 2UL * this->_internal_repeated_message_size();
@@ -3107,7 +3103,9 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   // map<string, .google.protobuf.UInt64Value> map_value16 = 45;
   total_size += 2 * ::google::protobuf::internal::FromIntSize(_internal_map_value16_size());
   for (const auto& entry : _internal_map_value16()) {
-    total_size += Proto3Message_MapValue16Entry_DoNotUse::Funcs::ByteSizeLong(entry.first, entry.second);
+    total_size += _pbi::MapEntryFuncs<std::string, ::google::protobuf::UInt64Value,
+                                   _pbi::WireFormatLite::TYPE_STRING,
+                                   _pbi::WireFormatLite::TYPE_MESSAGE>::ByteSizeLong(entry.first, entry.second);
   }
   // string string_value = 8;
   if (!this->_internal_string_value().empty()) {
@@ -3125,109 +3123,94 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   if (cached_has_bits & 0x000000ffu) {
     // .google.protobuf.Timestamp timestamp_value = 13;
     if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.timestamp_value_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.timestamp_value_);
     }
 
     // .google.protobuf.Duration duration_value = 14;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.duration_value_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.duration_value_);
     }
 
     // .google.protobuf.FieldMask field_mask_value = 15;
     if (cached_has_bits & 0x00000004u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.field_mask_value_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.field_mask_value_);
     }
 
     // .google.protobuf.DoubleValue wrapper_double_value = 17;
     if (cached_has_bits & 0x00000008u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_double_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_double_value_);
     }
 
     // .google.protobuf.FloatValue wrapper_float_value = 18;
     if (cached_has_bits & 0x00000010u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_float_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_float_value_);
     }
 
     // .google.protobuf.Int64Value wrapper_int64_value = 19;
     if (cached_has_bits & 0x00000020u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_int64_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_int64_value_);
     }
 
     // .google.protobuf.Int32Value wrapper_int32_value = 20;
     if (cached_has_bits & 0x00000040u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_int32_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_int32_value_);
     }
 
     // .google.protobuf.UInt64Value wrapper_u_int64_value = 21;
     if (cached_has_bits & 0x00000080u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_u_int64_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_u_int64_value_);
     }
 
   }
   if (cached_has_bits & 0x00007f00u) {
     // .google.protobuf.UInt32Value wrapper_u_int32_value = 22;
     if (cached_has_bits & 0x00000100u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_u_int32_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_u_int32_value_);
     }
 
     // .google.protobuf.BoolValue wrapper_bool_value = 23;
     if (cached_has_bits & 0x00000200u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_bool_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_bool_value_);
     }
 
     // .google.protobuf.StringValue wrapper_string_value = 24;
     if (cached_has_bits & 0x00000400u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_string_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_string_value_);
     }
 
     // .google.protobuf.BytesValue wrapper_bytes_value = 25;
     if (cached_has_bits & 0x00000800u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.wrapper_bytes_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.wrapper_bytes_value_);
     }
 
     // .struqt.demo.v3.Proto3Message nested = 41;
     if (cached_has_bits & 0x00001000u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.nested_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.nested_);
     }
 
     // .google.protobuf.Value struct_value_value = 47;
     if (cached_has_bits & 0x00002000u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.struct_value_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.struct_value_value_);
     }
 
     // .google.protobuf.Struct struct_value = 48;
     if (cached_has_bits & 0x00004000u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.struct_value_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.struct_value_);
     }
 
   }
@@ -3305,9 +3288,8 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
   switch (nested_oneof_value_case()) {
     // .struqt.demo.v3.Proto3Message nested_oneof_value_one = 46;
     case kNestedOneofValueOne: {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.nested_oneof_value_.nested_oneof_value_one_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.nested_oneof_value_.nested_oneof_value_one_);
       break;
     }
     case NESTED_ONEOF_VALUE_NOT_SET: {
@@ -3318,11 +3300,12 @@ const ::_pbi::TcParseTable<5, 45, 32, 265, 7> Proto3Message::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData Proto3Message::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    Proto3Message::MergeImpl
+    Proto3Message::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*Proto3Message::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* Proto3Message::GetClassData() const {
+  return &_class_data_;
+}
 
 void Proto3Message::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<Proto3Message*>(&to_msg);
@@ -3347,7 +3330,8 @@ void Proto3Message::MergeImpl(::google::protobuf::Message& to_msg, const ::googl
   _this->_impl_.map_value12_.MergeFrom(from._impl_.map_value12_);
   _this->_impl_.map_value14_.MergeFrom(from._impl_.map_value14_);
   _this->_impl_.map_value15_.MergeFrom(from._impl_.map_value15_);
-  _this->_internal_mutable_repeated_message()->MergeFrom(from._internal_repeated_message());
+  _this->_internal_mutable_repeated_message()->MergeFrom(
+      from._internal_repeated_message());
   _this->_impl_.map_value16_.MergeFrom(from._impl_.map_value16_);
   if (!from._internal_string_value().empty()) {
     _this->_internal_set_string_value(from._internal_string_value());
@@ -3491,10 +3475,13 @@ PROTOBUF_NOINLINE bool Proto3Message::IsInitialized() const {
   return true;
 }
 
-void Proto3Message::InternalSwap(Proto3Message* other) {
+::_pbi::CachedSize* Proto3Message::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void Proto3Message::InternalSwap(Proto3Message* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
   _impl_.repeated_value_.InternalSwap(&other->_impl_.repeated_value_);
@@ -3514,10 +3501,8 @@ void Proto3Message::InternalSwap(Proto3Message* other) {
   _impl_.map_value15_.InternalSwap(&other->_impl_.map_value15_);
   _impl_.repeated_message_.InternalSwap(&other->_impl_.repeated_message_);
   _impl_.map_value16_.InternalSwap(&other->_impl_.map_value16_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.string_value_, lhs_arena,
-                                       &other->_impl_.string_value_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.bytes_value_, lhs_arena,
-                                       &other->_impl_.bytes_value_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.string_value_, &other->_impl_.string_value_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.bytes_value_, &other->_impl_.bytes_value_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(Proto3Message, _impl_.float_value_)
       + sizeof(Proto3Message::_impl_.float_value_)

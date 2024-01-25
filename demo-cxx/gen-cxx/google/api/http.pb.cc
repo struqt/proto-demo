@@ -22,66 +22,20 @@ namespace _pbi = ::google::protobuf::internal;
 namespace _fl = ::google::protobuf::internal::field_layout;
 namespace google {
 namespace api {
-        template <typename>
-PROTOBUF_CONSTEXPR Http::Http(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.rules_)*/ {},
-      /*decltype(_impl_.fully_decode_reserved_expansion_)*/ false,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
-struct HttpDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR HttpDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~HttpDefaultTypeInternal() {}
-  union {
-    Http _instance;
-  };
-};
 
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HttpDefaultTypeInternal _Http_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR HttpRule::HttpRule(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.additional_bindings_)*/ {},
-      /*decltype(_impl_.selector_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.body_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.response_body_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.pattern_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_._oneof_case_)*/ {},
-    } {}
-struct HttpRuleDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR HttpRuleDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~HttpRuleDefaultTypeInternal() {}
-  union {
-    HttpRule _instance;
-  };
-};
+inline constexpr CustomHttpPattern::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : kind_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        path_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
 
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HttpRuleDefaultTypeInternal _HttpRule_default_instance_;
-        template <typename>
+template <typename>
 PROTOBUF_CONSTEXPR CustomHttpPattern::CustomHttpPattern(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.kind_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.path_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct CustomHttpPatternDefaultTypeInternal {
   PROTOBUF_CONSTEXPR CustomHttpPatternDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~CustomHttpPatternDefaultTypeInternal() {}
@@ -92,6 +46,56 @@ struct CustomHttpPatternDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CustomHttpPatternDefaultTypeInternal _CustomHttpPattern_default_instance_;
+
+inline constexpr HttpRule::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : additional_bindings_{},
+        selector_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        body_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        response_body_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        pattern_{},
+        _cached_size_{0},
+        _oneof_case_{} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR HttpRule::HttpRule(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct HttpRuleDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HttpRuleDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~HttpRuleDefaultTypeInternal() {}
+  union {
+    HttpRule _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HttpRuleDefaultTypeInternal _HttpRule_default_instance_;
+
+inline constexpr Http::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : rules_{},
+        fully_decode_reserved_expansion_{false},
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR Http::Http(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct HttpDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HttpDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~HttpDefaultTypeInternal() {}
+  union {
+    Http _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HttpDefaultTypeInternal _Http_default_instance_;
 }  // namespace api
 }  // namespace google
 static ::_pb::Metadata file_level_metadata_google_2fapi_2fhttp_2eproto[3];
@@ -219,27 +223,34 @@ Http::Http(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:google.api.Http)
 }
-Http::Http(const Http& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE Http::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : rules_{visibility, arena, from.rules_},
+        _cached_size_{0} {}
+
+Http::Http(
+    ::google::protobuf::Arena* arena,
+    const Http& from)
+    : ::google::protobuf::Message(arena) {
   Http* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.rules_){from._impl_.rules_},
-      decltype(_impl_.fully_decode_reserved_expansion_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _this->_impl_.fully_decode_reserved_expansion_ = from._impl_.fully_decode_reserved_expansion_;
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  _impl_.fully_decode_reserved_expansion_ = from._impl_.fully_decode_reserved_expansion_;
 
   // @@protoc_insertion_point(copy_constructor:google.api.Http)
 }
+inline PROTOBUF_NDEBUG_INLINE Http::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : rules_{visibility, arena},
+        _cached_size_{0} {}
+
 inline void Http::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.rules_){arena},
-      decltype(_impl_.fully_decode_reserved_expansion_){false},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.fully_decode_reserved_expansion_ = {};
 }
 Http::~Http() {
   // @@protoc_insertion_point(destructor:google.api.Http)
@@ -247,20 +258,18 @@ Http::~Http() {
   SharedDtor();
 }
 inline void Http::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.rules_.~RepeatedPtrField();
-}
-void Http::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  ABSL_DCHECK(GetArena() == nullptr);
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void Http::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.api.Http)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_rules()->Clear();
+  _impl_.rules_.Clear();
   _impl_.fully_decode_reserved_expansion_ = false;
   _internal_metadata_.Clear<::google::protobuf::UnknownFieldSet>();
 }
@@ -362,11 +371,12 @@ const ::_pbi::TcParseTable<1, 2, 1, 0, 2> Http::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData Http::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    Http::MergeImpl
+    Http::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*Http::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* Http::GetClassData() const {
+  return &_class_data_;
+}
 
 void Http::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<Http*>(&to_msg);
@@ -376,7 +386,8 @@ void Http::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protob
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_rules()->MergeFrom(from._internal_rules());
+  _this->_internal_mutable_rules()->MergeFrom(
+      from._internal_rules());
   if (from._internal_fully_decode_reserved_expansion() != 0) {
     _this->_internal_set_fully_decode_reserved_expansion(from._internal_fully_decode_reserved_expansion());
   }
@@ -394,7 +405,10 @@ PROTOBUF_NOINLINE bool Http::IsInitialized() const {
   return true;
 }
 
-void Http::InternalSwap(Http* other) {
+::_pbi::CachedSize* Http::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void Http::InternalSwap(Http* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.rules_.InternalSwap(&other->_impl_.rules_);
@@ -419,14 +433,12 @@ const ::google::api::CustomHttpPattern& HttpRule::_Internal::custom(const HttpRu
   return *msg->_impl_.pattern_.custom_;
 }
 void HttpRule::set_allocated_custom(::google::api::CustomHttpPattern* custom) {
-  ::google::protobuf::Arena* message_arena = GetArenaForAllocation();
+  ::google::protobuf::Arena* message_arena = GetArena();
   clear_pattern();
   if (custom) {
-    ::google::protobuf::Arena* submessage_arena =
-      ::google::protobuf::Arena::InternalGetOwningArena(custom);
+    ::google::protobuf::Arena* submessage_arena = custom->GetArena();
     if (message_arena != submessage_arena) {
-      custom = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, custom, submessage_arena);
+      custom = ::google::protobuf::internal::GetOwnedMessage(message_arena, custom, submessage_arena);
     }
     set_has_custom();
     _impl_.pattern_.custom_ = custom;
@@ -438,99 +450,64 @@ HttpRule::HttpRule(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:google.api.HttpRule)
 }
-HttpRule::HttpRule(const HttpRule& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE HttpRule::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : additional_bindings_{visibility, arena, from.additional_bindings_},
+        selector_(arena, from.selector_),
+        body_(arena, from.body_),
+        response_body_(arena, from.response_body_),
+        pattern_{},
+        _cached_size_{0},
+        _oneof_case_{from._oneof_case_[0]} {}
+
+HttpRule::HttpRule(
+    ::google::protobuf::Arena* arena,
+    const HttpRule& from)
+    : ::google::protobuf::Message(arena) {
   HttpRule* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.additional_bindings_){from._impl_.additional_bindings_},
-      decltype(_impl_.selector_){},
-      decltype(_impl_.body_){},
-      decltype(_impl_.response_body_){},
-      decltype(_impl_.pattern_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_._oneof_case_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.selector_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.selector_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_selector().empty()) {
-    _this->_impl_.selector_.Set(from._internal_selector(), _this->GetArenaForAllocation());
-  }
-  _impl_.body_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.body_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_body().empty()) {
-    _this->_impl_.body_.Set(from._internal_body(), _this->GetArenaForAllocation());
-  }
-  _impl_.response_body_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.response_body_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_response_body().empty()) {
-    _this->_impl_.response_body_.Set(from._internal_response_body(), _this->GetArenaForAllocation());
-  }
-  clear_has_pattern();
-  switch (from.pattern_case()) {
-    case kGet: {
-      _this->_internal_set_get(from._internal_get());
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  switch (pattern_case()) {
+    case PATTERN_NOT_SET:
       break;
-    }
-    case kPut: {
-      _this->_internal_set_put(from._internal_put());
-      break;
-    }
-    case kPost: {
-      _this->_internal_set_post(from._internal_post());
-      break;
-    }
-    case kDelete: {
-      _this->_internal_set_delete_(from._internal_delete_());
-      break;
-    }
-    case kPatch: {
-      _this->_internal_set_patch(from._internal_patch());
-      break;
-    }
-    case kCustom: {
-      _this->_internal_mutable_custom()->::google::api::CustomHttpPattern::MergeFrom(
-          from._internal_custom());
-      break;
-    }
-    case PATTERN_NOT_SET: {
-      break;
-    }
+      case kGet:
+        new (&_impl_.pattern_.get_) decltype(_impl_.pattern_.get_){arena, from._impl_.pattern_.get_};
+        break;
+      case kPut:
+        new (&_impl_.pattern_.put_) decltype(_impl_.pattern_.put_){arena, from._impl_.pattern_.put_};
+        break;
+      case kPost:
+        new (&_impl_.pattern_.post_) decltype(_impl_.pattern_.post_){arena, from._impl_.pattern_.post_};
+        break;
+      case kDelete:
+        new (&_impl_.pattern_.delete__) decltype(_impl_.pattern_.delete__){arena, from._impl_.pattern_.delete__};
+        break;
+      case kPatch:
+        new (&_impl_.pattern_.patch_) decltype(_impl_.pattern_.patch_){arena, from._impl_.pattern_.patch_};
+        break;
+      case kCustom:
+        _impl_.pattern_.custom_ = CreateMaybeMessage<::google::api::CustomHttpPattern>(arena, *from._impl_.pattern_.custom_);
+        break;
   }
 
   // @@protoc_insertion_point(copy_constructor:google.api.HttpRule)
 }
+inline PROTOBUF_NDEBUG_INLINE HttpRule::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : additional_bindings_{visibility, arena},
+        selector_(arena),
+        body_(arena),
+        response_body_(arena),
+        pattern_{},
+        _cached_size_{0},
+        _oneof_case_{} {}
+
 inline void HttpRule::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.additional_bindings_){arena},
-      decltype(_impl_.selector_){},
-      decltype(_impl_.body_){},
-      decltype(_impl_.response_body_){},
-      decltype(_impl_.pattern_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_._oneof_case_)*/ {},
-  };
-  _impl_.selector_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.selector_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.body_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.body_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.response_body_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.response_body_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  clear_has_pattern();
+  new (&_impl_) Impl_(internal_visibility(), arena);
 }
 HttpRule::~HttpRule() {
   // @@protoc_insertion_point(destructor:google.api.HttpRule)
@@ -538,21 +515,19 @@ HttpRule::~HttpRule() {
   SharedDtor();
 }
 inline void HttpRule::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  _impl_.additional_bindings_.~RepeatedPtrField();
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.selector_.Destroy();
   _impl_.body_.Destroy();
   _impl_.response_body_.Destroy();
   if (has_pattern()) {
     clear_pattern();
   }
-}
-void HttpRule::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 void HttpRule::clear_pattern() {
 // @@protoc_insertion_point(one_of_clear_start:google.api.HttpRule)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   switch (pattern_case()) {
     case kGet: {
       _impl_.pattern_.get_.Destroy();
@@ -575,7 +550,7 @@ void HttpRule::clear_pattern() {
       break;
     }
     case kCustom: {
-      if (GetArenaForAllocation() == nullptr) {
+      if (GetArena() == nullptr) {
         delete _impl_.pattern_.custom_;
       }
       break;
@@ -590,11 +565,12 @@ void HttpRule::clear_pattern() {
 
 PROTOBUF_NOINLINE void HttpRule::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.api.HttpRule)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  _internal_mutable_additional_bindings()->Clear();
+  _impl_.additional_bindings_.Clear();
   _impl_.selector_.ClearToEmpty();
   _impl_.body_.ClearToEmpty();
   _impl_.response_body_.ClearToEmpty();
@@ -754,8 +730,8 @@ const ::_pbi::TcParseTable<3, 10, 2, 82, 2> HttpRule::_table_ = {
 
   // .google.api.CustomHttpPattern custom = 8;
   if (pattern_case() == kCustom) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(8, _Internal::custom(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        8, _Internal::custom(this),
         _Internal::custom(this).GetCachedSize(), target, stream);
   }
 
@@ -849,9 +825,8 @@ const ::_pbi::TcParseTable<3, 10, 2, 82, 2> HttpRule::_table_ = {
     }
     // .google.api.CustomHttpPattern custom = 8;
     case kCustom: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.pattern_.custom_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.pattern_.custom_);
       break;
     }
     case PATTERN_NOT_SET: {
@@ -862,11 +837,12 @@ const ::_pbi::TcParseTable<3, 10, 2, 82, 2> HttpRule::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData HttpRule::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    HttpRule::MergeImpl
+    HttpRule::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*HttpRule::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* HttpRule::GetClassData() const {
+  return &_class_data_;
+}
 
 void HttpRule::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<HttpRule*>(&to_msg);
@@ -876,7 +852,8 @@ void HttpRule::MergeImpl(::google::protobuf::Message& to_msg, const ::google::pr
   ::uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  _this->_internal_mutable_additional_bindings()->MergeFrom(from._internal_additional_bindings());
+  _this->_internal_mutable_additional_bindings()->MergeFrom(
+      from._internal_additional_bindings());
   if (!from._internal_selector().empty()) {
     _this->_internal_set_selector(from._internal_selector());
   }
@@ -930,18 +907,18 @@ PROTOBUF_NOINLINE bool HttpRule::IsInitialized() const {
   return true;
 }
 
-void HttpRule::InternalSwap(HttpRule* other) {
+::_pbi::CachedSize* HttpRule::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void HttpRule::InternalSwap(HttpRule* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   _impl_.additional_bindings_.InternalSwap(&other->_impl_.additional_bindings_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.selector_, lhs_arena,
-                                       &other->_impl_.selector_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.body_, lhs_arena,
-                                       &other->_impl_.body_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.response_body_, lhs_arena,
-                                       &other->_impl_.response_body_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.selector_, &other->_impl_.selector_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.body_, &other->_impl_.body_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.response_body_, &other->_impl_.response_body_, arena);
   swap(_impl_.pattern_, other->_impl_.pattern_);
   swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
@@ -962,48 +939,34 @@ CustomHttpPattern::CustomHttpPattern(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:google.api.CustomHttpPattern)
 }
-CustomHttpPattern::CustomHttpPattern(const CustomHttpPattern& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE CustomHttpPattern::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : kind_(arena, from.kind_),
+        path_(arena, from.path_),
+        _cached_size_{0} {}
+
+CustomHttpPattern::CustomHttpPattern(
+    ::google::protobuf::Arena* arena,
+    const CustomHttpPattern& from)
+    : ::google::protobuf::Message(arena) {
   CustomHttpPattern* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.kind_){},
-      decltype(_impl_.path_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.kind_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.kind_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_kind().empty()) {
-    _this->_impl_.kind_.Set(from._internal_kind(), _this->GetArenaForAllocation());
-  }
-  _impl_.path_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.path_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_path().empty()) {
-    _this->_impl_.path_.Set(from._internal_path(), _this->GetArenaForAllocation());
-  }
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
 
   // @@protoc_insertion_point(copy_constructor:google.api.CustomHttpPattern)
 }
+inline PROTOBUF_NDEBUG_INLINE CustomHttpPattern::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : kind_(arena),
+        path_(arena),
+        _cached_size_{0} {}
+
 inline void CustomHttpPattern::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.kind_){},
-      decltype(_impl_.path_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.kind_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.kind_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  _impl_.path_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.path_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  new (&_impl_) Impl_(internal_visibility(), arena);
 }
 CustomHttpPattern::~CustomHttpPattern() {
   // @@protoc_insertion_point(destructor:google.api.CustomHttpPattern)
@@ -1011,16 +974,15 @@ CustomHttpPattern::~CustomHttpPattern() {
   SharedDtor();
 }
 inline void CustomHttpPattern::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.kind_.Destroy();
   _impl_.path_.Destroy();
-}
-void CustomHttpPattern::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void CustomHttpPattern::Clear() {
 // @@protoc_insertion_point(message_clear_start:google.api.CustomHttpPattern)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1133,11 +1095,12 @@ const ::_pbi::TcParseTable<1, 2, 0, 45, 2> CustomHttpPattern::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData CustomHttpPattern::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    CustomHttpPattern::MergeImpl
+    CustomHttpPattern::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*CustomHttpPattern::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* CustomHttpPattern::GetClassData() const {
+  return &_class_data_;
+}
 
 void CustomHttpPattern::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<CustomHttpPattern*>(&to_msg);
@@ -1167,15 +1130,16 @@ PROTOBUF_NOINLINE bool CustomHttpPattern::IsInitialized() const {
   return true;
 }
 
-void CustomHttpPattern::InternalSwap(CustomHttpPattern* other) {
+::_pbi::CachedSize* CustomHttpPattern::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void CustomHttpPattern::InternalSwap(CustomHttpPattern* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.kind_, lhs_arena,
-                                       &other->_impl_.kind_, rhs_arena);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.path_, lhs_arena,
-                                       &other->_impl_.path_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.kind_, &other->_impl_.kind_, arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.path_, &other->_impl_.path_, arena);
 }
 
 ::google::protobuf::Metadata CustomHttpPattern::GetMetadata() const {

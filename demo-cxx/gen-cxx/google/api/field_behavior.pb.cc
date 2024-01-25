@@ -90,21 +90,10 @@ const ::google::protobuf::EnumDescriptor* FieldBehavior_descriptor() {
   ::google::protobuf::internal::AssignDescriptors(&descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto);
   return file_level_enum_descriptors_google_2fapi_2ffield_5fbehavior_2eproto[0];
 }
+PROTOBUF_CONSTINIT const uint32_t FieldBehavior_internal_data_[] = {
+    589824u, 0u, };
 bool FieldBehavior_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-    case 5:
-    case 6:
-    case 7:
-    case 8:
-      return true;
-    default:
-      return false;
-  }
+  return 0 <= value && value <= 8;
 }
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
     ::google::protobuf::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior, ::google::api::FieldBehavior_IsValid>, 14, true>
