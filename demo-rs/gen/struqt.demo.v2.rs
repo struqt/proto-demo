@@ -224,7 +224,9 @@ pub mod basic_service_server {
                             request: tonic::Request<super::EchoRequest>,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
-                            let fut = async move { (*inner).echo(request).await };
+                            let fut = async move {
+                                <T as BasicService>::echo(&inner, request).await
+                            };
                             Box::pin(fut)
                         }
                     }
@@ -268,7 +270,9 @@ pub mod basic_service_server {
                             request: tonic::Request<super::JsonRpcRequest>,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
-                            let fut = async move { (*inner).json_rpc(request).await };
+                            let fut = async move {
+                                <T as BasicService>::json_rpc(&inner, request).await
+                            };
                             Box::pin(fut)
                         }
                     }

@@ -270,7 +270,9 @@ pub mod demo_service_server {
                             request: tonic::Request<super::EchoValueRequest>,
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
-                            let fut = async move { (*inner).echo_value(request).await };
+                            let fut = async move {
+                                <T as DemoService>::echo_value(&inner, request).await
+                            };
                             Box::pin(fut)
                         }
                     }

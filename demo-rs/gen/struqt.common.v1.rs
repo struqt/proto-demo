@@ -168,7 +168,7 @@ pub mod common_service_server {
                         ) -> Self::Future {
                             let inner = Arc::clone(&self.0);
                             let fut = async move {
-                                (*inner).get_server_info(request).await
+                                <T as CommonService>::get_server_info(&inner, request).await
                             };
                             Box::pin(fut)
                         }
