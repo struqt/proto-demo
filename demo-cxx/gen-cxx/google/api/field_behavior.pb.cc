@@ -11,13 +11,15 @@
 #include "google/protobuf/generated_message_reflection.h"
 #include "google/protobuf/reflection_ops.h"
 #include "google/protobuf/wire_format.h"
+#include "google/protobuf/generated_message_tctable_impl.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
 #include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::PROTOBUF_NAMESPACE_ID;
-namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
+namespace _pb = ::google::protobuf;
+namespace _pbi = ::google::protobuf::internal;
+namespace _fl = ::google::protobuf::internal::field_layout;
 namespace google {
 namespace api {
 }  // namespace api
@@ -84,8 +86,8 @@ PROTOBUF_ATTRIBUTE_INIT_PRIORITY2
 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_google_2fapi_2ffield_5fbehavior_2eproto(&descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto);
 namespace google {
 namespace api {
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* FieldBehavior_descriptor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto);
+const ::google::protobuf::EnumDescriptor* FieldBehavior_descriptor() {
+  ::google::protobuf::internal::AssignDescriptors(&descriptor_table_google_2fapi_2ffield_5fbehavior_2eproto);
   return file_level_enum_descriptors_google_2fapi_2ffield_5fbehavior_2eproto[0];
 }
 bool FieldBehavior_IsValid(int value) {
@@ -104,13 +106,15 @@ bool FieldBehavior_IsValid(int value) {
       return false;
   }
 }
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior, ::google::api::FieldBehavior_IsValid>, 14, true>
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
+    ::google::protobuf::internal::RepeatedEnumTypeTraits< ::google::api::FieldBehavior, ::google::api::FieldBehavior_IsValid>, 14, true>
   field_behavior(kFieldBehaviorFieldNumber, static_cast< ::google::api::FieldBehavior >(0), nullptr);
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace api
 }  // namespace google
-PROTOBUF_NAMESPACE_OPEN
-PROTOBUF_NAMESPACE_CLOSE
+namespace google {
+namespace protobuf {
+}  // namespace protobuf
+}  // namespace google
 // @@protoc_insertion_point(global_scope)
 #include "google/protobuf/port_undef.inc"

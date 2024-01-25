@@ -16,8 +16,7 @@ jobs:
         ]
         grpc_version: [
           1.56,
-          1.57,
-          1.59,
+          1.61,
         ]
         build_type: [
           Release,

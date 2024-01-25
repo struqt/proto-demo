@@ -11,13 +11,15 @@
 #include "google/protobuf/generated_message_reflection.h"
 #include "google/protobuf/reflection_ops.h"
 #include "google/protobuf/wire_format.h"
+#include "google/protobuf/generated_message_tctable_impl.h"
 // @@protoc_insertion_point(includes)
 
 // Must be included last.
 #include "google/protobuf/port_def.inc"
 PROTOBUF_PRAGMA_INIT_SEG
-namespace _pb = ::PROTOBUF_NAMESPACE_ID;
-namespace _pbi = ::PROTOBUF_NAMESPACE_ID::internal;
+namespace _pb = ::google::protobuf;
+namespace _pbi = ::google::protobuf::internal;
+namespace _fl = ::google::protobuf::internal::field_layout;
 namespace grpc {
 namespace gateway {
 namespace protoc_gen_openapiv2 {
@@ -101,27 +103,29 @@ namespace grpc {
 namespace gateway {
 namespace protoc_gen_openapiv2 {
 namespace options {
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FileOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Swagger >, 11, false>
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::FileOptions,
+    ::google::protobuf::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Swagger >, 11, false>
   openapiv2_swagger(kOpenapiv2SwaggerFieldNumber, ::grpc::gateway::protoc_gen_openapiv2::options::Swagger::default_instance(), nullptr);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::MethodOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Operation >, 11, false>
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::MethodOptions,
+    ::google::protobuf::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Operation >, 11, false>
   openapiv2_operation(kOpenapiv2OperationFieldNumber, ::grpc::gateway::protoc_gen_openapiv2::options::Operation::default_instance(), nullptr);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::MessageOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Schema >, 11, false>
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::MessageOptions,
+    ::google::protobuf::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Schema >, 11, false>
   openapiv2_schema(kOpenapiv2SchemaFieldNumber, ::grpc::gateway::protoc_gen_openapiv2::options::Schema::default_instance(), nullptr);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::ServiceOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Tag >, 11, false>
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::ServiceOptions,
+    ::google::protobuf::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::Tag >, 11, false>
   openapiv2_tag(kOpenapiv2TagFieldNumber, ::grpc::gateway::protoc_gen_openapiv2::options::Tag::default_instance(), nullptr);
-PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::PROTOBUF_NAMESPACE_ID::FieldOptions,
-    ::PROTOBUF_NAMESPACE_ID::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::JSONSchema >, 11, false>
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 ::google::protobuf::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
+    ::google::protobuf::internal::MessageTypeTraits< ::grpc::gateway::protoc_gen_openapiv2::options::JSONSchema >, 11, false>
   openapiv2_field(kOpenapiv2FieldFieldNumber, ::grpc::gateway::protoc_gen_openapiv2::options::JSONSchema::default_instance(), nullptr);
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace options
 }  // namespace protoc_gen_openapiv2
 }  // namespace gateway
 }  // namespace grpc
-PROTOBUF_NAMESPACE_OPEN
-PROTOBUF_NAMESPACE_CLOSE
+namespace google {
+namespace protobuf {
+}  // namespace protobuf
+}  // namespace google
 // @@protoc_insertion_point(global_scope)
 #include "google/protobuf/port_undef.inc"
