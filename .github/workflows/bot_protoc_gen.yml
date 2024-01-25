@@ -8,7 +8,7 @@ jobs:
   generate:
     strategy:
       matrix:
-        grpc_version: [ 1.57 ]
+        grpc_version: [ 1.59 ]
         build_type: [ Release ]
         os: [ ubuntu-latest ]
       fail-fast: true
