@@ -40,6 +40,7 @@ function cmake_build_grpc() {
   cmake_build 'protobuf' 'grpc/third_party/protobuf' \
     -D CMAKE_PREFIX_PATH="$t/zlib;$t/abseil-cpp" \
     -D protobuf_BUILD_TESTS=OFF \
+    -D protobuf_INSTALL=ON \
     -D protobuf_ABSL_PROVIDER=package
   cmake_build 'grpc' 'grpc' \
     -D CMAKE_PREFIX_PATH="$t/zlib;$t/c-ares;$t/re2;$t/abseil-cpp;$t/protobuf" \
