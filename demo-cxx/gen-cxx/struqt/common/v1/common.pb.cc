@@ -35,36 +35,18 @@ struct GetServerInfoRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetServerInfoRequestDefaultTypeInternal _GetServerInfoRequest_default_instance_;
-        template <typename>
-PROTOBUF_CONSTEXPR GetServerInfoResponse::GetServerInfoResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.started_at_)*/ nullptr,
-      /*decltype(_impl_.timestamp_)*/ nullptr,
-      /*decltype(_impl_.server_id_)*/ 0,
-      /*decltype(_impl_.status_)*/ 0,
-    } {}
-struct GetServerInfoResponseDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR GetServerInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~GetServerInfoResponseDefaultTypeInternal() {}
-  union {
-    GetServerInfoResponse _instance;
-  };
-};
 
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetServerInfoResponseDefaultTypeInternal _GetServerInfoResponse_default_instance_;
-        template <typename>
+inline constexpr Dummy::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : version_tag_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        version_{0},
+        _cached_size_{0} {}
+
+template <typename>
 PROTOBUF_CONSTEXPR Dummy::Dummy(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.version_tag_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.version_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct DummyDefaultTypeInternal {
   PROTOBUF_CONSTEXPR DummyDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~DummyDefaultTypeInternal() {}
@@ -75,6 +57,28 @@ struct DummyDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DummyDefaultTypeInternal _Dummy_default_instance_;
+
+inline constexpr GetServerInfoResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        started_at_{nullptr},
+        timestamp_{nullptr},
+        server_id_{0},
+        status_{static_cast< ::struqt::common::v1::ServerStatus >(0)} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR GetServerInfoResponse::GetServerInfoResponse(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct GetServerInfoResponseDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GetServerInfoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GetServerInfoResponseDefaultTypeInternal() {}
+  union {
+    GetServerInfoResponse _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GetServerInfoResponseDefaultTypeInternal _GetServerInfoResponse_default_instance_;
 }  // namespace v1
 }  // namespace common
 }  // namespace struqt
@@ -205,17 +209,10 @@ const ::google::protobuf::EnumDescriptor* ServerStatus_descriptor() {
   ::google::protobuf::internal::AssignDescriptors(&descriptor_table_struqt_2fcommon_2fv1_2fcommon_2eproto);
   return file_level_enum_descriptors_struqt_2fcommon_2fv1_2fcommon_2eproto[0];
 }
+PROTOBUF_CONSTINIT const uint32_t ServerStatus_internal_data_[] = {
+    327680u, 0u, };
 bool ServerStatus_IsValid(int value) {
-  switch (value) {
-    case 0:
-    case 1:
-    case 2:
-    case 3:
-    case 4:
-      return true;
-    default:
-      return false;
-  }
+  return 0 <= value && value <= 4;
 }
 // ===================================================================
 
@@ -227,7 +224,10 @@ GetServerInfoRequest::GetServerInfoRequest(::google::protobuf::Arena* arena)
     : ::google::protobuf::internal::ZeroFieldsBase(arena) {
   // @@protoc_insertion_point(arena_constructor:struqt.common.v1.GetServerInfoRequest)
 }
-GetServerInfoRequest::GetServerInfoRequest(const GetServerInfoRequest& from) : ::google::protobuf::internal::ZeroFieldsBase() {
+GetServerInfoRequest::GetServerInfoRequest(
+    ::google::protobuf::Arena* arena,
+    const GetServerInfoRequest& from)
+    : ::google::protobuf::internal::ZeroFieldsBase(arena) {
   GetServerInfoRequest* const _this = this;
   (void)_this;
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
@@ -237,13 +237,6 @@ GetServerInfoRequest::GetServerInfoRequest(const GetServerInfoRequest& from) : :
 }
 
 
-
-
-const ::google::protobuf::Message::ClassData GetServerInfoRequest::_class_data_ = {
-    ::google::protobuf::internal::ZeroFieldsBase::CopyImpl,
-    ::google::protobuf::internal::ZeroFieldsBase::MergeImpl,
-};
-const ::google::protobuf::Message::ClassData*GetServerInfoRequest::GetClassData() const { return &_class_data_; }
 
 
 
@@ -280,10 +273,12 @@ const ::google::protobuf::Timestamp& GetServerInfoResponse::_Internal::timestamp
   return *msg->_impl_.timestamp_;
 }
 void GetServerInfoResponse::clear_started_at() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.started_at_ != nullptr) _impl_.started_at_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 void GetServerInfoResponse::clear_timestamp() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.timestamp_ != nullptr) _impl_.timestamp_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
@@ -292,41 +287,51 @@ GetServerInfoResponse::GetServerInfoResponse(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.common.v1.GetServerInfoResponse)
 }
-GetServerInfoResponse::GetServerInfoResponse(const GetServerInfoResponse& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE GetServerInfoResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0} {}
+
+GetServerInfoResponse::GetServerInfoResponse(
+    ::google::protobuf::Arena* arena,
+    const GetServerInfoResponse& from)
+    : ::google::protobuf::Message(arena) {
   GetServerInfoResponse* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.started_at_){nullptr},
-      decltype(_impl_.timestamp_){nullptr},
-      decltype(_impl_.server_id_){},
-      decltype(_impl_.status_){},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.started_at_ = new ::google::protobuf::Timestamp(*from._impl_.started_at_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
-    _this->_impl_.timestamp_ = new ::google::protobuf::Timestamp(*from._impl_.timestamp_);
-  }
-  ::memcpy(&_impl_.server_id_, &from._impl_.server_id_,
-    static_cast<::size_t>(reinterpret_cast<char*>(&_impl_.status_) -
-    reinterpret_cast<char*>(&_impl_.server_id_)) + sizeof(_impl_.status_));
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.started_at_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Timestamp>(arena, *from._impl_.started_at_)
+                : nullptr;
+  _impl_.timestamp_ = (cached_has_bits & 0x00000002u)
+                ? CreateMaybeMessage<::google::protobuf::Timestamp>(arena, *from._impl_.timestamp_)
+                : nullptr;
+  ::memcpy(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, server_id_),
+           reinterpret_cast<const char *>(&from._impl_) +
+               offsetof(Impl_, server_id_),
+           offsetof(Impl_, status_) -
+               offsetof(Impl_, server_id_) +
+               sizeof(Impl_::status_));
 
   // @@protoc_insertion_point(copy_constructor:struqt.common.v1.GetServerInfoResponse)
 }
+inline PROTOBUF_NDEBUG_INLINE GetServerInfoResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0} {}
+
 inline void GetServerInfoResponse::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.started_at_){nullptr},
-      decltype(_impl_.timestamp_){nullptr},
-      decltype(_impl_.server_id_){0},
-      decltype(_impl_.status_){0},
-  };
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, started_at_),
+           0,
+           offsetof(Impl_, status_) -
+               offsetof(Impl_, started_at_) +
+               sizeof(Impl_::status_));
 }
 GetServerInfoResponse::~GetServerInfoResponse() {
   // @@protoc_insertion_point(destructor:struqt.common.v1.GetServerInfoResponse)
@@ -334,16 +339,15 @@ GetServerInfoResponse::~GetServerInfoResponse() {
   SharedDtor();
 }
 inline void GetServerInfoResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.started_at_;
-  if (this != internal_default_instance()) delete _impl_.timestamp_;
-}
-void GetServerInfoResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  ABSL_DCHECK(GetArena() == nullptr);
+  delete _impl_.started_at_;
+  delete _impl_.timestamp_;
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void GetServerInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.common.v1.GetServerInfoResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -439,8 +443,8 @@ const ::_pbi::TcParseTable<2, 4, 2, 0, 2> GetServerInfoResponse::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Timestamp started_at = 23 [(.google.api.field_behavior) = IMMUTABLE];
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(23, _Internal::started_at(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        23, _Internal::started_at(this),
         _Internal::started_at(this).GetCachedSize(), target, stream);
   }
 
@@ -453,8 +457,8 @@ const ::_pbi::TcParseTable<2, 4, 2, 0, 2> GetServerInfoResponse::_table_ = {
 
   // .google.protobuf.Timestamp timestamp = 25 [(.google.api.field_behavior) = REQUIRED];
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(25, _Internal::timestamp(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        25, _Internal::timestamp(this),
         _Internal::timestamp(this).GetCachedSize(), target, stream);
   }
 
@@ -479,16 +483,14 @@ const ::_pbi::TcParseTable<2, 4, 2, 0, 2> GetServerInfoResponse::_table_ = {
   if (cached_has_bits & 0x00000003u) {
     // .google.protobuf.Timestamp started_at = 23 [(.google.api.field_behavior) = IMMUTABLE];
     if (cached_has_bits & 0x00000001u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.started_at_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.started_at_);
     }
 
     // .google.protobuf.Timestamp timestamp = 25 [(.google.api.field_behavior) = REQUIRED];
     if (cached_has_bits & 0x00000002u) {
-      total_size += 2 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.timestamp_);
+      total_size +=
+          2 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.timestamp_);
     }
 
   }
@@ -508,11 +510,12 @@ const ::_pbi::TcParseTable<2, 4, 2, 0, 2> GetServerInfoResponse::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData GetServerInfoResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    GetServerInfoResponse::MergeImpl
+    GetServerInfoResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*GetServerInfoResponse::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* GetServerInfoResponse::GetClassData() const {
+  return &_class_data_;
+}
 
 void GetServerInfoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<GetServerInfoResponse*>(&to_msg);
@@ -553,7 +556,10 @@ PROTOBUF_NOINLINE bool GetServerInfoResponse::IsInitialized() const {
   return true;
 }
 
-void GetServerInfoResponse::InternalSwap(GetServerInfoResponse* other) {
+::_pbi::CachedSize* GetServerInfoResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void GetServerInfoResponse::InternalSwap(GetServerInfoResponse* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
@@ -581,38 +587,34 @@ Dummy::Dummy(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.common.v1.Dummy)
 }
-Dummy::Dummy(const Dummy& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE Dummy::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : version_tag_(arena, from.version_tag_),
+        _cached_size_{0} {}
+
+Dummy::Dummy(
+    ::google::protobuf::Arena* arena,
+    const Dummy& from)
+    : ::google::protobuf::Message(arena) {
   Dummy* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.version_tag_){},
-      decltype(_impl_.version_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.version_tag_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.version_tag_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_version_tag().empty()) {
-    _this->_impl_.version_tag_.Set(from._internal_version_tag(), _this->GetArenaForAllocation());
-  }
-  _this->_impl_.version_ = from._impl_.version_;
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  _impl_.version_ = from._impl_.version_;
 
   // @@protoc_insertion_point(copy_constructor:struqt.common.v1.Dummy)
 }
+inline PROTOBUF_NDEBUG_INLINE Dummy::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : version_tag_(arena),
+        _cached_size_{0} {}
+
 inline void Dummy::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.version_tag_){},
-      decltype(_impl_.version_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.version_tag_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.version_tag_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.version_ = {};
 }
 Dummy::~Dummy() {
   // @@protoc_insertion_point(destructor:struqt.common.v1.Dummy)
@@ -620,15 +622,14 @@ Dummy::~Dummy() {
   SharedDtor();
 }
 inline void Dummy::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.version_tag_.Destroy();
-}
-void Dummy::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void Dummy::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.common.v1.Dummy)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -739,11 +740,12 @@ const ::_pbi::TcParseTable<1, 2, 0, 42, 2> Dummy::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData Dummy::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    Dummy::MergeImpl
+    Dummy::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*Dummy::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* Dummy::GetClassData() const {
+  return &_class_data_;
+}
 
 void Dummy::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<Dummy*>(&to_msg);
@@ -773,13 +775,15 @@ PROTOBUF_NOINLINE bool Dummy::IsInitialized() const {
   return true;
 }
 
-void Dummy::InternalSwap(Dummy* other) {
+::_pbi::CachedSize* Dummy::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void Dummy::InternalSwap(Dummy* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.version_tag_, lhs_arena,
-                                       &other->_impl_.version_tag_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.version_tag_, &other->_impl_.version_tag_, arena);
         swap(_impl_.version_, other->_impl_.version_);
 }
 

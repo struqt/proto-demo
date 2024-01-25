@@ -23,35 +23,18 @@ namespace _fl = ::google::protobuf::internal::field_layout;
 namespace struqt {
 namespace demo {
 namespace v1 {
-        template <typename>
-PROTOBUF_CONSTEXPR EchoRequest::EchoRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.value_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
-struct EchoRequestDefaultTypeInternal {
-  PROTOBUF_CONSTEXPR EchoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
-  ~EchoRequestDefaultTypeInternal() {}
-  union {
-    EchoRequest _instance;
-  };
-};
 
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
-    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoRequestDefaultTypeInternal _EchoRequest_default_instance_;
-        template <typename>
+inline constexpr EchoResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : value_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        version_{0},
+        _cached_size_{0} {}
+
+template <typename>
 PROTOBUF_CONSTEXPR EchoResponse::EchoResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_.value_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.version_)*/ 0,
-      /*decltype(_impl_._cached_size_)*/ {},
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct EchoResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR EchoResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~EchoResponseDefaultTypeInternal() {}
@@ -62,18 +45,40 @@ struct EchoResponseDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoResponseDefaultTypeInternal _EchoResponse_default_instance_;
-        template <typename>
+
+inline constexpr EchoRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : value_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        _cached_size_{0} {}
+
+template <typename>
+PROTOBUF_CONSTEXPR EchoRequest::EchoRequest(::_pbi::ConstantInitialized)
+    : _impl_(::_pbi::ConstantInitialized()) {}
+struct EchoRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR EchoRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
+  ~EchoRequestDefaultTypeInternal() {}
+  union {
+    EchoRequest _instance;
+  };
+};
+
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
+    PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 EchoRequestDefaultTypeInternal _EchoRequest_default_instance_;
+
+inline constexpr JsonRpcRequest::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        method_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        params_{nullptr},
+        id_{nullptr} {}
+
+template <typename>
 PROTOBUF_CONSTEXPR JsonRpcRequest::JsonRpcRequest(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.method_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.params_)*/ nullptr,
-      /*decltype(_impl_.id_)*/ nullptr,
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct JsonRpcRequestDefaultTypeInternal {
   PROTOBUF_CONSTEXPR JsonRpcRequestDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~JsonRpcRequestDefaultTypeInternal() {}
@@ -84,18 +89,19 @@ struct JsonRpcRequestDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JsonRpcRequestDefaultTypeInternal _JsonRpcRequest_default_instance_;
-        template <typename>
+
+inline constexpr JsonRpcErrorObject::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        message_(
+            &::google::protobuf::internal::fixed_address_empty_string,
+            ::_pbi::ConstantInitialized()),
+        data_{nullptr},
+        code_{0} {}
+
+template <typename>
 PROTOBUF_CONSTEXPR JsonRpcErrorObject::JsonRpcErrorObject(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.message_)*/ {
-          &::_pbi::fixed_address_empty_string,
-          ::_pbi::ConstantInitialized{},
-      },
-      /*decltype(_impl_.data_)*/ nullptr,
-      /*decltype(_impl_.code_)*/ 0,
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct JsonRpcErrorObjectDefaultTypeInternal {
   PROTOBUF_CONSTEXPR JsonRpcErrorObjectDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~JsonRpcErrorObjectDefaultTypeInternal() {}
@@ -106,15 +112,17 @@ struct JsonRpcErrorObjectDefaultTypeInternal {
 
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT
     PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 JsonRpcErrorObjectDefaultTypeInternal _JsonRpcErrorObject_default_instance_;
-        template <typename>
+
+inline constexpr JsonRpcResponse::Impl_::Impl_(
+    ::_pbi::ConstantInitialized) noexcept
+      : _cached_size_{0},
+        id_{nullptr},
+        one_of_{},
+        _oneof_case_{} {}
+
+template <typename>
 PROTOBUF_CONSTEXPR JsonRpcResponse::JsonRpcResponse(::_pbi::ConstantInitialized)
-    : _impl_{
-      /*decltype(_impl_._has_bits_)*/ {},
-      /*decltype(_impl_._cached_size_)*/ {},
-      /*decltype(_impl_.id_)*/ nullptr,
-      /*decltype(_impl_.one_of_)*/ {},
-      /*decltype(_impl_._oneof_case_)*/ {},
-    } {}
+    : _impl_(::_pbi::ConstantInitialized()) {}
 struct JsonRpcResponseDefaultTypeInternal {
   PROTOBUF_CONSTEXPR JsonRpcResponseDefaultTypeInternal() : _instance(::_pbi::ConstantInitialized{}) {}
   ~JsonRpcResponseDefaultTypeInternal() {}
@@ -297,35 +305,32 @@ EchoRequest::EchoRequest(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v1.EchoRequest)
 }
-EchoRequest::EchoRequest(const EchoRequest& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE EchoRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : value_(arena, from.value_),
+        _cached_size_{0} {}
+
+EchoRequest::EchoRequest(
+    ::google::protobuf::Arena* arena,
+    const EchoRequest& from)
+    : ::google::protobuf::Message(arena) {
   EchoRequest* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.value_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_value().empty()) {
-    _this->_impl_.value_.Set(from._internal_value(), _this->GetArenaForAllocation());
-  }
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v1.EchoRequest)
 }
+inline PROTOBUF_NDEBUG_INLINE EchoRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : value_(arena),
+        _cached_size_{0} {}
+
 inline void EchoRequest::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.value_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  new (&_impl_) Impl_(internal_visibility(), arena);
 }
 EchoRequest::~EchoRequest() {
   // @@protoc_insertion_point(destructor:struqt.demo.v1.EchoRequest)
@@ -333,15 +338,14 @@ EchoRequest::~EchoRequest() {
   SharedDtor();
 }
 inline void EchoRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.value_.Destroy();
-}
-void EchoRequest::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void EchoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v1.EchoRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -432,11 +436,12 @@ const ::_pbi::TcParseTable<0, 1, 0, 40, 2> EchoRequest::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData EchoRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    EchoRequest::MergeImpl
+    EchoRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*EchoRequest::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* EchoRequest::GetClassData() const {
+  return &_class_data_;
+}
 
 void EchoRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<EchoRequest*>(&to_msg);
@@ -463,13 +468,15 @@ PROTOBUF_NOINLINE bool EchoRequest::IsInitialized() const {
   return true;
 }
 
-void EchoRequest::InternalSwap(EchoRequest* other) {
+::_pbi::CachedSize* EchoRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void EchoRequest::InternalSwap(EchoRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.value_, lhs_arena,
-                                       &other->_impl_.value_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.value_, &other->_impl_.value_, arena);
 }
 
 ::google::protobuf::Metadata EchoRequest::GetMetadata() const {
@@ -488,38 +495,34 @@ EchoResponse::EchoResponse(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v1.EchoResponse)
 }
-EchoResponse::EchoResponse(const EchoResponse& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE EchoResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : value_(arena, from.value_),
+        _cached_size_{0} {}
+
+EchoResponse::EchoResponse(
+    ::google::protobuf::Arena* arena,
+    const EchoResponse& from)
+    : ::google::protobuf::Message(arena) {
   EchoResponse* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_.value_){},
-      decltype(_impl_.version_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_value().empty()) {
-    _this->_impl_.value_.Set(from._internal_value(), _this->GetArenaForAllocation());
-  }
-  _this->_impl_.version_ = from._impl_.version_;
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  _impl_.version_ = from._impl_.version_;
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v1.EchoResponse)
 }
+inline PROTOBUF_NDEBUG_INLINE EchoResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : value_(arena),
+        _cached_size_{0} {}
+
 inline void EchoResponse::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_.value_){},
-      decltype(_impl_.version_){0},
-      /*decltype(_impl_._cached_size_)*/ {},
-  };
-  _impl_.value_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.value_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.version_ = {};
 }
 EchoResponse::~EchoResponse() {
   // @@protoc_insertion_point(destructor:struqt.demo.v1.EchoResponse)
@@ -527,15 +530,14 @@ EchoResponse::~EchoResponse() {
   SharedDtor();
 }
 inline void EchoResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.value_.Destroy();
-}
-void EchoResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void EchoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v1.EchoResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -646,11 +648,12 @@ const ::_pbi::TcParseTable<1, 2, 0, 41, 2> EchoResponse::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData EchoResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    EchoResponse::MergeImpl
+    EchoResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*EchoResponse::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* EchoResponse::GetClassData() const {
+  return &_class_data_;
+}
 
 void EchoResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<EchoResponse*>(&to_msg);
@@ -680,13 +683,15 @@ PROTOBUF_NOINLINE bool EchoResponse::IsInitialized() const {
   return true;
 }
 
-void EchoResponse::InternalSwap(EchoResponse* other) {
+::_pbi::CachedSize* EchoResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void EchoResponse::InternalSwap(EchoResponse* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.value_, lhs_arena,
-                                       &other->_impl_.value_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.value_, &other->_impl_.value_, arena);
         swap(_impl_.version_, other->_impl_.version_);
 }
 
@@ -719,10 +724,12 @@ const ::google::protobuf::Value& JsonRpcRequest::_Internal::id(const JsonRpcRequ
   return *msg->_impl_.id_;
 }
 void JsonRpcRequest::clear_params() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.params_ != nullptr) _impl_.params_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
 void JsonRpcRequest::clear_id() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.id_ != nullptr) _impl_.id_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
@@ -731,47 +738,46 @@ JsonRpcRequest::JsonRpcRequest(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v1.JsonRpcRequest)
 }
-JsonRpcRequest::JsonRpcRequest(const JsonRpcRequest& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE JsonRpcRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        method_(arena, from.method_) {}
+
+JsonRpcRequest::JsonRpcRequest(
+    ::google::protobuf::Arena* arena,
+    const JsonRpcRequest& from)
+    : ::google::protobuf::Message(arena) {
   JsonRpcRequest* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.method_){},
-      decltype(_impl_.params_){nullptr},
-      decltype(_impl_.id_){nullptr},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.method_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.method_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_method().empty()) {
-    _this->_impl_.method_.Set(from._internal_method(), _this->GetArenaForAllocation());
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.params_ = new ::google::protobuf::Value(*from._impl_.params_);
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000002u) != 0) {
-    _this->_impl_.id_ = new ::google::protobuf::Value(*from._impl_.id_);
-  }
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.params_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.params_)
+                : nullptr;
+  _impl_.id_ = (cached_has_bits & 0x00000002u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.id_)
+                : nullptr;
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v1.JsonRpcRequest)
 }
+inline PROTOBUF_NDEBUG_INLINE JsonRpcRequest::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        method_(arena) {}
+
 inline void JsonRpcRequest::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.method_){},
-      decltype(_impl_.params_){nullptr},
-      decltype(_impl_.id_){nullptr},
-  };
-  _impl_.method_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.method_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, params_),
+           0,
+           offsetof(Impl_, id_) -
+               offsetof(Impl_, params_) +
+               sizeof(Impl_::id_));
 }
 JsonRpcRequest::~JsonRpcRequest() {
   // @@protoc_insertion_point(destructor:struqt.demo.v1.JsonRpcRequest)
@@ -779,17 +785,16 @@ JsonRpcRequest::~JsonRpcRequest() {
   SharedDtor();
 }
 inline void JsonRpcRequest::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.method_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.params_;
-  if (this != internal_default_instance()) delete _impl_.id_;
-}
-void JsonRpcRequest::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  delete _impl_.params_;
+  delete _impl_.id_;
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void JsonRpcRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v1.JsonRpcRequest)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -882,15 +887,15 @@ const ::_pbi::TcParseTable<2, 3, 2, 44, 2> JsonRpcRequest::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Value params = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::params(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        3, _Internal::params(this),
         _Internal::params(this).GetCachedSize(), target, stream);
   }
 
   // .google.protobuf.Value id = 4;
   if (cached_has_bits & 0x00000002u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::id(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        4, _Internal::id(this),
         _Internal::id(this).GetCachedSize(), target, stream);
   }
 
@@ -921,16 +926,14 @@ const ::_pbi::TcParseTable<2, 3, 2, 44, 2> JsonRpcRequest::_table_ = {
   if (cached_has_bits & 0x00000003u) {
     // .google.protobuf.Value params = 3;
     if (cached_has_bits & 0x00000001u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.params_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.params_);
     }
 
     // .google.protobuf.Value id = 4;
     if (cached_has_bits & 0x00000002u) {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.id_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.id_);
     }
 
   }
@@ -938,11 +941,12 @@ const ::_pbi::TcParseTable<2, 3, 2, 44, 2> JsonRpcRequest::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData JsonRpcRequest::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    JsonRpcRequest::MergeImpl
+    JsonRpcRequest::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*JsonRpcRequest::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* JsonRpcRequest::GetClassData() const {
+  return &_class_data_;
+}
 
 void JsonRpcRequest::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<JsonRpcRequest*>(&to_msg);
@@ -980,14 +984,16 @@ PROTOBUF_NOINLINE bool JsonRpcRequest::IsInitialized() const {
   return true;
 }
 
-void JsonRpcRequest::InternalSwap(JsonRpcRequest* other) {
+::_pbi::CachedSize* JsonRpcRequest::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void JsonRpcRequest::InternalSwap(JsonRpcRequest* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.method_, lhs_arena,
-                                       &other->_impl_.method_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.method_, &other->_impl_.method_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(JsonRpcRequest, _impl_.id_)
       + sizeof(JsonRpcRequest::_impl_.id_)
@@ -1018,6 +1024,7 @@ const ::google::protobuf::Value& JsonRpcErrorObject::_Internal::data(const JsonR
   return *msg->_impl_.data_;
 }
 void JsonRpcErrorObject::clear_data() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.data_ != nullptr) _impl_.data_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
@@ -1026,45 +1033,44 @@ JsonRpcErrorObject::JsonRpcErrorObject(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v1.JsonRpcErrorObject)
 }
-JsonRpcErrorObject::JsonRpcErrorObject(const JsonRpcErrorObject& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE JsonRpcErrorObject::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        message_(arena, from.message_) {}
+
+JsonRpcErrorObject::JsonRpcErrorObject(
+    ::google::protobuf::Arena* arena,
+    const JsonRpcErrorObject& from)
+    : ::google::protobuf::Message(arena) {
   JsonRpcErrorObject* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.message_){},
-      decltype(_impl_.data_){nullptr},
-      decltype(_impl_.code_){},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.message_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  if (!from._internal_message().empty()) {
-    _this->_impl_.message_.Set(from._internal_message(), _this->GetArenaForAllocation());
-  }
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.data_ = new ::google::protobuf::Value(*from._impl_.data_);
-  }
-  _this->_impl_.code_ = from._impl_.code_;
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.data_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.data_)
+                : nullptr;
+  _impl_.code_ = from._impl_.code_;
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v1.JsonRpcErrorObject)
 }
+inline PROTOBUF_NDEBUG_INLINE JsonRpcErrorObject::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        message_(arena) {}
+
 inline void JsonRpcErrorObject::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.message_){},
-      decltype(_impl_.data_){nullptr},
-      decltype(_impl_.code_){0},
-  };
-  _impl_.message_.InitDefault();
-  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
-        _impl_.message_.Set("", GetArenaForAllocation());
-  #endif  // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  ::memset(reinterpret_cast<char *>(&_impl_) +
+               offsetof(Impl_, data_),
+           0,
+           offsetof(Impl_, code_) -
+               offsetof(Impl_, data_) +
+               sizeof(Impl_::code_));
 }
 JsonRpcErrorObject::~JsonRpcErrorObject() {
   // @@protoc_insertion_point(destructor:struqt.demo.v1.JsonRpcErrorObject)
@@ -1072,16 +1078,15 @@ JsonRpcErrorObject::~JsonRpcErrorObject() {
   SharedDtor();
 }
 inline void JsonRpcErrorObject::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
+  ABSL_DCHECK(GetArena() == nullptr);
   _impl_.message_.Destroy();
-  if (this != internal_default_instance()) delete _impl_.data_;
-}
-void JsonRpcErrorObject::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  delete _impl_.data_;
+  _impl_.~Impl_();
 }
 
 PROTOBUF_NOINLINE void JsonRpcErrorObject::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v1.JsonRpcErrorObject)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1175,8 +1180,8 @@ const ::_pbi::TcParseTable<2, 3, 1, 49, 2> JsonRpcErrorObject::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Value data = 3;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(3, _Internal::data(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        3, _Internal::data(this),
         _Internal::data(this).GetCachedSize(), target, stream);
   }
 
@@ -1206,9 +1211,8 @@ const ::_pbi::TcParseTable<2, 3, 1, 49, 2> JsonRpcErrorObject::_table_ = {
   // .google.protobuf.Value data = 3;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *_impl_.data_);
+    total_size +=
+        1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.data_);
   }
 
   // int32 code = 1;
@@ -1221,11 +1225,12 @@ const ::_pbi::TcParseTable<2, 3, 1, 49, 2> JsonRpcErrorObject::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData JsonRpcErrorObject::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    JsonRpcErrorObject::MergeImpl
+    JsonRpcErrorObject::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*JsonRpcErrorObject::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* JsonRpcErrorObject::GetClassData() const {
+  return &_class_data_;
+}
 
 void JsonRpcErrorObject::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<JsonRpcErrorObject*>(&to_msg);
@@ -1259,14 +1264,16 @@ PROTOBUF_NOINLINE bool JsonRpcErrorObject::IsInitialized() const {
   return true;
 }
 
-void JsonRpcErrorObject::InternalSwap(JsonRpcErrorObject* other) {
+::_pbi::CachedSize* JsonRpcErrorObject::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void JsonRpcErrorObject::InternalSwap(JsonRpcErrorObject* PROTOBUF_RESTRICT other) {
   using std::swap;
-  auto* lhs_arena = GetArenaForAllocation();
-  auto* rhs_arena = other->GetArenaForAllocation();
+  auto* arena = GetArena();
+  ABSL_DCHECK_EQ(arena, other->GetArena());
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
-  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, lhs_arena,
-                                       &other->_impl_.message_, rhs_arena);
+  ::_pbi::ArenaStringPtr::InternalSwap(&_impl_.message_, &other->_impl_.message_, arena);
   ::google::protobuf::internal::memswap<
       PROTOBUF_FIELD_OFFSET(JsonRpcErrorObject, _impl_.code_)
       + sizeof(JsonRpcErrorObject::_impl_.code_)
@@ -1307,15 +1314,12 @@ const ::google::protobuf::Value& JsonRpcResponse::_Internal::id(const JsonRpcRes
   return *msg->_impl_.id_;
 }
 void JsonRpcResponse::set_allocated_result(::google::protobuf::Value* result) {
-  ::google::protobuf::Arena* message_arena = GetArenaForAllocation();
+  ::google::protobuf::Arena* message_arena = GetArena();
   clear_one_of();
   if (result) {
-    ::google::protobuf::Arena* submessage_arena =
-        ::google::protobuf::Arena::InternalGetOwningArena(
-                reinterpret_cast<::google::protobuf::MessageLite*>(result));
+    ::google::protobuf::Arena* submessage_arena = reinterpret_cast<::google::protobuf::MessageLite*>(result)->GetArena();
     if (message_arena != submessage_arena) {
-      result = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, result, submessage_arena);
+      result = ::google::protobuf::internal::GetOwnedMessage(message_arena, result, submessage_arena);
     }
     set_has_result();
     _impl_.one_of_.result_ = result;
@@ -1323,22 +1327,21 @@ void JsonRpcResponse::set_allocated_result(::google::protobuf::Value* result) {
   // @@protoc_insertion_point(field_set_allocated:struqt.demo.v1.JsonRpcResponse.result)
 }
 void JsonRpcResponse::clear_result() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (one_of_case() == kResult) {
-    if (GetArenaForAllocation() == nullptr) {
+    if (GetArena() == nullptr) {
       delete _impl_.one_of_.result_;
     }
     clear_has_one_of();
   }
 }
 void JsonRpcResponse::set_allocated_error(::struqt::demo::v1::JsonRpcErrorObject* error) {
-  ::google::protobuf::Arena* message_arena = GetArenaForAllocation();
+  ::google::protobuf::Arena* message_arena = GetArena();
   clear_one_of();
   if (error) {
-    ::google::protobuf::Arena* submessage_arena =
-      ::google::protobuf::Arena::InternalGetOwningArena(error);
+    ::google::protobuf::Arena* submessage_arena = error->GetArena();
     if (message_arena != submessage_arena) {
-      error = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, error, submessage_arena);
+      error = ::google::protobuf::internal::GetOwnedMessage(message_arena, error, submessage_arena);
     }
     set_has_error();
     _impl_.one_of_.error_ = error;
@@ -1346,6 +1349,7 @@ void JsonRpcResponse::set_allocated_error(::struqt::demo::v1::JsonRpcErrorObject
   // @@protoc_insertion_point(field_set_allocated:struqt.demo.v1.JsonRpcResponse.error)
 }
 void JsonRpcResponse::clear_id() {
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   if (_impl_.id_ != nullptr) _impl_.id_->Clear();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
@@ -1354,50 +1358,50 @@ JsonRpcResponse::JsonRpcResponse(::google::protobuf::Arena* arena)
   SharedCtor(arena);
   // @@protoc_insertion_point(arena_constructor:struqt.demo.v1.JsonRpcResponse)
 }
-JsonRpcResponse::JsonRpcResponse(const JsonRpcResponse& from) : ::google::protobuf::Message() {
+inline PROTOBUF_NDEBUG_INLINE JsonRpcResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility, ::google::protobuf::Arena* arena,
+    const Impl_& from)
+      : _has_bits_{from._has_bits_},
+        _cached_size_{0},
+        one_of_{},
+        _oneof_case_{from._oneof_case_[0]} {}
+
+JsonRpcResponse::JsonRpcResponse(
+    ::google::protobuf::Arena* arena,
+    const JsonRpcResponse& from)
+    : ::google::protobuf::Message(arena) {
   JsonRpcResponse* const _this = this;
   (void)_this;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){from._impl_._has_bits_},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.id_){nullptr},
-      decltype(_impl_.one_of_){},
-      /*decltype(_impl_._oneof_case_)*/ {},
-  };
   _internal_metadata_.MergeFrom<::google::protobuf::UnknownFieldSet>(
       from._internal_metadata_);
-  if ((from._impl_._has_bits_[0] & 0x00000001u) != 0) {
-    _this->_impl_.id_ = new ::google::protobuf::Value(*from._impl_.id_);
-  }
-  clear_has_one_of();
-  switch (from.one_of_case()) {
-    case kResult: {
-      _this->_internal_mutable_result()->::google::protobuf::Value::MergeFrom(
-          from._internal_result());
+  new (&_impl_) Impl_(internal_visibility(), arena, from._impl_);
+  ::uint32_t cached_has_bits = _impl_._has_bits_[0];
+  _impl_.id_ = (cached_has_bits & 0x00000001u)
+                ? CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.id_)
+                : nullptr;
+  switch (one_of_case()) {
+    case ONE_OF_NOT_SET:
       break;
-    }
-    case kError: {
-      _this->_internal_mutable_error()->::struqt::demo::v1::JsonRpcErrorObject::MergeFrom(
-          from._internal_error());
-      break;
-    }
-    case ONE_OF_NOT_SET: {
-      break;
-    }
+      case kResult:
+        _impl_.one_of_.result_ = CreateMaybeMessage<::google::protobuf::Value>(arena, *from._impl_.one_of_.result_);
+        break;
+      case kError:
+        _impl_.one_of_.error_ = CreateMaybeMessage<::struqt::demo::v1::JsonRpcErrorObject>(arena, *from._impl_.one_of_.error_);
+        break;
   }
 
   // @@protoc_insertion_point(copy_constructor:struqt.demo.v1.JsonRpcResponse)
 }
+inline PROTOBUF_NDEBUG_INLINE JsonRpcResponse::Impl_::Impl_(
+    ::google::protobuf::internal::InternalVisibility visibility,
+    ::google::protobuf::Arena* arena)
+      : _cached_size_{0},
+        one_of_{},
+        _oneof_case_{} {}
+
 inline void JsonRpcResponse::SharedCtor(::_pb::Arena* arena) {
-  (void)arena;
-  new (&_impl_) Impl_{
-      decltype(_impl_._has_bits_){},
-      /*decltype(_impl_._cached_size_)*/ {},
-      decltype(_impl_.id_){nullptr},
-      decltype(_impl_.one_of_){},
-      /*decltype(_impl_._oneof_case_)*/ {},
-  };
-  clear_has_one_of();
+  new (&_impl_) Impl_(internal_visibility(), arena);
+  _impl_.id_ = {};
 }
 JsonRpcResponse::~JsonRpcResponse() {
   // @@protoc_insertion_point(destructor:struqt.demo.v1.JsonRpcResponse)
@@ -1405,27 +1409,26 @@ JsonRpcResponse::~JsonRpcResponse() {
   SharedDtor();
 }
 inline void JsonRpcResponse::SharedDtor() {
-  ABSL_DCHECK(GetArenaForAllocation() == nullptr);
-  if (this != internal_default_instance()) delete _impl_.id_;
+  ABSL_DCHECK(GetArena() == nullptr);
+  delete _impl_.id_;
   if (has_one_of()) {
     clear_one_of();
   }
-}
-void JsonRpcResponse::SetCachedSize(int size) const {
-  _impl_._cached_size_.Set(size);
+  _impl_.~Impl_();
 }
 
 void JsonRpcResponse::clear_one_of() {
 // @@protoc_insertion_point(one_of_clear_start:struqt.demo.v1.JsonRpcResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   switch (one_of_case()) {
     case kResult: {
-      if (GetArenaForAllocation() == nullptr) {
+      if (GetArena() == nullptr) {
         delete _impl_.one_of_.result_;
       }
       break;
     }
     case kError: {
-      if (GetArenaForAllocation() == nullptr) {
+      if (GetArena() == nullptr) {
         delete _impl_.one_of_.error_;
       }
       break;
@@ -1440,6 +1443,7 @@ void JsonRpcResponse::clear_one_of() {
 
 PROTOBUF_NOINLINE void JsonRpcResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:struqt.demo.v1.JsonRpcResponse)
+  PROTOBUF_TSAN_WRITE(&_impl_._tsan_detect_race);
   ::uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1508,14 +1512,14 @@ const ::_pbi::TcParseTable<0, 3, 3, 0, 2> JsonRpcResponse::_table_ = {
 
   switch (one_of_case()) {
     case kResult: {
-      target = ::google::protobuf::internal::WireFormatLite::
-        InternalWriteMessage(2, _Internal::result(this),
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          2, _Internal::result(this),
           _Internal::result(this).GetCachedSize(), target, stream);
       break;
     }
     case kError: {
-      target = ::google::protobuf::internal::WireFormatLite::
-        InternalWriteMessage(3, _Internal::error(this),
+      target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+          3, _Internal::error(this),
           _Internal::error(this).GetCachedSize(), target, stream);
       break;
     }
@@ -1525,8 +1529,8 @@ const ::_pbi::TcParseTable<0, 3, 3, 0, 2> JsonRpcResponse::_table_ = {
   cached_has_bits = _impl_._has_bits_[0];
   // .google.protobuf.Value id = 4;
   if (cached_has_bits & 0x00000001u) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessage(4, _Internal::id(this),
+    target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessage(
+        4, _Internal::id(this),
         _Internal::id(this).GetCachedSize(), target, stream);
   }
 
@@ -1550,24 +1554,21 @@ const ::_pbi::TcParseTable<0, 3, 3, 0, 2> JsonRpcResponse::_table_ = {
   // .google.protobuf.Value id = 4;
   cached_has_bits = _impl_._has_bits_[0];
   if (cached_has_bits & 0x00000001u) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *_impl_.id_);
+    total_size +=
+        1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.id_);
   }
 
   switch (one_of_case()) {
     // .google.protobuf.Value result = 2;
     case kResult: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.one_of_.result_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.one_of_.result_);
       break;
     }
     // .struqt.demo.v1.JsonRpcErrorObject error = 3;
     case kError: {
-      total_size += 1 +
-        ::google::protobuf::internal::WireFormatLite::MessageSize(
-          *_impl_.one_of_.error_);
+      total_size +=
+          1 + ::google::protobuf::internal::WireFormatLite::MessageSize(*_impl_.one_of_.error_);
       break;
     }
     case ONE_OF_NOT_SET: {
@@ -1578,11 +1579,12 @@ const ::_pbi::TcParseTable<0, 3, 3, 0, 2> JsonRpcResponse::_table_ = {
 }
 
 const ::google::protobuf::Message::ClassData JsonRpcResponse::_class_data_ = {
-    ::google::protobuf::Message::CopyWithSourceCheck,
-    JsonRpcResponse::MergeImpl
+    JsonRpcResponse::MergeImpl,
+    nullptr,  // OnDemandRegisterArenaDtor
 };
-const ::google::protobuf::Message::ClassData*JsonRpcResponse::GetClassData() const { return &_class_data_; }
-
+const ::google::protobuf::Message::ClassData* JsonRpcResponse::GetClassData() const {
+  return &_class_data_;
+}
 
 void JsonRpcResponse::MergeImpl(::google::protobuf::Message& to_msg, const ::google::protobuf::Message& from_msg) {
   auto* const _this = static_cast<JsonRpcResponse*>(&to_msg);
@@ -1625,7 +1627,10 @@ PROTOBUF_NOINLINE bool JsonRpcResponse::IsInitialized() const {
   return true;
 }
 
-void JsonRpcResponse::InternalSwap(JsonRpcResponse* other) {
+::_pbi::CachedSize* JsonRpcResponse::AccessCachedSize() const {
+  return &_impl_._cached_size_;
+}
+void JsonRpcResponse::InternalSwap(JsonRpcResponse* PROTOBUF_RESTRICT other) {
   using std::swap;
   _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   swap(_impl_._has_bits_[0], other->_impl_._has_bits_[0]);
