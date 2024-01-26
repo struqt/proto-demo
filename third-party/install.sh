@@ -31,26 +31,25 @@ function cmake_build() {
 
 function cmake_build_grpc() {
   local t="$SELF_DIR/build/target"
+  cmake_build 'c-ares' 'grpc/third_party/cares/cares'
+  cmake_build 're2' 'grpc/third_party/re2' -D CMAKE_POSITION_INDEPENDENT_CODE=TRUE
   cmake_build 'abseil-cpp' 'grpc/third_party/abseil-cpp' \
     -D CMAKE_POSITION_INDEPENDENT_CODE=TRUE \
     -D ABSL_PROPAGATE_CXX_STD=ON
-  cmake_build 'zlib' 'grpc/third_party/zlib' -D CMAKE_MACOSX_RPATH=OFF
-  cmake_build 'c-ares' 'grpc/third_party/cares/cares'
-  cmake_build 're2' 'grpc/third_party/re2' -D CMAKE_POSITION_INDEPENDENT_CODE=TRUE
   cmake_build 'protobuf' 'grpc/third_party/protobuf' \
-    -D CMAKE_PREFIX_PATH="$t/zlib;$t/abseil-cpp" \
+    -D CMAKE_PREFIX_PATH="$t/abseil-cpp" \
     -D protobuf_BUILD_TESTS=OFF \
     -D protobuf_INSTALL=ON \
     -D protobuf_ABSL_PROVIDER=package
   cmake_build 'grpc' 'grpc' \
-    -D CMAKE_PREFIX_PATH="$t/zlib;$t/c-ares;$t/re2;$t/abseil-cpp;$t/protobuf" \
+    -D CMAKE_PREFIX_PATH="$t/c-ares;$t/re2;$t/abseil-cpp;$t/protobuf" \
     -D gRPC_BUILD_TESTS=OFF \
     -D gRPC_INSTALL=ON \
-    -D gRPC_SSL_PROVIDER=package \
-    -D gRPC_ZLIB_PROVIDER=package \
+    -D gRPC_SSL_PROVIDER=module    \
+    -D gRPC_ZLIB_PROVIDER=module   \
     -D gRPC_CARES_PROVIDER=package \
-    -D gRPC_RE2_PROVIDER=package \
-    -D gRPC_ABSL_PROVIDER=package \
+    -D gRPC_RE2_PROVIDER=package   \
+    -D gRPC_ABSL_PROVIDER=package  \
     -D gRPC_PROTOBUF_PROVIDER=package
 }
 
