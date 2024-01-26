@@ -18,12 +18,12 @@ jobs:
         with: { submodules: true }
       - run: git submodule update --recursive --remote
         shell: bash
-      - uses: bufbuild/buf-setup-action@v1
-      - uses: bufbuild/buf-lint-action@v1
+      - uses: bufbuild/buf-setup-action@v1.29.0
+      - uses: bufbuild/buf-lint-action@v1.1.0
 
       - name: Setup gRPC
         id: cache-grpc
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: gRPC${{ matrix.grpc_version }}
         with:
@@ -33,7 +33,7 @@ jobs:
           key: ${{ env.cache-name }} ${{ runner.os }} ${{ runner.arch }} ${{ matrix.build_type }}
 
       - name: Setup Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v5
         with: { go-version: 1.19 }
 
       - name: Generate

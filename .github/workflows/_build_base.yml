@@ -38,7 +38,7 @@ jobs:
 
       - name: gRPC Cache
         id: cache-grpc
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: gRPC${{ matrix.grpc_version }}
         with:
