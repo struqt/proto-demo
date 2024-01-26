@@ -19,10 +19,10 @@ apt install -y golang
 
 ```
 brew install git
-brew install cmake openssl
+brew install cmake
 brew install rustup
 brew install goenv
-goenv install 1.19
+goenv install 1.21
 ```
 
 ### Build
