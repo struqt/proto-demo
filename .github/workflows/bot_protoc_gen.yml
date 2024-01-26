@@ -14,7 +14,7 @@ jobs:
       fail-fast: true
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with: { submodules: true }
       - run: git submodule update --recursive --remote
         shell: bash
