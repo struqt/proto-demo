@@ -64,14 +64,14 @@ jobs:
           ctest -C ${{ matrix.build_type }}
 
       - name: Upload demo_cxx_hello
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           retention-days: 10
           name: demo_cxx_hello-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}
           path: ${{ github.workspace }}/demo-cxx-build/demo_cxx_hello
 
       - name: Upload demo_cxx_server
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           retention-days: 10
           name: demo_cxx_server-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}

@@ -25,7 +25,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Download demo_cxx_hello
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: demo_cxx_hello-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}
       - name: Test demo_cxx_hello
