@@ -45,6 +45,10 @@ jobs:
             ${{ github.workspace }}/third-party/build
           key: ${{ env.cache-name }} ${{ runner.os }} ${{ runner.arch }} ${{ matrix.build_type }}
 
+      - name: CMake Installation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake
       - name: CMake
         if: steps.cache-grpc.outputs.cache-hit == 'true'
         working-directory: ${{ github.workspace }}/demo-cxx
@@ -64,14 +68,14 @@ jobs:
           ctest -C ${{ matrix.build_type }}
 
       - name: Upload demo_cxx_hello
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           retention-days: 10
           name: demo_cxx_hello-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}
           path: ${{ github.workspace }}/demo-cxx-build/demo_cxx_hello
 
       - name: Upload demo_cxx_server
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           retention-days: 10
           name: demo_cxx_server-gRPC${{ matrix.grpc_version }}-${{ runner.os }}-${{ runner.arch }}

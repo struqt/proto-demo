@@ -35,7 +35,10 @@ jobs:
         with:
           ref: ${{ inputs.safe-checkout }}
           submodules: 'true'
-
+      - name: Install CMake
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake
       - name: gRPC Cache
         id: cache-grpc
         uses: actions/cache@v4

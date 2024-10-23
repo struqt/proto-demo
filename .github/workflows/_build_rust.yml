@@ -28,12 +28,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with: { ref: '${{ inputs.safe-checkout }}' }
+      - name: Setup rustup
+        shell: bash
+        run: |
+          if command -v cargo >/dev/null 2>&1; then
+            echo "Installed"
+          else
+            echo "Installing"
+            curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+            source $HOME/.cargo/env
+          fi
+          which cargo
       - name: Build
         working-directory: ${{ github.workspace }}/demo-rs
-        run: cargo build --verbose
+        run: source $HOME/.cargo/env && cargo build --verbose
       - name: Test
         working-directory: ${{ github.workspace }}/demo-rs
-        run: cargo test --verbose
+        run: source $HOME/.cargo/env && cargo test --verbose
     #steps
   #build
 #jobs
